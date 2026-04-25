@@ -1,1 +1,1 @@
-markdown>=3.5
+# No external deps — morning_brief.py uses Python stdlib only.
