@@ -1,35 +1,40 @@
 #!/usr/bin/env python3
-"""Morning Brief email sender. Plain-text + HTML (lightweight) via Gmail SMTP.
+"""Morning Brief email sender via Resend HTTPS API.
 
 Reads the brief body from stdin (or --body-file), takes subject from --subject,
-and sends. No external deps — uses stdlib only so no pip install is required
-inside the routine sandbox.
+renders markdown to HTML, and POSTs to https://api.resend.com/emails.
+
+Why Resend instead of Gmail SMTP: the Anthropic routine sandbox firewalls
+all SMTP ports (25/465/587), so App Password auth can't establish a connection.
+Resend uses HTTPS (port 443) which the sandbox allows.
 
 Usage:
     python3 morning_brief.py --subject "[morning-brief-bot] 2026-04-25 ..." < body.md
     python3 morning_brief.py --subject "..." --body-file body.md
     python3 morning_brief.py --subject "..." --body-file body.md --dry-run
 
-Env vars required (set by the routine before invoking):
-    GMAIL_USER           — Gmail address sending the mail
-    GMAIL_APP_PASSWORD   — 16-char App Password (NOT the real Google password)
-    TO_EMAIL             — Recipient (defaults to GMAIL_USER if unset)
+Env vars required:
+    RESEND_API_KEY  — Resend API key (re_...)
+    TO_EMAIL        — Recipient email
+
+Env vars optional:
+    RESEND_FROM     — Sender. Default: "Morning Brief <onboarding@resend.dev>"
+                      (the resend.dev sandbox sender works without domain verification.)
 """
 from __future__ import annotations
 
 import argparse
 import html
+import json
 import os
 import re
-import smtplib
 import sys
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+import urllib.error
+import urllib.request
 
 
-# Minimal markdown → HTML converter covering the subset we use:
-# headings (#..######), bold (**), inline code (`), links ([t](u)),
-# horizontal rule (---), unordered list (-), paragraphs.
+# Minimal markdown -> HTML for the subset we use:
+# headings, bold, inline code, links, hr, unordered list, paragraphs.
 def md_to_html(text: str) -> str:
     lines = text.split("\n")
     out: list[str] = []
@@ -100,25 +105,39 @@ def render_html(body_md: str) -> str:
     )
 
 
-def send_email(subject: str, body_md: str) -> None:
-    gmail_user = os.environ["GMAIL_USER"]
-    gmail_pw = os.environ["GMAIL_APP_PASSWORD"]
-    to_email = os.environ.get("TO_EMAIL", gmail_user)
+def send_via_resend(subject: str, body_md: str) -> str:
+    api_key = os.environ["RESEND_API_KEY"]
+    to_email = os.environ["TO_EMAIL"]
+    from_addr = os.environ.get("RESEND_FROM", "Morning Brief <onboarding@resend.dev>")
 
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = subject
-    msg["From"] = gmail_user
-    msg["To"] = to_email
-    msg.attach(MIMEText(body_md, "plain", "utf-8"))
-    msg.attach(MIMEText(render_html(body_md), "html", "utf-8"))
+    payload = {
+        "from": from_addr,
+        "to": [to_email],
+        "subject": subject,
+        "text": body_md,
+        "html": render_html(body_md),
+    }
 
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as s:
-        s.login(gmail_user, gmail_pw)
-        s.send_message(msg)
+    req = urllib.request.Request(
+        "https://api.resend.com/emails",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+            return result.get("id", "<no-id>")
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"Resend API {e.code}: {body}") from e
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Send the morning brief via Gmail SMTP.")
+    parser = argparse.ArgumentParser(description="Send the morning brief via Resend.")
     parser.add_argument("--subject", required=True, help="Full email subject line")
     parser.add_argument("--body-file", help="Path to markdown body (defaults to stdin)")
     parser.add_argument("--dry-run", action="store_true", help="Print instead of sending")
@@ -139,8 +158,8 @@ def main() -> int:
         print(body_md)
         return 0
 
-    send_email(args.subject, body_md)
-    print(f"Sent: {args.subject}")
+    msg_id = send_via_resend(args.subject, body_md)
+    print(f"Sent: {args.subject} (resend id: {msg_id})")
     return 0
 
 
