@@ -32,11 +32,13 @@ import urllib.error
 import urllib.request
 
 
-def create_issue(title: str, body_md: str) -> str:
+def create_issue(title: str, body_md: str, labels: list[str] | None = None) -> str:
     token = os.environ["GITHUB_TOKEN"]
     repo = os.environ.get("GITHUB_REPO", "hank800620/morning-brief")
 
-    payload = {"title": title, "body": body_md}
+    payload: dict = {"title": title, "body": body_md}
+    if labels:
+        payload["labels"] = labels
 
     req = urllib.request.Request(
         f"https://api.github.com/repos/{repo}/issues",
@@ -63,6 +65,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Post the morning brief as a GitHub issue.")
     parser.add_argument("--subject", required=True, help="Issue title")
     parser.add_argument("--body-file", help="Path to markdown body (defaults to stdin)")
+    parser.add_argument("--label", action="append", default=[],
+                        help="Label to attach (repeatable). E.g. --label daily --label 2026-04")
     parser.add_argument("--dry-run", action="store_true", help="Print instead of posting")
     args = parser.parse_args()
 
@@ -77,11 +81,14 @@ def main() -> int:
         return 1
 
     if args.dry_run:
-        print(f"Title: {args.subject}\n")
+        print(f"Title: {args.subject}")
+        if args.label:
+            print(f"Labels: {', '.join(args.label)}")
+        print()
         print(body_md)
         return 0
 
-    url = create_issue(args.subject, body_md)
+    url = create_issue(args.subject, body_md, labels=args.label or None)
     print(f"Posted: {url}")
     return 0
 
