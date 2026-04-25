@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
-"""Morning Brief email sender.
+"""Morning Brief email sender. Plain-text + HTML (lightweight) via Gmail SMTP.
 
 Reads the brief body from stdin (or --body-file), takes subject from --subject,
-renders markdown to HTML, sends via Gmail SMTP.
-
-Designed to be invoked from a Claude routine: Claude gathers news and writes
-the brief, then calls this script to send the email.
+and sends. No external deps — uses stdlib only so no pip install is required
+inside the routine sandbox.
 
 Usage:
-    python morning_brief.py --subject "[morning-brief-bot] 2026-04-25 ..." < body.md
-    python morning_brief.py --subject "..." --body-file body.md
-    python morning_brief.py --subject "..." --body-file body.md --dry-run
+    python3 morning_brief.py --subject "[morning-brief-bot] 2026-04-25 ..." < body.md
+    python3 morning_brief.py --subject "..." --body-file body.md
+    python3 morning_brief.py --subject "..." --body-file body.md --dry-run
 
 Env vars required (set by the routine before invoking):
     GMAIL_USER           — Gmail address sending the mail
@@ -20,13 +18,64 @@ Env vars required (set by the routine before invoking):
 from __future__ import annotations
 
 import argparse
+import html
 import os
+import re
 import smtplib
 import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-import markdown
+
+# Minimal markdown → HTML converter covering the subset we use:
+# headings (#..######), bold (**), inline code (`), links ([t](u)),
+# horizontal rule (---), unordered list (-), paragraphs.
+def md_to_html(text: str) -> str:
+    lines = text.split("\n")
+    out: list[str] = []
+    in_list = False
+
+    def close_list():
+        nonlocal in_list
+        if in_list:
+            out.append("</ul>")
+            in_list = False
+
+    def inline(s: str) -> str:
+        s = html.escape(s)
+        s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)
+        s = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", s)
+        s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)",
+                   lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', s)
+        return s
+
+    for raw in lines:
+        line = raw.rstrip()
+        if not line.strip():
+            close_list()
+            out.append("")
+            continue
+        if line.strip() == "---":
+            close_list()
+            out.append("<hr>")
+            continue
+        m = re.match(r"^(#{1,6})\s+(.+)$", line)
+        if m:
+            close_list()
+            level = len(m.group(1))
+            out.append(f"<h{level}>{inline(m.group(2))}</h{level}>")
+            continue
+        m = re.match(r"^[-*]\s+(.+)$", line)
+        if m:
+            if not in_list:
+                out.append("<ul>")
+                in_list = True
+            out.append(f"<li>{inline(m.group(1))}</li>")
+            continue
+        close_list()
+        out.append(f"<p>{inline(line)}</p>")
+    close_list()
+    return "\n".join(out)
 
 
 EMAIL_CSS = """
@@ -35,24 +84,19 @@ body { font-family: -apple-system, "Segoe UI", "Microsoft JhengHei", sans-serif;
 h1 { border-bottom: 2px solid #333; padding-bottom: 8px; }
 h2 { margin-top: 28px; border-left: 4px solid #4a90e2; padding-left: 10px; }
 h3 { margin-top: 20px; color: #1a1a1a; }
-blockquote { border-left: 3px solid #ccc; margin: 0; padding: 6px 14px; color: #444;
-             background: #fafafa; }
 a { color: #1f6feb; text-decoration: none; }
 a:hover { text-decoration: underline; }
 hr { border: none; border-top: 1px solid #ddd; margin: 24px 0; }
 ul { padding-left: 22px; }
 strong { color: #111; }
+code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; font-family: ui-monospace, monospace; }
 """
 
 
 def render_html(body_md: str) -> str:
-    body_html = markdown.markdown(
-        body_md,
-        extensions=["tables", "fenced_code", "nl2br", "sane_lists"],
-    )
     return (
         "<!doctype html><html><head><meta charset='utf-8'>"
-        f"<style>{EMAIL_CSS}</style></head><body>{body_html}</body></html>"
+        f"<style>{EMAIL_CSS}</style></head><body>{md_to_html(body_md)}</body></html>"
     )
 
 
@@ -68,7 +112,7 @@ def send_email(subject: str, body_md: str) -> None:
     msg.attach(MIMEText(body_md, "plain", "utf-8"))
     msg.attach(MIMEText(render_html(body_md), "html", "utf-8"))
 
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as s:
         s.login(gmail_user, gmail_pw)
         s.send_message(msg)
 
