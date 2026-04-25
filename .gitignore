@@ -7,3 +7,7 @@ venv/
 .idea/
 .vscode/
 *.log
+
+# Routine-generated transient files (per session, not committed)
+body.md
+subject.txt
