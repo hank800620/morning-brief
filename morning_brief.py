@@ -32,6 +32,41 @@ import urllib.error
 import urllib.request
 
 
+def fetch_recent(label: str, limit: int) -> str:
+    """Fetch the N most-recent issues with the given label, formatted as plain text
+    for downstream LLM consumption. Returns one big string with === title === markers."""
+    token = os.environ["GITHUB_TOKEN"]
+    repo = os.environ.get("GITHUB_REPO", "hank800620/morning-brief")
+    url = (
+        f"https://api.github.com/repos/{repo}/issues"
+        f"?state=all&labels={label}&per_page={limit}"
+        f"&sort=created&direction=desc"
+    )
+    req = urllib.request.Request(
+        url,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": "morning-brief-bot",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        issues = json.loads(resp.read().decode("utf-8"))
+    if not issues:
+        return f"(no recent issues with label `{label}`)"
+    parts: list[str] = []
+    for issue in issues:
+        parts.append(f"=== {issue['title']} ===")
+        parts.append(f"URL: {issue.get('html_url', '')}")
+        parts.append(f"Created: {issue.get('created_at', '')}")
+        body = issue.get("body") or "(empty)"
+        # cap each body at 8000 chars to stay reasonable
+        parts.append(body[:8000])
+        parts.append("")
+    return "\n".join(parts)
+
+
 def create_issue(title: str, body_md: str, labels: list[str] | None = None) -> str:
     token = os.environ["GITHUB_TOKEN"]
     repo = os.environ.get("GITHUB_REPO", "hank800620/morning-brief")
@@ -63,12 +98,27 @@ def create_issue(title: str, body_md: str, labels: list[str] | None = None) -> s
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Post the morning brief as a GitHub issue.")
-    parser.add_argument("--subject", required=True, help="Issue title")
+    parser.add_argument("--subject", help="Issue title (required unless --fetch-recent)")
     parser.add_argument("--body-file", help="Path to markdown body (defaults to stdin)")
     parser.add_argument("--label", action="append", default=[],
-                        help="Label to attach (repeatable). E.g. --label daily --label 2026-04")
+                        help="Label to attach (repeatable). Or filter for --fetch-recent.")
     parser.add_argument("--dry-run", action="store_true", help="Print instead of posting")
+    parser.add_argument("--fetch-recent", action="store_true",
+                        help="Print recent issues for the given --label (for routine memory).")
+    parser.add_argument("--limit", type=int, default=7,
+                        help="Number of recent issues to fetch (used with --fetch-recent).")
     args = parser.parse_args()
+
+    if args.fetch_recent:
+        if not args.label:
+            print("ERROR: --fetch-recent requires --label", file=sys.stderr)
+            return 1
+        print(fetch_recent(args.label[0], args.limit))
+        return 0
+
+    if not args.subject:
+        print("ERROR: --subject is required (unless --fetch-recent)", file=sys.stderr)
+        return 1
 
     if args.body_file:
         with open(args.body_file, "r", encoding="utf-8") as f:
