@@ -1,128 +1,133 @@
 #!/usr/bin/env python3
-"""Morning Brief email sender. Plain-text + HTML (lightweight) via Gmail SMTP.
+"""Morning Brief delivery via GitHub Issue.
 
-Reads the brief body from stdin (or --body-file), takes subject from --subject,
-and sends. No external deps — uses stdlib only so no pip install is required
-inside the routine sandbox.
+Reads the brief body from stdin (or --body-file), takes title from --subject,
+and POSTs to https://api.github.com/repos/<repo>/issues to create an issue.
+
+Why GitHub Issue instead of email: the Anthropic routine sandbox blocks all
+SMTP ports AND all third-party email APIs at its egress firewall (responds
+with HTTP 403 "Host not in allowlist"). GitHub's API is on the sandbox
+allowlist, so this works. GitHub auto-emails the watcher when the issue is
+created, so the user still receives an email at their normal inbox — the
+difference is GitHub sends it, not us.
 
 Usage:
     python3 morning_brief.py --subject "[morning-brief-bot] 2026-04-25 ..." < body.md
     python3 morning_brief.py --subject "..." --body-file body.md
     python3 morning_brief.py --subject "..." --body-file body.md --dry-run
 
-Env vars required (set by the routine before invoking):
-    GMAIL_USER           — Gmail address sending the mail
-    GMAIL_APP_PASSWORD   — 16-char App Password (NOT the real Google password)
-    TO_EMAIL             — Recipient (defaults to GMAIL_USER if unset)
+Env vars required:
+    GITHUB_TOKEN  — PAT or OAuth token with `issues: write` on the target repo
+
+Env vars optional:
+    GITHUB_REPO   — `owner/repo`. Default: "hank800620/morning-brief"
 """
 from __future__ import annotations
 
 import argparse
-import html
+import json
 import os
-import re
-import smtplib
 import sys
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+import urllib.error
+import urllib.request
 
 
-# Minimal markdown → HTML converter covering the subset we use:
-# headings (#..######), bold (**), inline code (`), links ([t](u)),
-# horizontal rule (---), unordered list (-), paragraphs.
-def md_to_html(text: str) -> str:
-    lines = text.split("\n")
-    out: list[str] = []
-    in_list = False
-
-    def close_list():
-        nonlocal in_list
-        if in_list:
-            out.append("</ul>")
-            in_list = False
-
-    def inline(s: str) -> str:
-        s = html.escape(s)
-        s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)
-        s = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", s)
-        s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)",
-                   lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', s)
-        return s
-
-    for raw in lines:
-        line = raw.rstrip()
-        if not line.strip():
-            close_list()
-            out.append("")
-            continue
-        if line.strip() == "---":
-            close_list()
-            out.append("<hr>")
-            continue
-        m = re.match(r"^(#{1,6})\s+(.+)$", line)
-        if m:
-            close_list()
-            level = len(m.group(1))
-            out.append(f"<h{level}>{inline(m.group(2))}</h{level}>")
-            continue
-        m = re.match(r"^[-*]\s+(.+)$", line)
-        if m:
-            if not in_list:
-                out.append("<ul>")
-                in_list = True
-            out.append(f"<li>{inline(m.group(1))}</li>")
-            continue
-        close_list()
-        out.append(f"<p>{inline(line)}</p>")
-    close_list()
-    return "\n".join(out)
-
-
-EMAIL_CSS = """
-body { font-family: -apple-system, "Segoe UI", "Microsoft JhengHei", sans-serif;
-       max-width: 760px; margin: 0 auto; padding: 16px; line-height: 1.55; color: #222; }
-h1 { border-bottom: 2px solid #333; padding-bottom: 8px; }
-h2 { margin-top: 28px; border-left: 4px solid #4a90e2; padding-left: 10px; }
-h3 { margin-top: 20px; color: #1a1a1a; }
-a { color: #1f6feb; text-decoration: none; }
-a:hover { text-decoration: underline; }
-hr { border: none; border-top: 1px solid #ddd; margin: 24px 0; }
-ul { padding-left: 22px; }
-strong { color: #111; }
-code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; font-family: ui-monospace, monospace; }
-"""
-
-
-def render_html(body_md: str) -> str:
-    return (
-        "<!doctype html><html><head><meta charset='utf-8'>"
-        f"<style>{EMAIL_CSS}</style></head><body>{md_to_html(body_md)}</body></html>"
+def fetch_recent(label: str, limit: int) -> str:
+    """Fetch the N most-recent issues with the given label, formatted as plain text
+    for downstream LLM consumption. Returns one big string with === title === markers."""
+    token = os.environ["GITHUB_TOKEN"]
+    repo = os.environ.get("GITHUB_REPO", "hank800620/morning-brief")
+    url = (
+        f"https://api.github.com/repos/{repo}/issues"
+        f"?state=all&labels={label}&per_page={limit}"
+        f"&sort=created&direction=desc"
     )
+    req = urllib.request.Request(
+        url,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": "morning-brief-bot",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        issues = json.loads(resp.read().decode("utf-8"))
+    if not issues:
+        return f"(no recent issues with label `{label}`)"
+    # Per-label body cap. Higher cadence reports cover more sections
+    # (weekly has 對賬 + 下週重點; monthly has MTK 季度目標 + 校準) that live
+    # in later sections of the body — those need a higher cap so cross-issue
+    # memory in the next cadence can still see them.
+    # Caps sized so a TYPICAL issue fits fully, with headroom for anomalies.
+    body_cap = {
+        "daily": 5000,    # typical 3500-4500 chars, full body fits
+        "weekly": 7000,   # typical ~5000 chars, full body fits
+        "monthly": 12000, # typical ~7000+ chars, full body fits
+    }.get(label, 5000)
+    parts: list[str] = []
+    for issue in issues:
+        parts.append(f"=== {issue['title']} ===")
+        parts.append(f"URL: {issue.get('html_url', '')}")
+        parts.append(f"Created: {issue.get('created_at', '')}")
+        body = issue.get("body") or "(empty)"
+        parts.append(body[:body_cap])
+        parts.append("")
+    return "\n".join(parts)
 
 
-def send_email(subject: str, body_md: str) -> None:
-    gmail_user = os.environ["GMAIL_USER"]
-    gmail_pw = os.environ["GMAIL_APP_PASSWORD"]
-    to_email = os.environ.get("TO_EMAIL", gmail_user)
+def create_issue(title: str, body_md: str, labels: list[str] | None = None) -> str:
+    token = os.environ["GITHUB_TOKEN"]
+    repo = os.environ.get("GITHUB_REPO", "hank800620/morning-brief")
 
-    msg = MIMEMultipart("alternative")
-    msg["Subject"] = subject
-    msg["From"] = gmail_user
-    msg["To"] = to_email
-    msg.attach(MIMEText(body_md, "plain", "utf-8"))
-    msg.attach(MIMEText(render_html(body_md), "html", "utf-8"))
+    payload: dict = {"title": title, "body": body_md}
+    if labels:
+        payload["labels"] = labels
 
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as s:
-        s.login(gmail_user, gmail_pw)
-        s.send_message(msg)
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{repo}/issues",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "Content-Type": "application/json",
+            "User-Agent": "morning-brief-bot",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            return data.get("html_url", "<no-url>")
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"GitHub API {e.code}: {body}") from e
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Send the morning brief via Gmail SMTP.")
-    parser.add_argument("--subject", required=True, help="Full email subject line")
+    parser = argparse.ArgumentParser(description="Post the morning brief as a GitHub issue.")
+    parser.add_argument("--subject", help="Issue title (required unless --fetch-recent)")
     parser.add_argument("--body-file", help="Path to markdown body (defaults to stdin)")
-    parser.add_argument("--dry-run", action="store_true", help="Print instead of sending")
+    parser.add_argument("--label", action="append", default=[],
+                        help="Label to attach (repeatable). Or filter for --fetch-recent.")
+    parser.add_argument("--dry-run", action="store_true", help="Print instead of posting")
+    parser.add_argument("--fetch-recent", action="store_true",
+                        help="Print recent issues for the given --label (for routine memory).")
+    parser.add_argument("--limit", type=int, default=7,
+                        help="Number of recent issues to fetch (used with --fetch-recent).")
     args = parser.parse_args()
+
+    if args.fetch_recent:
+        if not args.label:
+            print("ERROR: --fetch-recent requires --label", file=sys.stderr)
+            return 1
+        print(fetch_recent(args.label[0], args.limit))
+        return 0
+
+    if not args.subject:
+        print("ERROR: --subject is required (unless --fetch-recent)", file=sys.stderr)
+        return 1
 
     if args.body_file:
         with open(args.body_file, "r", encoding="utf-8") as f:
@@ -135,12 +140,15 @@ def main() -> int:
         return 1
 
     if args.dry_run:
-        print(f"Subject: {args.subject}\n")
+        print(f"Title: {args.subject}")
+        if args.label:
+            print(f"Labels: {', '.join(args.label)}")
+        print()
         print(body_md)
         return 0
 
-    send_email(args.subject, body_md)
-    print(f"Sent: {args.subject}")
+    url = create_issue(args.subject, body_md, labels=args.label or None)
+    print(f"Posted: {url}")
     return 0
 
 
