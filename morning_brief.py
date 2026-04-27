@@ -59,11 +59,12 @@ def fetch_recent(label: str, limit: int) -> str:
     # (weekly has 對賬 + 下週重點; monthly has MTK 季度目標 + 校準) that live
     # in later sections of the body — those need a higher cap so cross-issue
     # memory in the next cadence can still see them.
+    # Caps sized so a TYPICAL issue fits fully, with headroom for anomalies.
     body_cap = {
-        "daily": 3000,    # daily ~3500 chars, headline + Insight + top items
-        "weekly": 6000,   # weekly ~4500 chars, full body fits
-        "monthly": 10000, # monthly ~7000+ chars, full body fits
-    }.get(label, 3000)
+        "daily": 5000,    # typical 3500-4500 chars, full body fits
+        "weekly": 7000,   # typical ~5000 chars, full body fits
+        "monthly": 12000, # typical ~7000+ chars, full body fits
+    }.get(label, 5000)
     parts: list[str] = []
     for issue in issues:
         parts.append(f"=== {issue['title']} ===")
