@@ -84,3 +84,11 @@ python morning_brief.py --subject "[test] hello" <<< "# Hello\n\nThis is a test.
 - **執行時間**：routine 的 cron expression (UTC)
 - **寄送對象**：routine prompt 裡的 `TO_EMAIL`
 - **email 樣式**：`morning_brief.py` 的 `EMAIL_CSS`
+
+## 💰 Bounty Contribution
+
+- **Task:** [morning-brief][daily] 2026-04-27 Google TPU 8i推論晶片交聯發科設計，MTK雙雲AI格局確立
+- **Reward:** $8520
+- **Source:** GitHub-Paid
+- **Date:** 2026-04-27
+
