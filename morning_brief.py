@@ -55,15 +55,22 @@ def fetch_recent(label: str, limit: int) -> str:
         issues = json.loads(resp.read().decode("utf-8"))
     if not issues:
         return f"(no recent issues with label `{label}`)"
+    # Per-label body cap. Higher cadence reports cover more sections
+    # (weekly has 對賬 + 下週重點; monthly has MTK 季度目標 + 校準) that live
+    # in later sections of the body — those need a higher cap so cross-issue
+    # memory in the next cadence can still see them.
+    body_cap = {
+        "daily": 3000,    # daily ~3500 chars, headline + Insight + top items
+        "weekly": 6000,   # weekly ~4500 chars, full body fits
+        "monthly": 10000, # monthly ~7000+ chars, full body fits
+    }.get(label, 3000)
     parts: list[str] = []
     for issue in issues:
         parts.append(f"=== {issue['title']} ===")
         parts.append(f"URL: {issue.get('html_url', '')}")
         parts.append(f"Created: {issue.get('created_at', '')}")
         body = issue.get("body") or "(empty)"
-        # Cap each body at 2500 chars — enough to capture title + Today's Insight +
-        # top items + Talking Points, but not bloat downstream LLM context.
-        parts.append(body[:2500])
+        parts.append(body[:body_cap])
         parts.append("")
     return "\n".join(parts)
 
