@@ -61,8 +61,9 @@ def fetch_recent(label: str, limit: int) -> str:
         parts.append(f"URL: {issue.get('html_url', '')}")
         parts.append(f"Created: {issue.get('created_at', '')}")
         body = issue.get("body") or "(empty)"
-        # cap each body at 8000 chars to stay reasonable
-        parts.append(body[:8000])
+        # Cap each body at 2500 chars — enough to capture title + Today's Insight +
+        # top items + Talking Points, but not bloat downstream LLM context.
+        parts.append(body[:2500])
         parts.append("")
     return "\n".join(parts)
 
