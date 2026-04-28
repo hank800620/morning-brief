@@ -1,83 +1,81 @@
-# ☀️ Hank's Morning Brief · 2026-04-28 (週二)
-**Window: 2026-04-27 07:00 → 2026-04-28 07:00 (Asia/Taipei)**
+# ☀️ Hank's Morning Brief · 2026-04-29 (週三)
+**Window: 2026-04-28 07:00 → 2026-04-29 07:00 (Asia/Taipei)**
 
 ## ⚡ 30-Second TLDR
-- OpenAI 聯手 Qualcomm 與 **MediaTek** 開發 AI 原生手機晶片，2028 年量產計畫引爆晶片股，Qualcomm 單日漲逾 12%。
-- Google 宣布最高投資 400 億美元押注 Anthropic，同步推出 A2A 協定 v1.0，雲端 AI Agent 基礎設施全速就緒。
-- 長征十號乙今日首飛驗證全球首創「海上網系回收」技術，中美商業太空競賽進入新回合。
+- UAE 宣布 5 月退出 OPEC，伊朗戰爭引爆海灣石油同盟分裂，霍爾木茲危機進入高原期，全球能源定價機制面臨重組。
+- Google 與 OpenAI 搶簽美國 DoD AI 合約，Anthropic 以防止大規模監控為由公開拒絕，AI 軍事化版圖出現首次陣營分裂。
+- MediaTek 完成 TSMC 2nm 旗艦 SoC 設計，年底量產在即；NVIDIA 同步鎖定 CoWoS 大部份產能，AI 供應鏈瓶頸從算力移至先進封裝。
 
 ---
 
 ## 🧠 Today's Insight
-**本日摘要重點:** OpenAI 以「AI 原生裝置」為切入點，拉攏 Qualcomm 與 MediaTek 共同開發手機 SoC，改寫 edge AI 晶片生態圖；Google 同步在雲端砸 400 億美元深綁 Anthropic，形成 cloud+edge 雙線包抄格局。AI 軍備競賽從模型延伸至晶片、算力、裝置三個層次同步開打。
-
-**未來發展方向:** 2028 年前，AI 原生手機晶片戰場將是 edge AI 能力與雲端 AI 服務整合競爭的核心舞台。Google A2A v1.0 進入 150 家企業生產環境，意味著 multi-agent 部署已從實驗進入採購週期，企業 AI 基礎設施支出將急速擴大。MediaTek 若在晶片聯盟中取得更多技術話語權，台灣半導體在下一輪 AI 硬體浪潮中的地位將更為關鍵。
-
-**對你的意義:** 聯發科若正式加入 OpenAI 晶片聯盟，Hank 所在的 edge AI 部門將迎來產品定義階段的關鍵窗口期——影響力最大、決策最快、風險也最高的一段時間。同時 A2A v1.0 落地代表 multi-agent 系統已可進行企業級部署評估，值得立即啟動 PoC 規劃。
+**本日摘要重點:** 今天三條主軸同步逼近不可逆轉折：UAE 退出 OPEC 撕裂海灣能源聯盟、Google/OpenAI 軍事化路線讓 AI 治理陣營分裂、MediaTek 2nm SoC 完成設計，三件事都預示著未來六個月的市場格局將快速重組，不是緩慢演進。
+**未來發展方向:** 油市碎片化 + 霍爾木茲封鎖持續 → 亞洲能源成本不確定性攀升，直接壓縮 AI 資料中心與晶片廠 TCO；AI 軍事化路線分叉 → 「合規型 AI」與「軍事型 AI」雙軌並行，歐亞企業採購將越來越看重供應商治理立場；MediaTek 2nm + 先進封裝瓶頸 → ASIC 設計商必須在未來數月內鎖定製程與封裝槽位。
+**對你的意義:** MTK 2nm SoC 年底量產 + edge AI 推論需求爆發的時間窗口高度重合，現在是 edge AI 部門爭取產品定義話語權的最佳節點；Anthropic 拒絕 DoD 合約讓 MTK 選擇雲端 AI 夥伴（NVIDIA + Google）的商業清白度更高；霍爾木茲封鎖持續提醒你：客戶提案加上「省電 + 在地推論」的 edge AI 敘事，現在有更強的宏觀背書。
 
 ---
 
 ## 1️⃣ 🤖 AI / 科技
 
-### ① ⭐⭐⭐⭐⭐ OpenAI 拉攏 Qualcomm + MediaTek 打造 AI 原生手機晶片
-**摘要:** 天風國際分析師郭明錤 4/27 爆料，OpenAI 正與 Qualcomm 和 MediaTek 聯合開發 AI 原生智慧型手機晶片，製造商 Luxshare 協同設計，預計 2028 年量產。Qualcomm 盤前大漲 12%+，MediaTek 間接受益。三方皆未立即回應 CNBC 確認請求。
-**Insight:** 這是 OpenAI 首次公開向 edge 硬體滲透。若成真，AI 推理從雲端下移到手機 SoC 將成定局，對聯發科現有旗艦晶片路線圖有直接影響——機會與替代威脅並存。
-🔗 [CNBC 報導](https://www.cnbc.com/2026/04/27/qualcomm-qcom-openai-smartphone-chip-partnership-stock.html) | [Gurufocus](https://www.gurufocus.com/news/8819312/qualcomm-qcom-shares-surge-as-openai-collaborates-on-smartphone-processors)
+### ① ⭐⭐⭐⭐ Google 向五角大廈開放 AI 全面授權，Anthropic 拒簽 DoD 合約
+**摘要:** TechCrunch 4/28 報導，Anthropic 以「防止大規模監控及自主武器」為由，拒絕美國國防部（DoD）的無限制 AI 使用合約；Google 隨後宣布允許五角大廈在機密網路中「所有合法用途」使用 Google AI，OpenAI 與 xAI 同步簽署相似協議。AI 軍事化路線首次出現公開的倫理陣營分裂。
+**Insight:** Anthropic 的拒絕是「防禦性定位」的品牌投資——短期損失政府合約，長期鞏固歐亞企業採購的合規信任；OpenAI/Google/xAI 軍事化選擇則換取龐大政府算力合約。對 MTK 而言，主要雲端 AI 夥伴（Google）走向軍事化，需評估對歐洲市場客戶合規要求的潛在影響。
+🔗 [TechCrunch](https://techcrunch.com/2026/04/28/google-expands-pentagons-access-to-its-ai-after-anthropics-refusal/)
 
-### ② ⭐⭐⭐⭐ Google 最高 400 億美元投資 Anthropic，算力同步擴至 5GW
-**摘要:** Google 4/24 宣布先投 100 億美元，後續最高再追加 300 億美元（依里程碑分批），成為 Anthropic 最大金主。同步，Anthropic 與 Amazon 擴大合作以支撐高達 5GW 新增算力，Anthropic 年化營收已近 190 億美元。
-**Insight:** Google 同時投資自家 Gemini 又重押 Anthropic，是典型「對沖 + 卡位」策略。對 AI 基礎設施供應鏈（包含晶片）意味著算力需求仍在加速，短期內不存在供過於求的疑慮。
-🔗 [CNBC](https://www.cnbc.com/2026/04/24/google-to-invest-up-to-40-billion-in-anthropic-as-search-giant-spreads-its-ai-bets.html) | [Anthropic](https://www.anthropic.com/news/google-broadcom-partnership-compute)
+### ② ⭐⭐⭐⭐ Alibaba Qwen 3.6-Max-Preview + DeepSeek V4 雙重突破，中國 AI Agentic 能力全面追平
+**摘要:** Alibaba 發布 Qwen 3.6-Max-Preview，在程式撰寫、推理與 agentic 性能上全面突破；DeepSeek V4 同期推出，強化 reasoning 與自主行動能力，被定位為可媲美 OpenAI GPT-5.5 的開源前沿。中國開源 AI 模型一年內完成從「跟隨」到「並駕」的追趕。
+**Insight:** 中國 agentic 模型的開源化代表可在 edge device 本地部署的高能力 Agent 不再遙遠；MTK SoC 若能在 2nm 世代直接支援 Qwen / DeepSeek V4 等開源 agentic 模型的本地執行，將是對中國市場最直接的差異化訴求。
+🔗 [Bloomberg DeepSeek V4](https://www.bloomberg.com/news/articles/2026-04-24/deepseek-unveils-newest-flagship-a-year-after-ai-breakthrough) | [CNN DeepSeek](https://www.cnn.com/2026/04/24/tech/chinas-ai-deepseek-v4-intl-hnk)
 
-### ③ ⭐⭐⭐⭐ Google Cloud Next 2026：A2A v1.0 量產，Agent 時代正式開局
-**摘要:** Google Cloud Next 2026 (4/22-23) 宣布：A2A (Agent2Agent) 協定 v1.0 已在 150 家企業生產環境上線；Vertex AI 更名為 Gemini Enterprise Agent Platform；ADK v1.0 支援 Python/Java/Go/JS 四語言穩定版；Model Garden 納入 200+ 模型含 Anthropic Claude；Project Mariner 網頁瀏覽 Agent 正式推出。
-**Insight:** A2A v1.0 進入生產代表跨平台 Agent 協作已有標準協定，企業可開始採購而非等待。這是 multi-agent 部署的基礎設施成熟信號，值得立刻評估是否納入內部 AI 平台路線圖。
-🔗 [The Next Web](https://thenextweb.com/news/google-cloud-next-ai-agents-agentic-era) | [Bloomberg](https://www.bloomberg.com/news/articles/2026-04-22/google-releases-new-ai-agents-to-challenge-openai-and-anthropic)
+### ③ ⭐⭐⭐ Alipay AI Pay 讓 Agent 自主執行付款，金融化 AI Agent 首次在亞洲落地
+**摘要:** 螞蟻集團旗下 Alipay 推出擴大版 AI Pay，允許 AI Agent 在用戶授權下自主完成商品購買、帳單繳納等金融交易；MetaComp 同步在 Money20/20 Asia（新加坡）發布全球首個受監管金融服務的 AI Agent 治理框架，為 AI Agent 的識別、授權與問責建立標準。
+**Insight:** AI Agent 從「協助」升級到「自主動用資金」，是邁向半法律人格的關鍵一步；中國在金融 AI Agent 商業化速度再次領先亞洲，台灣與東南亞的 FinTech + AI 合規體系面臨示範壓力，也預示 AI Agent 監管框架很快將成為全球採購的前置條件。
+🔗 [MetaComp PR Newswire](https://www.prnewswire.com/apac/news-releases/metacomp-launches-the-worlds-first-ai-agent-governance-framework-for-regulated-financial-services-302749713.html)
 
 ---
 
 ## 2️⃣ 🏭 科技產業
 
-### ④ ⭐⭐⭐⭐ 長征十號乙今日首飛，驗證全球首創「海上網系回收」技術
-**摘要:** 長征十號乙火箭今日（4/28）11:00-12:00 在海南文昌商業航天發射場首飛。核心亮點為全球首創「海上網系回收」：144 米「Navigator」回收船在海上展開 36 米高十字型彈性網攔截一級火箭，無需著陸腿即可軟著陸。若回收成功，LEO 運載 16 噸，發射成本可降 30-60%，與 SpaceX Falcon 9 正面競爭。
-**Insight:** 中國商業航天的可回收技術路線正跨越最高風險門檻。成功將代表「可回收入軌」對 SpaceX 不再是專利，全球衛星發射市場定價將面臨重大壓力，也對台灣太空新創帶來機會與衝擊。
-🔗 [新浪新聞（中）](https://www.sina.cn/news/detail/5289102784336639.html) | [DoNews](https://www.donews.com/news/detail/4/6519787.html)
+### ④ ⭐⭐⭐⭐⭐⭐ MediaTek 完成 TSMC 2nm 旗艦 SoC 設計，年底量產，北京車展展示 AI 定義車
+**摘要:** MediaTek 宣布完成 TSMC 2nm 製程旗艦 SoC 設計，預計 2026 年底上市；同期在第 19 屆北京國際汽車展（4/24）展示全新 AI 智能座艙解決方案，主打「AI 定義下一代車載體驗」。2nm 製程將帶來 edge AI 推論性能的世代跳躍，是 MTK 年內最重要的硬體里程碑。
+**Insight:** 2nm SoC 量產時程與 edge AI 推論需求爆發窗口高度重合；車用 AI 座艙展示則意味著 MTK 正同步布局「手機旗艦 + 車用 AI」兩條高價值賽道。對 edge AI 部門：2nm 硬體底座即將就位，現在是爭取年底產品定義發言權的最佳窗口。
+🔗 [GameGPU MTK 2nm](https://en.gamegpu.com/news/zhelezo/mediatek-zavershila-proektirovanie-flagmanskogo-soc-na-2-nm-tekhprotsesse-tsmc-chip-postupit-v-prodazhu-k-kontsu-2026-goda)
 
-### ⑤ ⭐⭐⭐ 《時代》AI 企業榜：ChatGPT 周活 9 億、千問下載破 10 億
-**摘要:** 《時代》週刊發布全球最具影響力 AI 企業榜，OpenAI ChatGPT 周活躍用戶突破 9 億，阿里巴巴千問（Qwen）開源模型累計下載超 10 億次，字節跳動豆包（Doubao）農曆年日活破億、周活破 1.55 億。中美 AI 應用普及速度均遠超市場預期。
-**Insight:** 用戶黏著度決定未來商業化基礎。周活 9 億代表 OpenAI 已接近「平台壟斷」規模；千問 10 億下載代表中國開源生態在全球滲透力持續加強，對後進者（包含製造商自建模型）形成強大壓力。
-🔗 [俄羅斯衛星通訊社（繁中）](https://big5.sputniknews.cn/20260428/1070998858.html)
+### ⑤ ⭐⭐⭐⭐ NVIDIA 鎖定 TSMC CoWoS 大部份產能，AI 供應鏈瓶頸從算力移至先進封裝
+**摘要:** NVIDIA 已預訂 TSMC CoWoS 最先進封裝絕大部份產能（CoWoS 以 80% CAGR 成長）；TSMC 被迫將部份工序外包給 ASE、Amkor。2026 Q1 TSMC 營收 359 億美元（年增 39%），毛利率 66.2%。AI 供應鏈的下一個卡點正式從 GPU 算力轉移至先進封裝層。
+**Insight:** 封裝產能成為新瓶頸，ASIC 設計商（含 MTK）必須更早鎖定 CoWoS / SoIC 槽位，這不只是供應鏈操作，而是決定 2027 產品上市節奏的策略決策；封裝外包訂單溢出也讓台灣封測廠（ASE）意外成為 AI 基礎設施的最後一道卡點受益者。
+🔗 [CNBC TSMC/NVIDIA CoWoS](https://www.cnbc.com/2026/04/08/tsmc-nvidia-advanced-packaging-intel.html)
 
-### ⑥ ⭐⭐⭐ 日本人形機器人 5 月進駐羽田機場，JAL 啟動 2028 年測試計畫
-**摘要:** 日本航空（JAL）與 GMO AI & Robotics 合作，將於 5 月在東京羽田國際機場啟動人形機器人工作測試，計畫持續至 2028 年。這是日本首次在商業機場驗證人形機器人執行地勤任務。
-**Insight:** 日本將機場作為人形機器人的首個大規模驗證場景，是因機場流程標準化程度高、容錯空間相對大。若成功，將為製造業、倉儲提供可複製的落地模板，人形機器人商業化時間表可能提前。
-🔗 [俄羅斯衛星通訊社（日本版）](https://sputniknews.cn/20260428/1070999103.html)
+### ⑥ ⭐⭐⭐ ASE 宣布 2026 年底前動工六座新廠，先進封裝產能擴張全速啟動
+**摘要:** 全球最大半導體封裝公司 ASE 宣布，2026 年底前將動工六座新廠，對應 TSMC CoWoS 外包訂單急增；半導體業整體資本支出 2026 年預估達 2,000 億美元（年增 20%），封裝廠擴產速度首次追上設計端。
+**Insight:** 封裝廠急速擴產意味著 2027 年起產能緊張有望緩解，但 2026 H2 仍是最緊峭時段；對 MTK：這六個月內完成封裝產能鎖定，可決定自定義 ASIC 能否準時交付，應優先處理。
+🔗 [Yahoo Finance Semiconductor Revenue](https://finance.yahoo.com/sectors/technology/article/semiconductor-industry-revenue-to-hit-13-trillion-in-2026-as-memory-crunch-hits-consumers-151202545.html)
 
 ---
 
 ## 3️⃣ 🌍 國際新聞
 
-### ⑦ ⭐⭐⭐⭐ 美國封鎖霍爾木茲海峽，38 艘船受阻，美伊談判改電話進行
-**摘要:** 美軍中央司令部宣布，兩週來的霍爾木茲海峽封鎖行動已阻止 38 艘船進出伊朗港口。伊朗外長持續區域巡訪外交斡旋，但 Trump 取消特使親赴談判，改為電話繼續協商。黎巴嫩以色列-真主黨停火協議亦出現裂痕，中東緊張多線同步升溫。
-**Insight:** 霍爾木茲封鎖對全球油輪市場造成直接壓力，若持續，亞洲（包含台灣）能源供應鏈面臨運輸成本上漲風險。科技業電力密集型資料中心建設亦將受到能源價格波動影響。
-🔗 [CNN](https://www.cnn.com/2026/04/26/world/live-news/iran-war-trump-israel)
+### ⑦ ⭐⭐⭐⭐⭐ UAE 宣布 5 月退出 OPEC，伊朗戰爭撕裂六十年石油同盟
+**摘要:** UAE 4/28 宣布 5 月 1 日起退出 OPEC 與 OPEC+，終結逾六十年會員資格；直接導火線是伊朗戰爭造成的霍爾木茲封鎖，導致 UAE 與沙烏地在石油產量政策上的長期裂痕爆發。UAE 是 OPEC 第三大產油國，此舉使 OPEC 喪失重要定價籌碼，全球石油市場進入碎片化定價新時代。
+**Insight:** OPEC 分裂讓油市定價更加不穩定，亞洲進口依賴型國家（台灣、韓國、日本）能源成本預測難度上升；同時，中東能源格局重組預示非霍爾木茲繞道路線（沙烏地紅海出口、UAE 阿布達比管線）重要性大增，但短期內供應緊縮壓力不變。
+🔗 [Washington Post UAE OPEC](https://www.washingtonpost.com/world/2026/04/28/uae-opec-iran-hormuz-trump-saudi/) | [Bloomberg UAE Leaves OPEC](https://www.bloomberg.com/news/articles/2026-04-28/uae-to-leave-opec-and-opec-next-month-to-pursue-new-strategy)
 
-### ⑧ ⭐⭐⭐ 馬利首都遭蓋達聯軍攻擊，防長官邸炸彈殞命，薩赫勒危機急升
-**摘要:** 圖阿雷格武裝聯合蓋達聯盟同時攻擊馬利首都巴馬科等 5 城，防長 Sadio Camara 在官邸遭汽車炸彈炸死。這是近年薩赫勒地區最大規模城市恐攻，顯示馬利撤除法國駐軍後安全態勢急速惡化。
-**Insight:** 薩赫勒地區若持續失穩，將影響非洲稀土與礦產供應鏈（鈷、錳等電池材料）。對 AI 硬體依賴稀土礦產的中長期供應穩定性構成風險因子，值得持續追蹤。
-🔗 [Havana Times](https://havanatimes.org/news/international-news-briefs-for-monday-april-27-2026/)
+### ⑧ ⭐⭐⭐ Trump 拒接受伊朗霍爾木茲換核凍結提案，中東談判陷入高原期
+**摘要:** 伊朗提出三段換方案（開放霍爾木茲 + 凍結核計畫 + 核問題後續再談），但 Trump 公開表示很可能不接受，堅持徹底終結核計畫為前提；巴基斯坦調解方預計數日內轉交修正版提案。霍爾木茲封鎖已持續超過 50 天，全球 1/5 石油天然氣貿易受阻。
+**Insight:** 談判陷高原期代表霍爾木茲封鎖的最短結束時間從「週」推延至「月」；對台灣能源安全：70% 天然氣依賴進口，封鎖每延一月，電費成本上升壓力累積；AI 資料中心的建設 ROI 試算現在必須加入能源成本浮動因子。
+🔗 [Al Jazeera Iran Proposal](https://www.aljazeera.com/news/2026/4/28/whats-in-irans-latest-proposal-and-how-has-the-us-responded)
 
 ---
 
 ## ⚠️ 弱訊號
 
-**1. OpenAI 啟動 IPO 預備動作，最快 2026 年底上市**
-年化營收突破 250 億美元後，OpenAI 開始評估公開上市時間表，最快可能於 2026 年底進行 IPO。Anthropic 年化約 190 億美元緊追。兩家公司若相繼上市，AI 基礎設施股估值邏輯將重塑，也可能觸發新一輪融資競賽，加速下游（含晶片）採購週期。
-🔗 [LLM Stats AI News](https://llm-stats.com/ai-news)
+**1. AI Agent 金融交易的責任黑洞：下一個監管引爆點**
+Alipay AI Pay 允許 Agent 自主執行付款，但首個「AI 決策造成金融損失」的責任歸屬案例尚未出現。一旦出現，全球 AI Agent 商業化將面臨一波監管衝擊——平台、用戶、還是 AI 公司負責？這個問題的答案將決定 AI Agent 商業模式的天花板，比現在任何 benchmark 都更重要。
+🔗 [MetaComp AI Agent Governance](https://www.prnewswire.com/apac/news-releases/metacomp-launches-the-worlds-first-ai-agent-governance-framework-for-regulated-financial-services-302749713.html)
 
----
-
-ℹ️ *註: 本次無歷史資料可參考 (GitHub API 未回應 / 首次跑)*
+**2. Tenstorrent Jim Keller 的警告：模型快速迭代可能讓特殊硬件週期比你想像短**
+Tenstorrent 展示新世代 AI 伺服器的同時，CEO Jim Keller 提醒：當前所有 ASIC 都是為今天的模型架構設計，但模型的架構迭代速度可能超過晶片設計週期。這對所有押注「為特定模型優化 ASIC」的公司（含 MTK ASIC 路線）是一個低頻但高衝擊的逆向風險訊號。
+🔗 [Semiconductor News Amiko](https://amiko.consulting/en/semiconductor-news-20260411/)
 
 ---
 
