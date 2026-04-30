@@ -1,85 +1,77 @@
-# ☀️ Hank's Morning Brief · 2026-04-30 (週四)
-**Window: 2026-04-29 07:00 → 2026-04-30 07:00 (Asia/Taipei)**
+# ☀️ Hank's Morning Brief · 2026-05-01 (週五)
+**Window: 2026-04-30 07:00 → 2026-05-01 07:00 (Asia/Taipei)**
 
 ## ⚡ 30-Second TLDR
-- GPT-5.5、Claude Opus 4.7、Gemini 3.1 Pro 本月同台激戰，OpenAI 以「AI Super App」格局重新定義平台競爭，模型能力已非護城河、生態綁定才是。
-- NVIDIA × MediaTek GB10 DGX Spark 正式確立「桌面端 1 PetaFLOP 本地推論」里程碑，Edge AI 硬體形態進入新紀元，MTK 推論效率 DNA 獲最強市場背書。
-- 川普公開拒絕伊朗「核與霍爾木茲分離」提案，Brent 原油突破 $112，美財政部同日制裁 6 家中國化工企業，地緣風險鏈延伸至科技供應鏈。
+- 北韓駭客透過 Axios 供應鏈攻擊竊取 OpenAI macOS 程式碼簽署憑證，AI 安全危機從企業 Agent 延伸至 CI/CD 開發工具鏈本身。
+- DeepSeek V4 依北京指示全面優化 Huawei Ascend 950，開源 + 低價 + 脫離 NVIDIA，中國 AI 算力自主化生態系加速閉環。
+- 川普訪北京前，習近平明確要求台灣列首要議題，台海風險與科技脫鉤談判正式進入美中高層峰會桌面。
 
 ---
 
 ## 🧠 Today's Insight
-**本日摘要重點:** 三條主軸同步收緊：旗艦模型大戰進入 Super App 競爭格局（OpenAI 平台化）、NVIDIA×MTK DGX Spark 確立本地推論新基準、霍爾木茲談判破局再添對中制裁。每一條都直接影響 MTK edge AI 的定位與產品時間窗口。
-**未來發展方向:** AI 模型差異化日益收斂，下一波競爭轉向工具鏈標準（MCP）、Agent 安全性與本地推論硬體整合；邊緣推論硬體（DGX Spark GB10 形態）將成企業 IT 採購的新品類；霍爾木茲談判無論走向如何，能源成本壓力都會迫使 AI 資料中心加速「算力下移、本地化」。
-**對你的意義:** MTK 同時處於 GB10（桌面推論旗艦）、Google TPU 8i（雲端推論）、OpenAI 晶片聯盟（2028）三線攻擊位置；企業 AI Agent 安全危機為 edge AI「離線、私有、可控」差異化論述提供最佳市場背書，現在是重構 MTK edge AI 敘事的黃金節點。
+**本日摘要重點:** 三條主軸同步收緊：北韓攻擊 OpenAI macOS 簽署鏈（AI 工具鏈安全升至國家級威脅）、DeepSeek V4 × Huawei Ascend 算力分叉（全球 AI 硬體生態正式走向兩軌）、川普北京行台灣優先（晶片出口管制成高層談判籌碼）。三件事都直接影響 MTK 的 AI 路線定位與地緣風險敞口。
+**未來發展方向:** AI 開發工具鏈（npm 套件、GitHub Actions、CI 簽署流程）將進入企業安全 RFP 必選清單；DeepSeek × Huawei Ascend 若成熟，全球 AI 硬體正式分裂為「NVIDIA 系」與「Ascend 系」，影響中國市場 MTK SoC 競爭格局；川普-習近平峰會結果將決定晶片出口管制鬆緊，3-6 個月內可能有重大政策落地。
+**對你的意義:** MTK 同時處於三個交叉點：edge AI「離線私有可控」安全敘事現有最強市場背書（AI 供應鏈攻擊）、Huawei Ascend 崛起要求重新審視中國市場定位、台海風險需要 TSMC 2nm 供應鏈情境規劃。現在是向內部重申「MTK AI 路線供應鏈安全 + 地緣中立性」價值主張的最佳節點。
 
 ---
 
 ## 1️⃣ 🤖 AI / 科技
 
-### ① ⭐⭐⭐⭐ GPT-5.5 上市，OpenAI 宣示 AI Super App 格局成形
-**摘要:** OpenAI 4/23 發布 GPT-5.5，同步推送 ChatGPT Plus/Pro/Business/Enterprise；模型定位從「旗艦 LLM」轉型為「自主完成任務的 AI Super App 平台」，涵蓋程式碼、搜尋、數據分析、文件產生到跨工具作業。API 定價加倍至 $5/$30 per M tokens，但 ChatGPT 訂閱用戶無感。Claude Opus 4.7（4/16 發布）87.6% SWE-bench Verified，Gemini 3.1 Pro 在 GPQA Diamond 得 94.3%，史上最密集旗艦對決全在同月完成。
-**Insight:** 模型性能差距在壓縮，差異化戰場已移往「平台鎖定 + 工具鏈 + 用戶黏著度」。GPT-5.5 的 Super App 定義代表 OpenAI 圖謀成為 AI 時代的 iOS；對 MTK 而言，供應商選擇應加入「平台開放度」評估維度，避免深綁任一 Super App 生態而喪失晶片設計的架構自主性。
-🔗 [TechCrunch](https://techcrunch.com/2026/04/23/openai-chatgpt-gpt-5-5-ai-model-superapp/) | [Build Fast With AI](https://www.buildfastwithai.com/blogs/best-ai-models-april-2026-comparison)
+### ① ⭐⭐⭐⭐⭐ ⭐ 北韓駭客攻破 OpenAI macOS 程式碼簽署鏈，AI 供應鏈安全進入新階段
+**摘要:** 北韓國家行為者 3/31 篡改 Axios HTTP 函式庫 v1.14.1，植入混淆 JavaScript，滲入 OpenAI 的 GitHub Actions macOS 簽署工作流程，成功取得 ChatGPT Desktop、Codex、Atlas 的程式碼簽署憑證。OpenAI 4/29 正式吊銷受影響憑證，要求所有 macOS 用戶在 5/8 前完成應用程式更新，否則無法繼續獲得版本更新。OpenAI 稱未發現用戶資料外洩，但受影響的 CI 簽署流程已讓業界警覺：「AI 應用的信任基礎設施」本身正成為高價值攻擊目標。此事件是繼企業 AI Agent 安全危機浪潮後，安全問題首次蔓延至開發工具鏈 CI/CD 層。
+**Insight:** 這次攻擊針對的不是用戶資料，而是「程式碼簽署憑證」—即 AI 應用程式的信任基礎。代表國家行為者已將 npm 套件、GitHub Actions、CI 簽署流程列為優先滲透目標。未來 AI 工具採購的 RFP 將強制加入 SLSA/SBOM 供應鏈安全驗證，MTK 若對外推廣 edge AI SDK，現在是建立供應鏈安全聲明的黃金時點。
+🔗 [The Hacker News](https://thehackernews.com/2026/04/openai-revokes-macos-app-certificate.html) | [BleepingComputer](https://www.bleepingcomputer.com/news/security/openai-rotates-macos-certs-after-axios-attack-hit-code-signing-workflow/) | [Cyber Magazine](https://cybermagazine.com/news/axios-breach-fallout-openais-macos-app-updates-explained)
 
-### ② ⭐⭐⭐⭐ Anthropic MCP 達 9700 萬安裝，AI 工具互連標準格局確立
-**摘要:** Anthropic 的 Model Context Protocol（MCP）於 2026 年 3 月突破 9700 萬次安裝，所有主要 AI 提供商（OpenAI、Google、Microsoft、Amazon）均已推出 MCP 相容工具，從實驗性協定正式升格為「AI 工具整合基礎設施標準」。MCP 被視為 AI 生態系的 USB-C：一個介面連接所有工具與模型。
-**Insight:** MCP 成為事實標準意味著「AI 工具碎片化整合」時代終結，企業採購 AI 基礎設施可跨供應商組合，降低鎖定風險。對 edge AI SoC 設計：MCP 相容介面未來可能成為晶片硬體規格討論的新元素，MTK 提早卡位 MCP 生態系有助鞏固在 agentic edge 場景的話語權。
-🔗 [Crescendo AI News](https://www.crescendo.ai/news/latest-ai-news-and-updates) | [MIT Technology Review](https://www.technologyreview.com/2026/04/21/1135643/10-ai-artificial-intelligence-trends-technologies-research-2026/)
+### ② ⭐⭐⭐⭐⭐ DeepSeek V4 × Huawei Ascend：中美 AI 算力生態正式分叉 【亞洲重磅】
+**摘要:** DeepSeek 4/24 發布開源 V4-Pro 與 V4-Flash（均具 1M token context window），依北京指示全面優化 Huawei Ascend 950 晶片，Huawei 以「Supernode」多集群 Ascend 架構提供算力支撐。V4-Flash 定價 $0.14/$0.28 per M tokens，全面低於 GPT-5.4 Mini 與 Gemini 3.1 Flash；V4-Pro ($0.145/$3.48) 亦低於 GPT-5.5 與 Gemini 3.1 Pro。技術水準對標約半年前的美國旗艦（GPT-5.2 / Gemini 3.0 Pro）。DeepSeek V4 已成為繼 R1 之後中國 AI 再次顛覆全球市場的信號彈。
+**Insight:** DeepSeek 優化 Ascend 而非 NVIDIA 是政治決策更甚於技術選擇，代表中國正全力打造獨立於 NVIDIA 的完整 AI 算力生態。若 Huawei Ascend 生態成熟，全球 AI 硬體將正式分裂為「NVIDIA 系」與「Ascend 系」兩軌。MTK 在中國 edge AI 市場的主要對手正從「國際雲服務方案」轉型為「Huawei Ascend 生態」，需重新審視與華為在 edge 端的競合關係。
+🔗 [CNN Business](https://www.cnn.com/2026/04/24/tech/chinas-ai-deepseek-v4-intl-hnk) | [TechCrunch](https://techcrunch.com/2026/04/24/deepseek-previews-new-ai-model-that-closes-the-gap-with-frontier-models/) | [Al Jazeera](https://www.aljazeera.com/economy/2026/4/24/chinas-deepseek-unveils-latest-model-a-year-after-upending-global-tech) | [MIT Technology Review](https://www.technologyreview.com/2026/04/24/1136422/why-deepseeks-v4-matters/)
 
-### ③ ⭐⭐⭐⭐⭐ ⭐NVIDIA × MediaTek GB10 DGX Spark：桌面端 1 PetaFLOP 本地推論正式確立
-**摘要:** NVIDIA DGX Spark 平台搭載 GB10 Grace Blackwell Superchip（MTK CPU + NVIDIA GPU 異質封裝），提供 1 PetaFLOP FP4 推論效能，定位開發者在本地進行大模型微調與推論。MediaTek Analyst Day 2026 確認 AI ASIC 設計贏單已朝年化 $1B 美元目標推進，DGX Spark + NVLink Fusion ASIC + Google TPU 8i 三線並進；NVIDIA × MTK N1X AI CPU 預計 2026 年底量產，Asus/Dell/Lenovo 三大 OEM 同步備貨。
-**Insight:** 桌面端 1 PetaFLOP 是 edge AI 的重要里程碑：開發者可在本地完成原本需要雲端 GPU cluster 的任務，「本地推論 → 邊緣部署」的開發循環大幅縮短。MTK 在此波「本地化算力」浪潮中處於最佳產業位置，Analyst Day 結果代表投資人對 MTK 全端 AI 戰略已正式背書。
-🔗 [Futurum Group – MTK Analyst Day 2026](https://futurumgroup.com/insights/mediatek-analyst-day-2026-is-the-new-mediatek-ready-to-move-upmarket-to-ai-pcs-and-data-center/) | [Tom's Hardware](https://www.tomshardware.com/pc-components/cpus/nvidia-and-mediateks-ai-cpu-may-not-see-mass-rollout-until-late-2026-asus-dell-and-lenovo-reportedly-developing-n1x-desktops-and-laptops)
+### ③ ⭐⭐⭐⭐ Google Gemini 3.1 Ultra + Agentic Enterprise 戰略：雲端 AI 進入「行動系統」時代
+**摘要:** Google Cloud CEO Thomas Kurian 宣告「Agentic Enterprise」新戰略，AI 從「智慧系統」升格為「行動系統」，以 Gemini Enterprise Agent Platform 為核心。Google 同步推出 Gemini 3.1 Ultra：2M token 原生多模態（文字/圖像/音訊/影片無需轉錄中介），是目前最大 context window 的生產級模型，可直接消化企業完整知識庫進行跨模態推理。
+**Insight:** Google 以「Agent as Operating System」概念重新定義企業 AI 架構，差異化點已非模型能力而是工作流程整合深度。2M token + 原生多模態是 Agent 自主執行複雜企業任務的必要條件，而非噱頭。對 edge AI：企業 Agentic 系統若以 Gemini Enterprise 為雲端核心，邊緣端需要足夠強大的本地 AI 執行環境來承接下放的 Agent 子任務，MTK edge SoC 規格需求將快速提升。
+🔗 [Crescendo AI](https://www.crescendo.ai/news/latest-ai-news-and-updates) | [devFlokers](https://www.devflokers.com/blog/ai-news-last-24-hours-april-29-30-2026-roundup)
 
 ---
 
 ## 2️⃣ 🏭 科技產業
 
-### ④ ⭐⭐⭐⭐ 企業 AI Agent 安全危機：88% 已遭攻擊，86% 試點無法規模化
-**摘要:** Salt Security《2026 上半年 AI 與 API 安全報告》與 State of AI Agents 2026 兩份報告同期指出：88% 的企業組織過去一年發生確認或疑似 AI Agent 安全事故；只有 11-14% 的 AI Agent 試點達到生產規模，86-89% 無法產生持久商業價值。更驚人的是 48.9% 的企業對機器對機器（M2M）流量完全看不見，無法監控 Agent 行為；只有 23% 能完整追蹤 Agent 動作。73% 的 CEO 表示對公司 AI 策略感到焦慮。
-**Insight:** AI Agent 從 buzz 到可信生產部署之間的落差遠比市場認知大。安全性與可觀測性（而非模型能力）正成為企業 AI 落地的真正瓶頸。對 MTK edge AI：「Agent 離線執行 + 資料不出廠區 + 本地可稽核」三個訴求現在有最強的市場痛點背書，是差異化的絕佳切入點。
-🔗 [AI Automation Global](https://aiautomationglobal.com/blog/ai-agent-security-identity-crisis-enterprise-2026) | [Arcade.dev – State of AI Agents 2026](https://www.arcade.dev/blog/5-takeaways-2026-state-of-ai-agents-claude/) | [Salt Security](https://salt.security/blog/the-era-of-agentic-security-is-here-key-findings-from-the-1h-2026-state-of-ai-and-api-security-report)
+### ④ ⭐⭐⭐⭐⭐ OpenAI 年化收入破 $250 億，最快 2026 年底 IPO
+**摘要:** OpenAI 已突破 $250 億美元年化收入里程碑，並正進行 IPO 前期準備，最快 2026 年底上市。增長軌跡堪稱史上最快：2023 年 $13 億 → 2024 年 $37 億 → 2025 年 $111 億 → 2026 年超過 $250 億。GPT-5.5 訂閱 + API 雙輪驅動，ChatGPT 月活已超 6 億用戶。
+**Insight:** $250 億年化收入給 OpenAI 的 IPO 提供了強有力的財務基礎。一旦上市，估值將成為所有 AI 新創的公開定價基準，可能引發 Anthropic、xAI 等私有公司的一輪估值重算。對 MTK：OpenAI IPO 若成功，公開市場將有大量資本流入 AI 基礎設施（包括推論晶片），是 MTK AI ASIC 業務在資本市場露出的重要催化劑。
+🔗 [TechCrunch](https://techcrunch.com/) | [devFlokers](https://www.devflokers.com/blog/ai-news-last-24-hours-april-29-30-2026-roundup)
 
-### ⑤ ⭐⭐⭐⭐ ⭐Mira Murati 的 Thinking Machines Lab 獲 Google 多億美元算力合約
-**摘要:** 前 OpenAI CTO Mira Murati 創辦的 Thinking Machines Lab 與 Google Cloud 簽訂數十億美元算力協議，以 NVIDIA GB300 晶片為基礎建構 AI 基礎設施；合約規模為「單位數十億美元」，是 Google 在非 DeepMind/Anthropic 陣營中最大的第三方 AI 新創押注。Murati 的新公司被業界視為「OpenAI 分支生態」的最重要節點。
-**Insight:** Google 持續採用「雙軌對沖」策略（投 Anthropic + 簽 Thinking Machines），顯示其在 AI 投資上的戰略布局遠超單一供應商。對 MTK：Google 生態系的多元 AI 夥伴關係意味著 MTK 晶片的雲端 AI 服務入口路徑可能不止 Google TPU 8i 一條，值得密切追蹤 Thinking Machines Lab 的推論晶片偏好。
-🔗 [TechCrunch](https://techcrunch.com/2026/04/22/exclusive-google-deepens-thinking-machines-lab-ties-with-new-multi-billion-dollar-deal/)
+### ⑤ ⭐⭐⭐⭐ Musk 庭上承認 xAI 蒸餾訓練 Grok，並公開稱 Anthropic 為全球 AI 第一
+**摘要:** 加州聯邦法院 4/30，Elon Musk 出庭承認 xAI 使用「蒸餾技術」以 OpenAI 等競爭對手模型訓練 Grok，稱此為 AI 業界普遍做法。Musk 同庭對全球 AI 供應商排名：Anthropic 第一、OpenAI 第二、Google 第三、中國開源模型第四，xAI 未列名自家陣營前段。
+**Insight:** 蒸餾訓練若被法院認定為「普遍做法」，將對 AI 知識產權保護框架形成根本性衝擊；若不成立，業界訓練資料法律責任將全面重新界定，潛在法律成本直接影響 AI 公司估值。Musk 將 Anthropic 排第一（即使帶有策略目的）印證了市場對 Claude Opus 4.7 在 coding/agentic 能力上的認可，Anthropic 的商業競爭力持續提升。
+🔗 [TechCrunch](https://techcrunch.com/2026/04/30/elon-musk-testifies-that-xai-trained-grok-on-openai-models/)
 
-### ⑥ ⭐⭐⭐ 全球半導體月銷售 888 億美元，AI 晶片佔 0.2% 出貨量卻貢獻 50% 總收入
-**摘要:** SIA 數據顯示 2026 年 2 月全球半導體月銷售額達 888 億美元，年增 61.8%；年化約 $1 兆美元的晶片市場規模首次可見。結構性亮點：AI 晶片僅佔全球晶片出貨量 0.2%，卻貢獻約 50% 總收入，ASP（平均售價）領先一般晶片 250 倍以上。HBM4 16Hi 最新記憶體預計 2026 上半年進入量產。
-**Insight:** 這個「0.2% 出貨 vs 50% 收入」的結構不對稱是未來 3 年最重要的半導體行業特徵：AI 晶片是整個行業盈利的關鍵驅動，也是 MTK 進入 AI ASIC 設計領域的財務邏輯基礎。未來任何向 AI 晶片靠攏的產品線調整都將獲得最高的 ASP 溢價空間。
-🔗 [SIA – Semiconductor Industry Association](https://www.semiconductors.org/news-events/latest-news/) | [TechInsights 2026 Semiconductor Outlook](https://www.techinsights.com/outlook-reports-2026/semiconductor-outlook-report)
+### ⑥ ⭐⭐⭐ Samsung HBM4 量產在即 + 記憶體通膨時代：AI 晶片 0.2% 出貨佔 50% 收入
+**摘要:** Samsung 積極推進 HBM4 16Hi 記憶體 2026 上半年量產，同步與 Amazon 加速 AI 基礎設施卡位。全球半導體市場面臨「Memflation（記憶體通膨）」：AI 資料中心記憶體需求暴增，導致消費性裝置記憶體供應緊縮、BOM 成本攀升。SIA 數據顯示：AI 晶片雖僅佔全球晶片出貨量 0.2%，卻貢獻約 50% 總收入，ASP 溢價超一般晶片 250 倍。半導體年化市場接近 $1 兆美元。
+**Insight:** HBM4 量產意味著下一代 AI 訓練算力再次躍升，但 Memflation 同時代表消費性 AI 裝置的 BOM 成本壓力加劇。對 MTK edge SoC 設計：記憶體頻寬 vs. 成本最佳化將是未來 12 個月最關鍵的產品規格決策軸，「高效記憶體使用效率」將成為 MTK edge AI 晶片的重要差異化主張。
+🔗 [hipther.com AI Dispatch](https://hipther.com/latest-news/2026/04/30/111061/ai-dispatch-daily-trends-and-innovations-april-30-2026-openai-samsung-amazon-netomi-and-the-new-ai-infrastructure-race/) | [Yahoo Finance](https://finance.yahoo.com/sectors/technology/article/semiconductor-industry-revenue-to-hit-13-trillion-in-2026-as-memory-crunch-hits-consumers-151202545.html)
 
 ---
 
 ## 3️⃣ 🌍 國際新聞
 
-### ⑦ ⭐⭐⭐⭐ ⭐川普拒絕伊朗「核分離」提案，Brent 破 $112，美財政部制裁 6 家中國化工企業
-**摘要:** 4/30，川普公開表示「不太可能」接受伊朗提案（先重開霍爾木茲、核問題留後談），指稱此案相當於「讓伊朗核武繼續」；美財政部同日制裁 6 家向伊朗供應化工原料的中國企業，將地緣制裁延伸至中國供應鏈。Brent 原油報 $112+/桶，市場普遍預測可能觸及 $115 上限；美國零售油價已突破 $4/加侖，通膨壓力創近兩年新高。
-**Insight:** 霍爾木茲僵局疊加對中制裁是新的雙軌施壓格局：對台灣天然氣進口成本直接造成壓力，AI 資料中心 TCO 的最大不確定因子沒有消退。對 MTK：中國供應鏈制裁擴大，需關注中國電子原物料供應商的風險評估，同時邊緣推論（減少對大型資料中心依賴）在能源成本高企下獲得更強的商業邏輯支撐。
-🔗 [CBS News](https://www.cbsnews.com/live-updates/iran-war-trump-strait-of-hormuz-iranian-offer-ceasefire-oil-gas-prices/) | [CNN](https://www.cnn.com/2026/04/28/world/live-news/iran-war-trump-israel)
+### ⑦ ⭐⭐⭐⭐⭐ 川普訪北京：習近平要求台灣列首要議題，科技脫鉤談判進入高層峰會
+**摘要:** 川普預計下月訪問北京，習近平已透過管道明確表態「台灣議題是議程首要優先」，北京以台灣問題作為貿易/關稅談判籌碼。同期美國商務部正重新評估對中晶片出口管制政策，川普政府已透露「部分管制鬆綁換取其他讓步」的潛在談判空間。
+**Insight:** 台灣進入美中高層峰會議程，代表晶片出口管制可能成為更廣泛美中交易的一部分。這對 TSMC 2nm 供應鏈穩定性是直接的不確定性，也可能改變對中 AI 晶片出口的法律框架。MTK 需要密切追蹤峰會結果：若出口管制鬆綁，中國市場晶片競爭將急劇加劇；若台灣議題陷僵局，供應鏈風險溢價將再度攀升。
+🔗 [JustSecurity](https://www.justsecurity.org/137481/early-edition-april-30-2026/) | [International Free Press](https://internationalfreepress.com/2026/04/30/the-world-forum-april-30-2026/)
 
-### ⑧ ⭐⭐⭐ 中國 AI Token 日消耗從 1000 億飆至 30 兆，「Chat 時代終結、Agent 時代開啟」
-**摘要:** 新華社深度報導：2024 年初中國 AI 日均 Token 消耗量約 1000 億，截至 2025 年 6 月底突破 30 兆，一年半增長 300 倍以上，顯示 AI 應用從展示走向大規模業務落地。業界形成共識：以對話為核心的「Chat 範式」已告終結，競爭全面轉向「能辦事」的智能體（Agent）時代；中國大模型應用超過 40% 集中在客服與運營管理，30-40% 進入研發環節，製造業 AI 應用比例從 2024 年的 19.9% 升至 25.9%。
-**Insight:** 中國 Token 消耗量 300 倍成長是 AI 從 POC 走向批量業務落地的最硬數據指標。製造業滲透率快速上升，與 MTK 在中國市場客戶群（手機 OEM + 車廠 + 家電廠）高度重合，為 MTK edge AI 在中國市場的「AI 工廠化」部署提供了最直接的需求側背書。
-🔗 [新華網](https://www.news.cn/20260128/3b2f11906fd74ca397fef9996c805a60/c.html) | [清華大學 AI 研究](https://www.tsinghua.edu.cn/info/1182/124190.htm)
+### ⑧ ⭐⭐⭐ 美招募盟友組「Maritime Freedom Construct」，霍爾木茲安全架構謀求制度化
+**摘要:** 川普政府 4/30 尋求國際夥伴共組「Maritime Freedom Construct」聯盟，確保霍爾木茲海峽商業船舶通行。相較於過往多邊護航任務，此聯盟定位更為正式，意在建立永久性安全架構以因應持續伊朗封鎖威脅。目前盟友招募對象包括歐洲及印太國家。
+**Insight:** 若霍爾木茲安全架構正式化，全球能源定價將從「危機溢價」轉向「制度性安全溢價」，不確定性略降但系統性成本上升。台灣與韓國是霍爾木茲原油依賴度最高的半導體生產國，此聯盟若成形，TSMC/Samsung 的能源供應穩定性風險有所降低，但聯盟能否獲得足夠盟友支持仍是最大未知數。
+🔗 [JustSecurity](https://www.justsecurity.org/137481/early-edition-april-30-2026/) | [FDD Overnight Brief](https://www.fdd.org/overnight-brief/april-30-2026/)
 
 ---
 
 ## ⚠️ 弱訊號
 
-**1. AI Agent「安全可觀測性」將成下一個獨立賽道**
-48.9% 企業對 M2M 流量完全看不見這個數字，代表現有的企業 IT 安全工具無法適應 Agent 時代。一個類似 EDR（Endpoint Detection & Response）的「ADR（Agent Detection & Response）」新品類正在萌芽，監控 Agent 行為的工具市場可能在 2026-2027 年間快速形成。對 MTK：若未來 edge SoC 能在硬體層面提供 Agent 行為沙箱與稽核能力，將是差異化的藍海機會。
-🔗 [AGAT Software – AI Agent Security 2026](https://agatsoftware.com/blog/ai-agent-security-enterprise-2026/)
+1. **EU AI 監管失速，垂直 AI 在灰色地帶加速落地** — 布魯塞爾 AI Act 執法機構因人力/預算不足，實際執行進度遠落後於法規文本；垂直 AI 應用（醫療、法律、金融）正趁監管空窗快速商業化。對 MTK：歐洲 edge AI 應用市場可能比市場普遍預期更早爆發。🔗 [asanify.com](https://asanify.com/blog/news/regulated-vertical-ai-april-30-2026/)
 
-**2. 多模型路由（Multi-Model Routing）正在取代「選一個模型」的舊思維**
-GPT-5.5、DeepSeek V4、Claude Opus 4.7 同時可用，開發者開始用「按任務特性自動路由到最佳模型」取代「綁一家供應商」。這代表 AI 推論硬體的下一個需求：同一個 SoC/平台上同時快速切換多個量化模型的能力，而不只是跑單一大模型。
-🔗 [AI Thority – Multi-Model Routing 2026](https://aithority.com/machine-learning/from-gpt-5-5-to-deepseek-v4-how-developers-are-building-smarter-ai-agents-with-multi-model-routing-in-2026/)
-
----
-
-*📊 Cross-issue 記憶:* 連續 4+ 天追蹤：霍爾木茲/Iran 能源危機 ⭐、MTK AI 晶片格局 ⭐；已略過過熱話題：UAE/OPEC、Anthropic DoD 拒簽、IMF 下修。
+2. **日韓 AI 國家戰略 2026 正式進入執行期** — 日本《國家 AI 基本計劃》(2025/12 通過) 與韓國《AI 行動計劃 2026-2028》(2026/2 通過) 雙雙啟動，亞洲最大兩個民主科技體以國家戰略推動 AI 產業化，政府 AI 採購與 edge AI 部署需求將在 2026 下半年明顯放量。🔗 [Digital in Asia](https://digitalinasia.com/2026/04/08/asia-ai-policy-tracker/)
 
 ---
 
