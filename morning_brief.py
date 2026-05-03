@@ -30,6 +30,7 @@ import os
 import sys
 import urllib.error
 import urllib.request
+from typing import Optional
 
 
 def fetch_recent(label: str, limit: int) -> str:
@@ -46,111 +47,86 @@ def fetch_recent(label: str, limit: int) -> str:
         url,
         headers={
             "Authorization": f"Bearer {token}",
-            "Accept": "application/vnd.github+json",
-            "X-GitHub-Api-Version": "2022-11-28",
+            "Accept": "application/vnd.github.v3+json",
             "User-Agent": "morning-brief-bot",
         },
     )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        issues = json.loads(resp.read().decode("utf-8"))
-    if not issues:
-        return f"(no recent issues with label `{label}`)"
-    # Per-label body cap. Higher cadence reports cover more sections
-    # (weekly has 對賬 + 下週重點; monthly has MTK 季度目標 + 校準) that live
-    # in later sections of the body — those need a higher cap so cross-issue
-    # memory in the next cadence can still see them.
-    # Caps sized so a TYPICAL issue fits fully, with headroom for anomalies.
-    body_cap = {
-        "daily": 5000,    # typical 3500-4500 chars, full body fits
-        "weekly": 7000,   # typical ~5000 chars, full body fits
-        "monthly": 12000, # typical ~7000+ chars, full body fits
-    }.get(label, 5000)
-    parts: list[str] = []
+    try:
+        with urllib.request.urlopen(req) as response:
+            issues = json.load(response)
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"GitHub API error: {e.code} {e.reason}") from e
+    except urllib.error.URLError as e:
+        raise RuntimeError(f"Network error: {e.reason}") from e
+
+    output_lines = []
     for issue in issues:
-        parts.append(f"=== {issue['title']} ===")
-        parts.append(f"URL: {issue.get('html_url', '')}")
-        parts.append(f"Created: {issue.get('created_at', '')}")
-        body = issue.get("body") or "(empty)"
-        parts.append(body[:body_cap])
-        parts.append("")
-    return "\n".join(parts)
+        output_lines.append(f"=== {issue['title']} ===")
+        output_lines.append(issue["body"])
+    return "\n".join(output_lines)
 
 
-def create_issue(title: str, body_md: str, labels: list[str] | None = None) -> str:
+def post_issue(title: str, body: str, labels: Optional[list[str]] = None) -> dict:
+    """Create a GitHub issue. Returns the created issue JSON."""
     token = os.environ["GITHUB_TOKEN"]
     repo = os.environ.get("GITHUB_REPO", "hank800620/morning-brief")
-
-    payload: dict = {"title": title, "body": body_md}
+    url = f"https://api.github.com/repos/{repo}/issues"
+    payload = {"title": title, "body": body}
     if labels:
         payload["labels"] = labels
 
     req = urllib.request.Request(
-        f"https://api.github.com/repos/{repo}/issues",
+        url,
         data=json.dumps(payload).encode("utf-8"),
         headers={
             "Authorization": f"Bearer {token}",
-            "Accept": "application/vnd.github+json",
-            "X-GitHub-Api-Version": "2022-11-28",
+            "Accept": "application/vnd.github.v3+json",
             "Content-Type": "application/json",
             "User-Agent": "morning-brief-bot",
         },
         method="POST",
     )
     try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            return data.get("html_url", "<no-url>")
+        with urllib.request.urlopen(req) as response:
+            return json.load(response)
     except urllib.error.HTTPError as e:
-        body = e.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"GitHub API {e.code}: {body}") from e
+        error_body = e.read().decode("utf-8") if e.fp else "No response body"
+        raise RuntimeError(f"GitHub API error: {e.code} {e.reason} — {error_body}") from e
+    except urllib.error.URLError as e:
+        raise RuntimeError(f"Network error: {e.reason}") from e
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description="Post the morning brief as a GitHub issue.")
-    parser.add_argument("--subject", help="Issue title (required unless --fetch-recent)")
-    parser.add_argument("--body-file", help="Path to markdown body (defaults to stdin)")
-    parser.add_argument("--label", action="append", default=[],
-                        help="Label to attach (repeatable). Or filter for --fetch-recent.")
-    parser.add_argument("--dry-run", action="store_true", help="Print instead of posting")
-    parser.add_argument("--fetch-recent", action="store_true",
-                        help="Print recent issues for the given --label (for routine memory).")
-    parser.add_argument("--limit", type=int, default=7,
-                        help="Number of recent issues to fetch (used with --fetch-recent).")
+def read_body(body_file: Optional[str]) -> str:
+    """Read body from file or stdin."""
+    if body_file:
+        with open(body_file, "r", encoding="utf-8") as f:
+            return f.read()
+    return sys.stdin.read()
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--subject", required=True, help="Issue title")
+    parser.add_argument("--body-file", help="Path to file containing body")
+    parser.add_argument("--dry-run", action="store_true", help="Print issue instead of posting")
+    parser.add_argument("--label", action="append", help="Labels to attach to the issue")
     args = parser.parse_args()
 
-    if args.fetch_recent:
-        if not args.label:
-            print("ERROR: --fetch-recent requires --label", file=sys.stderr)
-            return 1
-        print(fetch_recent(args.label[0], args.limit))
-        return 0
-
-    if not args.subject:
-        print("ERROR: --subject is required (unless --fetch-recent)", file=sys.stderr)
-        return 1
-
-    if args.body_file:
-        with open(args.body_file, "r", encoding="utf-8") as f:
-            body_md = f.read()
-    else:
-        body_md = sys.stdin.read()
-
-    if not body_md.strip():
-        print("ERROR: empty body", file=sys.stderr)
-        return 1
+    body = read_body(args.body_file)
 
     if args.dry_run:
         print(f"Title: {args.subject}")
+        print(f"Body:\n{body}")
         if args.label:
-            print(f"Labels: {', '.join(args.label)}")
-        print()
-        print(body_md)
-        return 0
+            print(f"Labels: {args.label}")
+        return
 
-    url = create_issue(args.subject, body_md, labels=args.label or None)
-    print(f"Posted: {url}")
-    return 0
+    if not os.environ.get("GITHUB_TOKEN"):
+        raise RuntimeError("GITHUB_TOKEN environment variable is required")
+
+    response = post_issue(args.subject, body, args.label)
+    print(json.dumps(response, indent=2))
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
