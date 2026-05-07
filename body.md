@@ -1,77 +1,88 @@
-# ☀️ Hank's Morning Brief · 2026-05-06 (週三)
-**Window: 2026-05-05 07:00 → 2026-05-06 07:00 (Asia/Taipei)**
+# ☀️ Hank's Morning Brief · 2026-05-08 (週五)
+**Window: 2026-05-07 07:00 → 2026-05-08 07:00 (Asia/Taipei)**
 
 ## ⚡ 30-Second TLDR
-- Arm Holdings Q4 FY2026 財報今晚美股盤後揭曉（YTD 漲 93%，共識 EPS $0.58 / 收入 $14.7 億），結果直接決定 MTK 2027 旗艦 SoC 授權費情境模型起點。
-- Google Cloud Next 2026 宣告「Agentic AI 生產元年」：第 8 代 TPU（單 Pod 1,152 顆）+ Gemini 企業 Agent 平台 + A2A 協議，雲端 Agent 算力密度大幅躍升，邊緣 AI 差異化壓力進一步升高。
-- 川習峰會倒數 8 天，中國正式要求美方撤回 Section 301 貿易調查，Bessent-何立峰通話火藥味十足；5/14 稀土框架與晶片管制走向仍是本季最大地緣政策變數。
+- 聯發科 5/7 在台灣苗栗通霄科學園區啟用 NVIDIA DGX SuperPOD AI R&D 數據中心，首次自建大規模 AI 算力平台，邊緣+雲端研發一體化戰略正式落地。
+- 川習峰會倒數 6 天（5/14-15 北京），中方要求美方撤回 Section 301 調查、談判窗口持續收窄；同日 Cerebras 上市帶來雙向市場情緒激盪。
+- 霍爾木茲海峽持續封鎖，Brent 原油盤中破 $114；美伊接近 14 點 MOU 框架，能源危機是否迎來轉捩點是本週最重要觀察。
 
 ---
 
 ## 🧠 Today's Insight
-**本日摘要重點:** 今天是本週唯一「財報關鍵日」——Arm 結果（今晚台北時間凌晨約 01:00 公布）牽動 MTK 2027 旗艦 BOM 基準線，任何方向的偏差都需 24 小時內更新情境模型。Google Cloud Next 2026 同步宣告 Agentic AI 從「概念」進入「企業生產運行」，TPU 8i 單 Pod 1,152 顆讓雲端 Agent 推論成本繼續下行，邊緣 AI 論述的「比較優勢」窗口正在收窄。
-**未來發展方向:** Google A2A（Agent-to-Agent）協議若成產業標準，下一個邊緣 AI 差異化論述將是「Agent 在設備端本地協作」——MTK 旗艦 SoC 是否支援 on-device A2A 執行需在 Q2 內完成技術評估。川習峰會前中美雙方互加籌碼（Section 301 + 供應鏈外流管制），談判窗口比預期更窄，5/15 前供應鏈三情境通報不能等峰會結果。
-**對你的意義:** 三條即時行動：①Arm 財報台北 5/7 凌晨公布後立即更新 SoC 授權費壓力測試（超預期 → 啟動 BOM 審查；不如預期 → 確認算力重心偏移）；②Google A2A 協議 — 評估旗艦 SoC 是否能成為 on-device Agent 協作節點，這是下一個 18 個月邊緣 AI 的核心差異化敘事；③Section 301 調查擴大意味峰會前局勢比預期緊繃，5/15 前完成稀土/晶片管制三情境通報董事會。
+**本日摘要重點:** 聯發科自建 NVIDIA DGX SuperPOD AI R&D 中心是今日最高戰略信號——MTK 不只設計晶片，正在建立自有 AI 算力平台，為 AI ASIC 服務轉型（2026 年 $10 億收入軌道）提供研發基礎設施。AMD Q1 +38% 帶動 TSMC 漲 6%，再次確認 AI 晶片需求上行無放緩跡象。Anthropic $2,000 億 Google Cloud 5 年承諾則揭示 AI 算力「合約化、基礎設施化」的長期格局正在固化。
+**未來發展方向:** 5/14-15 川習峰會前，Section 301 調查持續升溫意味談判空間持續收窄；Cerebras 同日掛牌將放大市場情緒雙向震盪。若美伊 14 點 MOU 本週落地，Brent 有望回落至 $95-100 區間，亞洲能源成本壓力短期緩解，BOM 三情境中的能源成本假設需同步更新。
+**對你的意義:** ①MTK 通霄 DGX SuperPOD 中心啟用——確認 AI 研發算力自主化戰略，評估你負責的 edge/cloud AI 產品線是否能受益於此新內部算力池（如 SoC 驗證 workload）；②5/13 前必須完成供應鏈三情境通報（稀土+晶片管制+能源成本），不可等峰會結果；③Cerebras $26.6B 上市估值代表「非 NVIDIA 算力路徑」獲資本市場定價，MTK AI ASIC 服務論述可引用此溢價參照。
 
 ---
 
 ## 1️⃣ 🤖 AI / 科技
 
-### ① ⭐⭐⭐⭐⭐ ⭐ Arm Holdings Q4 FY2026 財報今晚揭曉：YTD 漲 93%，共識 EPS $0.58【連續追蹤】
-**摘要:** Arm Holdings 將於今日（5/6）美股收盤後（約台北時間 5/7 凌晨 01:00）發布 Q4 FY2026 財報，並同步召開法說會（PT 14:00）。市場共識：EPS $0.58（YoY +5.3%）、收入 $14.7 億（YoY +18.4%）。股票 YTD 漲幅高達 93%，4 月單月漲 39%（IPO 以來第二佳月）；近期催化劑為 AGI CPU 推出與 IBM 企業算力合作。過去 4 季平均超出共識 7.9%，市場預期財報後目標價上看 $250。關鍵觀察焦點：AGI CPU 授權費結構確認、FY27 guidance、Armv9 滲透率走向。
-**Insight:** 對 MTK 而言，三種結果各有行動含義：（超預期）AGI CPU 量產時程加速 + 授權費上調 → 立即啟動 2027 旗艦 BOM 壓力測試，評估特定中端產品線 RISC-V 混搭可行性；（符合預期）Armv9 滲透確認 → 確保 SoC 路線圖已鎖定授權費結構；（不如預期）AI 算力重心偏移至 GPU/ASIC 確認 → 更新 Dimensity 競爭定位論述。任一情境都需在財報後 24 小時內完成內部通報，不能等週報。
-🔗 [Arm 投資人關係](https://investors.arm.com/financials/quarterly-annual-results) | [TIKR 分析](https://www.tikr.com/blog/arm-stock-is-up-84-in-2026-heres-whats-driving-the-ai-chip-rally-into-earnings) | [Benzinga 財報波動分析](https://www.benzinga.com/markets/earnings/26/05/52251701/earnings-volatility-watch-arm-coreweave-applovin-may-2026)
+### ① ⭐⭐⭐⭐⭐ 【亞洲重磅】聯發科台灣通霄 AI R&D 數據中心啟用：NVIDIA DGX SuperPOD 自建算力平台
+**摘要:** 聯發科 5/7 宣布在苗栗通霄科學園區正式開設全新 AI 研發數據中心，核心設備採用 NVIDIA DGX SuperPOD，定位支援邊緣 AI 與雲端 AI 雙軌研發需求加速成長。這是聯發科首次在台灣自建大規模 AI 算力平台，標誌公司從純晶片設計廠向「晶片+算力+軟體」研發一體化轉型的重要里程碑。與同期 AI ASIC 服務業務 $10 億收入軌道、NVIDIA×MTK AI PC 晶片 N1/N1X 合作，共同構成 MTK 2026 年算力戰略三角。
+**Insight:** MTK 自建 DGX SuperPOD 而非外購雲算力，有三重戰略含義：①確保旗艦 SoC AI 效能驗證不受雲端 API 限制與延遲影響；②為 AI ASIC 服務業務提供內部 benchmark 平台，降低對外部算力依賴；③建立與 NVIDIA 更深入的技術合作基礎（從客戶關係升級為共同研發節點）。對你作為 MTK 資深技術經理：新算力池是否可用於 edge AI workload 驗證是 Q2 應確認的資源分配問題。
+🔗 [MediaTek opens AI R&D data center in Taiwan with Nvidia DGX SuperPOD – Digitimes](https://www.digitimes.com/news/a20260507PD237/mediatek-data-center-taiwan-nvidia-development.html)
 
-### ② ⭐⭐⭐⭐⭐ Google Cloud Next 2026：第 8 代 TPU + Gemini 企業 Agent 平台，宣告 Agentic AI 生產元年
-**摘要:** Google Cloud Next 2026 大會發布兩項核心基礎設施升級：(1) 第 8 代 TPU（TPU 8i，推論優化）—— 單 Pod 整合 1,152 顆 TPU，SRAM 提升 3 倍，專為百萬 Agent 並發設計；(2) Gemini 企業 Agent 平台 —— 涵蓋 Agent Studio、A2A Orchestration（Agent-to-Agent 協議）、Agent Registry、Agent Identity、Agent Gateway、Agent Observability 完整工具鏈。同步發布 Agentic Data Cloud（AI 原生架構）與 Agentic Defense（結合 Wiz 的雲端 AI 安全）。
-**Insight:** TPU 8i 單 Pod 1,152 顆代表雲端 Agent 推論成本曲線陡降——MTK 邊緣 AI SoC 的「省電/離線/隱私」論述已不夠，需要升級為「on-device A2A Agent 協作」的新論述。A2A 協議若成跨廠商標準，支援本地 Agent 間直接協作（不過雲）的旗艦 SoC 將獲得明確差異化定位，反之只是雲端 API 的最後一哩路延伸，邊緣 AI 論述將逐漸失去獨特性。
-🔗 [Google Cloud Next 官博](https://cloud.google.com/blog/topics/google-cloud-next/welcome-to-google-cloud-next26) | [SiliconANGLE 分析](https://siliconangle.com/2026/05/04/agentic-ai-infrastructure-googlecloudnext/) | [Bain & Company 評析](https://www.bain.com/insights/google_cloud_next_2026_the_agentic_enterprise_control_plane_comes_into_view/)
+---
 
-### ③ ⭐⭐⭐⭐ Anthropic Mythos 限制發布 + 美政府 AI 模型預審協議（5/5）
-**摘要:** 兩則同日重磅：(A) Anthropic 宣布最新 Mythos 模型因擅長識別網路安全弱點，評估後決定不公開發布，僅向獲批的特定機構限制開放——政府、銀行、電力公司均已收到關切通報；(B) Microsoft、Google、xAI 於 5/5 宣布加入 OpenAI 與 Anthropic 既有機制，同意讓美國商務部 NIST（AI 標準與創新中心）在模型上市前進行國家安全評估，已完成超過 40 次模型評估。
-**Insight:** Mythos 事件標誌「AI 自主發現安全漏洞」從理論進入現實，模型能力上限已超出現行安全護欄。對 MTK 邊緣 AI SoC 的直接意涵：若 on-device 推論模型具備同等能力，TEE 加固（Trusted Execution Environment）與模型存取控制將成政府/企業部署的硬性要求，超前 12 個月布局安全認證是進入國防/醫療/金融邊緣部署市場的入場券。
-🔗 [CNN Business 政府預審](https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models) | [Breaking Defense 五角大廈 AI 協議](https://breakingdefense.com/2026/05/pentagon-clears-7-tech-firms-to-deploy-their-ai-on-its-classified-networks/)
+### ② ⭐⭐⭐⭐ Anthropic $2,000 億 5 年 Google Cloud 承諾：AI 算力合約化進入萬億規模
+**摘要:** Anthropic 宣布承諾未來 5 年在 Google Cloud 服務與 AI 晶片上花費 $2,000 億（約 $400 億/年），並將從 2027 年起存取 Google TPU。此一承諾與 Google 對 Anthropic 的 $400 億投資形成互鎖結構（投資→回購算力），代表大型 AI 公司與雲端供應商之間的「算力同盟」正從金融投資升級為基礎設施層面的深度綁定。背景：Anthropic 年化收入 (ARR) 達 $300 億，已超越 OpenAI 的 $240 億。
+**Insight:** Anthropic-Google 算力互鎖模式揭示趨勢：前端 AI 模型公司與後端算力基礎設施的垂直整合將成競爭常態。對 MTK 的直接意涵：當雲端算力越來越貴且被 OpenAI/Anthropic/Google 互鎖，「主權算力」（on-device, 離線, 低延遲）的商業溢價論述需要更積極地在 B2G/B2B 通路推進。Anthropic ARR 超越 OpenAI 是被主流低估的信號——「安全派 AI」商業路徑正在驗證其市場規模。
+🔗 [Anthropic to Spend $200B on Google Cloud & AI Chips – Android Headlines](https://www.androidheadlines.com/2026/05/anthropic-google-200-billion-ai-infrastructure-deal.html) | [Google invests $40B in Anthropic – TechCrunch](https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/)
+
+---
+
+### ③ ⭐⭐⭐⭐ AMD Q1 2026 收入 $103 億 (+38% YoY)，帶動 TSMC 股漲 6%：AI 晶片需求無放緩
+**摘要:** AMD 公布 Q1 2026 收入 $103 億（YoY +38%，超出市場預期），帶動 TSMC 股價漲 6% 至 $418.03。TSMC 自身 Q1 已有 +58% 淨利（創 8 季連續兩位數成長），上調 2026 全年營收指引 +30%+ YoY，Q2 指引 $390-402 億（QoQ +10%）。AI 晶片驅動的「台灣供應鏈溢價」持續強化，TSMC 2nm 先進製程供需緊繃未見鬆動跡象。
+**Insight:** AMD +38% 確認 AI 算力需求上行週期沒有結束跡象。對 MTK 而言：①2nm 製程需求強勁，TSMC 產能緊張短期不緩解，MTK 2027 旗艦 SoC tape-out 的 TSMC 產能保留窗口需評估是否需提前鎖定；②AMD 在 GPU/AI 加速器市場份額持續上升，但對 MTK 智慧手機 SoC 不構成直接競爭，反而佐證整體 AI 算力投資週期的健康程度。
+🔗 [Why is TSMC stock surging today – Investing.com](https://www.investing.com/news/company-news/why-is-taiwan-semiconductor-manufacturing-stock-surging-today-93CH-4664204) | [TSMC Q1 profit +58%, beats estimates – CNBC](https://www.cnbc.com/2026/04/16/tsmc-q1-profit-58-percent-ai-chip-demand-record.html)
 
 ---
 
 ## 2️⃣ 🏭 科技產業
 
-### ④ ⭐⭐⭐⭐ Cerebras IPO 最新進展：$115–125 定價區間、5/13 定價、5/14 Nasdaq 上市
-**摘要:** Cerebras Systems 於 5/5 更新 IPO 詳情：發行 2,800 萬股 A 類股，定價區間 $115–125（高端籌資約 $35 億），估值上限 $26.6B。投資銀行預計 5/13（週三）夜間定價、5/14（週四）Nasdaq（代碼 CBRS）掛牌交易——與川習北京峰會第一天同日。承銷行為 Morgan Stanley、Citigroup、Barclays、UBS。核心技術亮點：Wafer-Scale Engine（WSE）比 Nvidia B200 大 58 倍、900,000 運算核心、比 B200 多 2,625 倍記憶體頻寬；與 OpenAI 簽 750MW/$200 億算力協議（2028 年前）。
-**Insight:** 5/14 同日：Cerebras 上市 + 川習峰會 + Glass4Chips Summit，三個市場情緒事件疊加，AI 算力股將面臨雙向劇烈波動。Cerebras WSE 定位是「整片晶圓」的極端路線，代表 AI 算力非 GPU 路徑的資本市場首次定價。MTK 邊緣 AI SoC 與 Cerebras 不直接競爭，但 IPO 估值代表市場認可「算力創新」溢價，有助於 MTK 在 B2B 邊緣算力場景中強化自身定位論述。
-🔗 [Motley Fool IPO 詳情](https://www.fool.com/investing/2026/05/05/nvidia-rival-cerebras-unveils-ipo-details-heres-wh/) | [IPOScoop 定價追蹤](https://www.iposcoop.com/the-ipo-buzz-cerebras-crbs-proposed-launches-3-4-billion-ipo-for-next-week/) | [GuruFocus 估值分析](https://www.gurufocus.com/news/8839855/cerebras-systems-cbrs-plans-4-billion-ipo-with-target-price-of-115125)
+### ④ ⭐⭐⭐ Cerebras IPO 路演第 3 天：$115-125/股，5/14 Nasdaq 掛牌倒數 6 天
+**摘要:** Cerebras Systems IPO 路演進行第 3 天，定價區間 $115–125/股，預計籌資 $35 億，估值上限 $26.6B，5/14 Nasdaq（代碼 CBRS）正式掛牌。關鍵財務數字：2025 年收入 $5.1 億（YoY +76%），Q4 FY2026 淨利 $8,800 萬，與 OpenAI 簽 750MW/$200 億算力協議（2028 前）。核心技術：WSE 晶片比 NVIDIA B200 大 58 倍、900,000 運算核心、2,625 倍記憶體頻寬。承銷行：Morgan Stanley / Citigroup / Barclays / UBS。
+**Insight:** 5/14 是本季最高密度事件日：川習峰會+Cerebras 上市雙重事件同步觸發市場情緒。Cerebras $26.6B 估值代表「非 GPU 算力路徑」晶片公司的資本市場接受度初步被定價，這是 MTK AI ASIC 服務、邊緣 AI SoC 商業敘事在資本市場的重要參照——非 NVIDIA 路徑獲溢價意味投資人對多元算力架構更為開放，MTK B2B 融資/合作敘事可引用此定價邏輯。
+🔗 [Cerebras IPO details – Motley Fool](https://www.fool.com/investing/2026/05/05/nvidia-rival-cerebras-unveils-ipo-details-heres-wh/) | [Cerebras targets $3.5B raise – CNBC](https://www.cnbc.com/2026/05/04/cerebras-ipo-ai-chipmaker.html) | [CBRS $115-125 target – GuruFocus](https://www.gurufocus.com/news/8839855/cerebras-systems-cbrs-plans-4-billion-ipo-with-target-price-of-115125)
 
-### ⑤ ⭐⭐⭐⭐ 【亞洲重磅】地平線星空 Starry 6P 發布：5nm/650TOPS，中國車用 AI 晶片性能新高
-**摘要:** 地平線機器人（Horizon Robotics）發布新一代舱駕融合整車智能體芯片「星空 Starry 6P」，採用 5nm 製程、算力達 650 TOPS，刷新中國國產車用 AI 晶片性能紀錄，計劃搭載多款 2026-2027 量產車型。同期，36Kr 報告確認 2026 年成為「國產 AI 訓練芯片元年」：華為 Ascend 950、燧原等平台已可穩定支撐千億參數模型全流程訓練，中國高階 AI 芯片整體市場預計 2026 年增長超 60%，本土廠商市占率有望提升至 50%。
-**Insight:** 地平線 5nm/650TOPS 對 MTK 汽車 SoC 布局是直接競爭警訊：若 MTK 車用芯片 2027 年無法突破 500TOPS 門檻且在 AI 舱駕融合上提出完整方案，中國汽車市場份額將面臨明顯壓縮。更廣的意義：中國 AI 訓練能力突破加速 Ascend 全棧閉環（訓練 + 推論），MTK 中國區 edge AI 競爭對手已從「功能受限的替代方案」升格為「可規模化的完整替代」，Q3 前必須完成 Ascend 競爭差異化戰略評估。
-🔗 [36kr 國產 AI 芯片分析](https://www.36kr.com/p/3696839539338881) | [NE 時代半導體展望](https://ne-time.cn/web/article/37360)
+---
 
-### ⑥ ⭐⭐⭐ ⭐ 全球供應鏈「現代卡喉點」：Memflation 持續 + 中東戰事重塑半導體物流 【連續追蹤】
-**摘要:** NPR 分析（5/3）深度解析「現代經濟卡喉點」——中東戰事封鎖霍爾木茲海峽使電子元件物流成本飆升，DRAM/NAND 漲價進一步受能源價格通膨推波助瀾。Deloitte 半導體展望確認 Memflation 將持續全年（下半年略緩但不消退），PC/手機 BOM 成本上升 5–12%；消費電子廠商毛利受壓 → 中低端 SoC 換機窗口持續收窄。Arm Holdings 財報今晚亦可作為 2026H2 半導體供應鏈健康度的重要外部驗證。
-**Insight:** 「通膨 + 物流成本 + 記憶體漲價」三角夾擊持續，MTK Dimensity 中低端系列出貨壓力仍在加劇。反向操作邏輯：如果消費端換機潮被延後 2-3 季，B2B 邊緣 AI（工業/醫療/智駕）反而是本年度訂單確定性最高的場景，資源傾斜決策愈晚愈貴。
-🔗 [NPR 卡喉點分析](https://www.npr.org/2026/05/03/nx-s1-5804691/modern-economic-chokepoints-in-war-and-the-impact-on-geopolitics) | [Deloitte 半導體展望](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/semiconductor-industry-outlook.html)
+### ⑤ ⭐⭐⭐⭐ 【亞洲中文重磅】聯發科 AI ASIC 服務 2026 衝 $10 億：Google/Meta 確認客戶，算力服務商轉型加速
+**摘要:** 台灣繁體中文科技媒體 MakerPRO 深度分析：聯發科 AI ASIC 服務 2026 年預計收入 $10 億，2027 年擴大至數十億美元規模。主要客戶為 Google 與 Meta，目的是幫助雲端巨頭在 NVIDIA 之外建立替代算力供應鏈。MTK ASIC 服務差異化：晶片設計+TSMC 2nm 製程整合+CoWoS 封裝一條龍服務，交付速度比競爭對手快 20-30%。同期 NVIDIA×MTK 合作的 Arm 架構 AI PC 晶片 N1/N1X，2026H2 量產，Dell/Lenovo/HP/ASUS 支援。
+**Insight:** 此條新聞與 ① 的 DGX SuperPOD AI R&D 中心共同構成完整圖像：MTK 同時建立「算力平台（R&D 用）」+「算力服務（商業用）」，從純硬體設計廠向「AI 基礎設施服務商」轉型路線清晰。對你的直接意義：AI ASIC 業務即將成為公司重要成長引擎，理解客戶訂製 NPU 規格需求、訓練/推論 workload 特性，是技術經理跨組織協作的戰略優先項。
+🔗 [聯發科AI ASIC服務為何這麼火？不只是代工！ – MakerPRO（繁體中文）](https://makerpro.cc/2026/05/why-are-mediateks-ai-asic-services-so-popular/)
+
+---
+
+### ⑥ ⭐⭐⭐ Bloomberg：全球半導體供應鏈重組加速，政府+廠商齊動員應對集中化風險
+**摘要:** Bloomberg 5/6 深度報導：全球半導體企業與各國政府正加速重組供應鏈，應對過度集中於台灣的地緣政治風險。主要動向：TSMC 亞利桑那廠 2nm 2025H2 量產目標推進、Samsung 德州廠擴張、Intel CHIPS Act 聯邦資金落地；日本 TSMC 熊本廠產能利用率達 90%；中國廠商加碼 28nm 以下本土化，但 7nm 以下仍受制裁限制。整體評估：地緣政治供應鏈溢價已固化為長期結構性成本。
+**Insight:** 供應鏈多元化大勢確認，但時程比市場預期更長（5-10 年而非 2-3 年）。對 MTK 而言：①台灣本地製造仍是主力，短期不需分散，但需準備應對地緣政治溢價；②東南亞封裝測試（馬來西亞為主）是 3-5 年最務實多元化選項；③台灣代工稀缺性提升等於 MTK 供應鏈地位強化，是議價能力的正向背書。
+🔗 [The World Is Scrambling to Remake Semiconductor Supply Chains – Bloomberg](https://www.bloomberg.com/news/articles/2026-05-06/the-world-is-scrambling-to-remake-semiconductor-supply-chains)
 
 ---
 
 ## 3️⃣ 🌍 國際新聞
 
-### ⑦ ⭐⭐⭐⭐ ⭐ 川習峰會倒數 8 天：中國要求撤回 Section 301 調查，Bessent-何立峰通話升溫 【連續追蹤】
-**摘要:** 中國正式要求美方在峰會前撤回美貿易代表 3/11 啟動的 Section 301 貿易調查（針對 16 個貿易夥伴「產能過剩」，中國列其中）。美國財政部長 Bessent 與中國副總理何立峰通話時批評「中國近期挑釁性的境外管制對全球供應鏈造成寒蟬效應」，雙方互不相讓。建構中的「貿易委員會（Board of Trade）」框架仍在推進，但議題已從稀土/技術分離升級至整體貿易結構。預計峰會前不會有實質突破，5/14 才是觀察點。
-**Insight:** Section 301 調查擴大（16 個夥伴，含中國）意味著談判籌碼賽局比之前更複雜——峰會結果不再是「稀土框架落地 or not」二元，而是多個平行議題同步角力。MTK 供應鏈三情境（正面/中性/負面）的假設前提需要在峰會前一天重新校正，特別是「負面情境：台灣議題升溫」的觸發概率是否提高。
-🔗 [南華早報 Section 301](https://www.scmp.com/news/us/article/3352544/china-urges-us-drop-trade-probe-key-trump-xi-summit-approaches) | [IDNFinancials Bessent-何立峰](https://www.idnfinancials.com/news/63420/bessent-and-he-lifeng-trade-complaints-ahead-of-trumpxi-summit)
+### ⑦ ⭐⭐⭐⭐⭐ 川習峰會倒數 6 天（5/14-15 北京）：Section 301 調查成最大前置摩擦【連續第 5 天追蹤】
+**摘要:** 峰會前最新發展：中國在 Section 301 過剩產能調查公開聽證上正式要求美方撤回調查（稱「法律瑕疵」），火藥味持續升高。談判背景：雙方目前處於「脆弱休戰」——關稅從峰值下調，但稀土出口管制（Q2 許可到期）、晶片管制擴大等問題懸而未決。峰會預期成果：共識可能聚焦稀土框架+大豆採購+芬太尼打擊，晶片管制鬆綁不太可能在峰會中正式落地。SCMP 指「峰會掩蓋了表面下激烈暗流」。
+**Insight:** 6 天倒數中，稀土出口許可到期時程與 Section 301 調查是兩個對 MTK 最直接的供應鏈風險點。無論峰會結果如何，三情境通報（①和解→供應鏈正常化；②維持現狀；③升級→管制擴大）必須在 5/13 前完成，不可等峰會結果。峰會是下一輪談判週期的起點，而非終點。
+🔗 [China urges US to drop trade probe ahead of summit – SCMP](https://www.scmp.com/news/us/article/3352544/china-urges-us-drop-trade-probe-key-trump-xi-summit-approaches) | [Summit hides simmering tensions – SCMP](https://www.scmp.com/news/china/diplomacy/article/3352674/trump-xi-summit-hides-simmering-trade-tensions-under-surface-industry-experts-say) | [What to expect – Eurasia Review](https://www.eurasiareview.com/04052026-what-to-expect-from-the-trump-xi-jinping-14-15-may-summit-analysis/)
 
-### ⑧ ⭐⭐⭐⭐ IMF 全球成長 3.1%、通膨 4.4%，中東戰事霍爾木茲封鎖加劇供應鏈衝擊
-**摘要:** IMF《世界經濟展望》（4 月版）將 2026 全球成長下調至 3.1%，通膨升至 4.4%（高於去年全球通膨趨勢），主因中東戰事霍爾木茲海峽有效封鎖，推升全球油氣、航空燃油、鋁、氦氣價格。Morgan Stanley 獨立預測美國 GDP 成長僅 1.8%。能源成本上升直接衝擊 AI 數據中心建設與半導體廠房的營運成本（台積電台灣廠電費、封測材料物流均受影響）。歐洲方面，防禦支出增加成為 2026-2027 年唯一確定性成長驅動力。
-**Insight:** 3.1% + 4.4% 接近「滯脹臨界點」意味著消費電子需求壓縮延長，換機潮被延後已不只是一個季度。對 MTK 最直接的硬數字衝擊：氦氣（晶圓製造必需氣體）與航運成本進一步上漲，N2P 量產 BOM 壓力比 3 個月前假設更高。需要在下一次 BOM 情境更新中加入「中東持續封鎖 6 個月」的壓力測試情境。
-🔗 [IMF 世界經濟展望 2026 年 4 月](https://www.imf.org/en/publications/weo/issues/2026/04/14/world-economic-outlook-april-2026) | [NPR 卡喉點分析](https://www.npr.org/2026/05/03/nx-s1-5804691/modern-economic-chokepoints-in-war-and-the-impact-on-geopolitics)
+---
+
+### ⑧ ⭐⭐⭐⭐ 霍爾木茲海峽第 10 週：Brent $114，美伊 14 點 MOU 框架「接近達成」，亞洲能源危機轉捩點？
+**摘要:** 霍爾木茲封鎖進入第 10 週：Brent 原油 5/7 盤中漲近 6% 至 $114.44（WTI $94.81），亞洲能源短缺最為嚴峻（中國每日石油進口損失估算 300 萬桶，泰國至巴基斯坦全面告急）。最新外交進展：美方官員透露美伊接近簽署 14 點 MOU 框架，核心條款：停止核濃縮+美方解除制裁+霍爾木茲解鎖，談判在卡達、瑞士、歐盟三個密使渠道並行進行。
+**Insight:** 若 MOU 在 5/10-12 前落地，可望在峰會前帶來油價回落（預測 Brent $95-100 區間），BOM 計算中的台積電晶圓廠電力成本壓力（能源成本占生產成本 15-20%）可從高油價情境切換至中性情境。建議 5/12 前根據 MOU 進展情況更新 BOM 三情境基準。
+🔗 [Oil prices today: Trump, Iran, Strait of Hormuz – CNBC (5/7)](https://www.cnbc.com/2026/05/07/oil-prices-today-trump-iran-strait-of-hormuz-us-crude-brent-.html) | [Oil prices surge as violence flares – Al Jazeera](https://www.aljazeera.com/amp/economy/2026/5/5/oil-prices-surge-as-violence-flares-in-strait-of-hormuz) | [Hormuz crisis Wikipedia](https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis)
 
 ---
 
 ## ⚠️ 弱訊號
 
-1. **Anthropic Mythos「主動發現漏洞」能力 → on-device AI 安全護欄缺口即將被攻破** — Mythos 模型自主識別網路安全弱點已讓政府/銀行/電力公司起警戒。若類似能力出現在 on-device 模型，目前旗艦 SoC 的 TEE 設計是否足夠？這是邊緣 AI 安全認證的下一個監管壓力點，12 個月內需要明確的 SoC 安全架構回應。🔗 [CNN Business](https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models)
+1. **Anthropic ARR $300 億已超越 OpenAI $240 億** — 主流媒體仍以 OpenAI 為 AI 領頭羊論述，但 ARR 數字已悄悄翻轉。「安全派 AI」（Claude 4 系列、企業合規場景優先）的商業路徑正在驗證其市場規模，這對 MTK on-device AI 安全認證布局（TEE/模型存取控制）是值得引用的市場驗證信號。
+   🔗 [Anthropic and OpenAI dominate 2026 AI race – Blockchain News](https://blockchain.news/ainews/anthropic-and-openai-dominate-2026-ai-race)
 
-2. **地平線 Starry 6P 5nm/650TOPS 進入量產車型 → 中國車用 AI 晶片效能門檻重置** — 主流媒體仍聚焦 Nvidia/高通 ADAS，但地平線已在中國 OEM 供應鏈深度綁定，且演算力規格比 2 年前快速迭代。MTK 若 2027 車用 SoC 無 AI 舱駕融合完整方案，中國汽車市場份額面臨系統性風險，而非只是單一競品壓力。🔗 [36kr](https://www.36kr.com/p/3696839539338881)
+2. **AI 數據中心暫停法案（Sanders-AOC）** — 美國國會提出 AI Data Center Moratorium Act，要求暫停新建大型 AI 數據中心至能源/水/勞工國家標準立法完成。主流科技媒體幾乎未追，但若通過將迫使 AI 算力更快往邊緣轉移——對 MTK 邊緣 AI SoC 是長期結構利多，值得追蹤立法進度。
 
 ---
 
