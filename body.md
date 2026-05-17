@@ -1,76 +1,130 @@
-# ☀️ Hank's Morning Brief · 2026-05-17 (週日)
-**Window: 2026-05-16 07:00 → 2026-05-17 07:00 (Asia/Taipei)**
-
-## ⚡ 30-Second TLDR
-- OpenAI 確認選擇 MediaTek Dimensity 9600（雙 NPU 架構）作為 AI 手機晶片，2027 量產衝 3000 萬支，MTK 從 SoC 晶片商升格為 OpenAI 生態核心硬件夥伴。
-- Google I/O（5/19）倒數 2 天：Gemini Intelligence 跨 App 系統級 AI 代理即將發布，Apple 同步開放第三方 AI（Claude/Gemini）接入 iOS 27，on-device AI SoC 競爭全面升維。
-- 霍姆斯海峽停火延長但通航仍癱瘓，油價 Brent 結構性 $100+ 高位確立；中國對台推出旅遊直航懷柔牌，地緣策略從軍事恐嚇轉向政治經濟滲透。
+# 📊 Hank's Weekly Brief · 2026-05-18 (2026-W21)
+**Window: 2026-05-11 06:30 → 2026-05-18 06:30 (Asia/Taipei)**
 
 ---
 
-## 🧠 Today's Insight
-**本日摘要重點:** OpenAI 選 MTK 是本週最高衝擊密度的信號——直接驗證 MTK 雙 NPU 架構設計競爭力，並開創 Hyperscaler 客製 SoC 新商業模式；Google I/O 前夕三大 AI 平台（Gemini、Apple Extensions、OpenAI 手機）同步向 on-device AI 集中資源，Android SoC NPU 算力需求即將進入新高度；霍姆斯停火≠通航恢復，製造業 BOM 成本 $100+ 油價鎖定至少 Q3。
-**未來發展方向:** Gemini Intelligence 若 5/19 正式落地，Android SoC 對多工 AI 跨 App 推理的算力需求將大幅提升，MTK NPU 需立即確認 Gemini Nano 2 官方適配狀態；Apple iOS 27 "Extensions" 打開第三方 AI SoC 認證機會，Anthropic/Google on-device 模型優化競賽升溫；中國懷柔台灣同時，EU+日本數位聯盟擴大「主權 AI 市場」版圖，台灣半導體廠的多軸外交管理難度上升。
-**對你的意義:** ①【MTK 直接利多】OpenAI 選 Dimensity 9600 確認雙 NPU 架構的市場背書，立即評估 2027 量產對 MTK AI ASIC 產線資源的影響並更新 ASIC 客戶組合優先級；②【Google I/O 監控清單】5/19 Gemini Intelligence 若落地，確認 MTK Dimensity NPU 在 Gemini Nano 2 優化支持，提前與 Google 對齊 AI Agent SDK 整合路線圖；③【BOM 成本鎖定】Hormuz「系統已破碎」框架更新，Q3 BOM 規劃以 Brent $100+ 為基準，MTK 低功耗 edge AI SoC TCO 優勢可升格為客戶溝通主訴求。
+## 1️⃣ 🧠 Weekly Insight
+**本週主旋律:** Google I/O 決戰前夕 × Hormuz 史上最大供應衝擊 × 川習後晶片管制延續 — 三條軌道同步加速，MTK 從晶片商升格為 AI Agent 基礎設施核心
+
+**結構性變化:**
+- **Gemini Intelligence 5/13 Android Show 預亮相**，系統級跨 App AI 代理從「概念」轉為明天（5/19）落地產品；Android NPU 需求規格從「單場景推理」升維為「持續背景執行 × 跨 App 上下文管理 × 螢幕視覺解析」三合一。
+- **Hormuz 供應衝擊被 IEA 確認為史上最大**：4 月 Brent 均值 $117/bbl，全球供應驟降 10.1 mb/d；BOM 成本 $100+ 結構性鎖定，edge AI SoC TCO 差異化從「加分項」升格為「採購必需理由」。
+- **川習峰會後中美科技脫鉤進入 6–12 個月緩衝確認期**，中國 12 天爆出 4 個 frontier 級開源 AI 模型（GLM-5.1 / MiniMax M2.7 / Kimi K2.6 / DeepSeek V4），自主 AI 路線顯著加速；Qualcomm CEO 宣示「edge AI 獲勝 = AI 競賽獲勝」，正面與 MTK 軌道交叉。
+
+**對你的下一步:**
+- **明天 5/19 I/O 後 48 小時：** 確認 Gemini 4.0 edge API 路線圖；評估 MTK 第二 ASIC（Google TPU 客製）技術對齊緊急程度。
+- **本週：** 更新 BOM Scenario C（Brent $120+）觸發條件；edge AI TCO 論述升格為客戶主訴求，量化能源成本差距。
+- **5/25 前（Computex 倒數 7 天）：** 完成「MTK Dimensity Agent Phone vs. N1 AI PC SoC」定位文件，搶先 NVIDIA 媒體框架。
 
 ---
 
-## 1️⃣ 🤖 AI / 科技
+## 2️⃣ 🪞 上週對賬（W20 → W21）
 
-### ① ⭐⭐⭐⭐⭐ ⭐ OpenAI 選擇 MediaTek Dimensity 9600 為 AI 手機晶片，雙 NPU 架構 2027 量產挑戰 iPhone
-**摘要:** 分析師 Ming-Chi Kuo 確認，OpenAI 在 MediaTek 與 Qualcomm 之間最終選擇 MediaTek，以客製化 Dimensity 9600 為核心晶片，搭載雙 NPU 異構計算架構、LPDDR6+UFS 5.0、增強 ISP HDR 視覺感測，以及 pKVM 安全虛擬化機制。Luxshare 負責代工組裝，量產計畫 2027 H1 啟動，2027–2028 銷售目標約 3000 萬支；若順利執行，OpenAI AI 手機將成市場最具代表性的 AI-first 終端。
-**Insight:** 這是 MTK 近年最具戰略意義的客戶確認——OpenAI 捨 Qualcomm 選 MTK，代表市場正式驗證 MTK 雙 NPU 架構的技術競爭力。客製化 Dimensity 9600 的雙 NPU 設計積累將直接強化 MTK ASIC 定制能力，並開創 Hyperscaler 直接與 MTK 合作開發 AI SoC 的新型商業模式，收入能見度顯著提升至 2027–2028。
-🔗 [Business Standard — OpenAI picks MediaTek over Qualcomm](https://www.business-standard.com/technology/tech-news/openai-reportedly-picks-mediatek-over-qualcomm-for-its-maiden-ai-smartphone-126050500730_1.html) | [wccftech — Dual-NPU architecture details](https://wccftech.com/openai-picks-mediatek-over-qualcomm-for-its-first-smartphone-customizing-the-dimensity-9600-with-a-dual-npu-architecture-to-challenge-the-iphone/)
-
-### ② ⭐⭐⭐⭐ Google I/O（5/19）倒數 2 天：Gemini Intelligence 跨 App 系統級 AI 代理即將登場
-**摘要:** Google I/O 開發者大會訂於 5/19（週二）正式開幕，Google 預計發布全新 Gemini 模型直接挑戰 GPT-5.5，並推出 Gemini Intelligence——一個可跨 App 操作、理解螢幕內容、串連 Gmail/日曆/購物/訂位的 Android 系統級 AI 代理層。同步亮相的 Googlebook 搭載「Magic Pointer」，晃動游標即可召喚 Gemini，由 Acer、ASUS、Dell、HP、Lenovo 各主機廠出貨。Gemini Intelligence 標誌 AI 正式從「問答助手」升格為「作業系統層代理」。
-**Insight:** Gemini Intelligence 若正式落地，Android SoC 的「多 App 跨任務 AI 推理」算力需求將進入全新等級——單一場景推理不再足夠，需持續背景執行、螢幕理解與跨服務調用。MTK 需立即確認 Dimensity NPU 在 Gemini Nano 2 的官方適配狀態，並提前與 Google 對齊 Gemini Intelligence SDK 整合路線圖，以確保 Android OEM 旗艦機型不落後於 Gemini Intelligence 官方認證清單。
-🔗 [CNBC — Google races to put Gemini at center of Android](https://www.cnbc.com/2026/05/12/google-races-put-gemini-at-center-of-android-before-apples-ai-reboot.html) | [Axios — Googlebook Magic Pointer](https://www.axios.com/2026/05/12/googlebook-ai-chromebook-announcement) | [Android Headlines — New Gemini model at I/O](https://www.androidheadlines.com/2026/05/google-io-new-gemini-model-launch-gpt-5-5-rival.html)
-
-### ③ ⭐⭐⭐⭐ Apple iOS 27 "Extensions" 開放第三方 AI 接入：Claude、Gemini 可成 Apple Intelligence 底層引擎
-**摘要:** Apple 正準備 iOS 27/iPadOS 27/macOS 27 的重大 AI 平台轉向——內部代號 "Extensions" 的功能將允許用戶選擇 Anthropic Claude 或 Google Gemini 作為 Apple Intelligence 底層 AI 驅動，透過 App Store 應用程式整合入系統。此舉使 iOS 從「Siri 獨家 AI 平台」轉型為「AI 市集型開放平台」，背景是 OpenAI 的法律施壓加速 Apple 多元 AI 來源布局。
-**Insight:** Apple 開放第三方 AI 接入是 on-device AI SoC 競爭的規則改變者——競爭焦點從「誰是蘋果唯一 AI 合作夥伴」轉變為「誰的模型在 Apple NPU 上跑得最快、最省電」。MTK 雖非蘋果晶片供應商，但 iOS 27 Extensions 推動 Claude 和 Gemini 加速 on-device 優化，會同步拉升 Android OEM（MTK 主要客戶群）對相同功能的需求壓力，形成正面市場拉力；MTK NPU 需積極進入 Claude Edge 和 Gemini Nano 官方認證流程。
-🔗 [9to5Mac — Apple third-party AI providers iOS 27 Extensions](https://9to5mac.com/2026/05/06/apple-may-have-just-made-one-of-the-most-important-new-siri-announcements/)
+| 狀態 | W20 預測 | W21 驗證 |
+|------|----------|----------|
+| ✅ Confirmed | Google I/O Gemini Intelligence 跨 App 代理落地 | 5/13 Android Show 預亮相確認；跨 App 操作 + 螢幕理解 + Googlebook，5/19 主題演講加碼 |
+| ✅ Confirmed | 川習峰會 Scenario B（6 個月展延）概率 65% | 峰會落幕，晶片管制「非主要議題」；H200 維持「美批 / 中待命」，Scenario B 完全驗證 |
+| ✅ Confirmed | MTK 雙 NPU 架構（OpenAI 手機）持續確認 | wccftech / AndroidAuthority：N2P 2nm 製程細節補全；量產加速至 2027 H1 |
+| ✅ Confirmed | TSMC 5/14 技術研討會，AI 高原論排除 | Applied Materials + TSMC EPIC Center 合作揭幕；台灣成全球 AI 供應鏈戰略中心 |
+| ⏳ Pending | MATCH Act 全院表決 | 無新動態，繼續追蹤 |
+| ❌ Refuted | 川習中介美伊停火 → Brent 回落至 $85–90 | 停火未成；IEA 確認史上最大供應衝擊，4 月均值 $117；W20 弱訊號 2 樂觀情境出局 |
 
 ---
 
-## 2️⃣ 🏭 科技產業
+## 3️⃣ 🔭 本週 5 條主軸線
 
-### ④ ⭐⭐⭐⭐ ⭐ TSMC 4月營收 YoY +17.5% 創歷史新高，全年成長上修「超過30%」；台灣 Q1 GDP+13.7% 創39年記錄
-**摘要:** TSMC 公布 2026 年 4 月合併營收，年增率 17.5%，創 4 月歷史新高，AI 伺服器先進製程需求持續強勁；全年成長率指引從「約 30%」上修為「超過 30%」。同期台灣 2026 Q1 GDP 年增 13.7%，大幅超越彭博預期 11.3%，是 1987 Q2 以來 39 年最強季度表現，直接受惠於 AI 與半導體出口爆發。
-**Insight:** TSMC 持續上修是整個 AI 晶片供應鏈景氣最具說服力的前瞻指標——AI 算力需求無假期。台灣 GDP 13.7% 超預期確認台灣半導體生態的系統性優勢，但也代表 TSMC 先進製程產能持續吃緊。MTK 的 ASIC 客戶（美國超大規模廠）2026 Q4 量產目標產能分配，需在 TSMC 緊張窗口中提前確保鎖單，任何延遲都可能影響 $20 億收入目標能見度。
-🔗 [Nikkei — TSMC 4月売上高17.5%増 AI用先端品が好調](https://www.nikkei.com/article/DGXZQOGM051IS0V00C26A5000000/) | [Digitimes — SEMICON SEA 2026 兆元晶片時代](https://www.digitimes.com/news/a20260505PD225/semiconductor-industry-2026-semi-growth-revenue.html)
+### 主軸 1: Google I/O 前夕——Gemini Intelligence 登場，MTK NPU 算力需求規格劇烈升維
+- **重要性:** ⭐⭐⭐⭐⭐
+- **發生了什麼:** 5/13–14「Android Show: I/O Edition」預亮相：Gemini Intelligence 跨 App 系統代理（自動填表/購物/訂位 + 螢幕即時理解）正式發布；Googlebook（Magic Pointer 召喚 Gemini）由 Acer/ASUS/Dell/HP/Lenovo 出貨；Gemini 4.0 + Omni 影片生成器明天 5/19 主題演講全揭幕。
+- **Insight:** Android NPU 需求從「TOPS 數字競賽」升維為「持續背景推理 × 多 App 上下文 × 視覺解析」三合一。MTK 是否進入 Gemini Intelligence 官方 SoC 認證清單，將成為 2027 Android OEM 旗艦機型 SoC 選擇的關鍵因素；MTK 第二 ASIC（Google TPU 客製）必須在 5/19 後確認 workload 規格對齊。
+- **來源:** [Android Central — I/O 2026 Live Blog](https://www.androidcentral.com/phones/live/google-i-o-2026-live-blog-android-17-android-xr-glasses-and-all-the-gemini-ai-news) | [Digitimes — Google Android Gemini AI 2026](https://www.digitimes.com/news/a20260513VL201/google-android-gemini-ai-2026.html)
 
-### ⑤ ⭐⭐⭐ 全球半導體 2026 年衝破 $1.29 兆，AI 晶片占 $5000 億，DRAM 收入三倍增至 $4186 億
-**摘要:** IDC 最新預測，2026 年全球半導體銷售額達 $1.29 兆（同比+52.8%）；Q1 已達 $2985 億（環比+25%）。Deloitte 估算 AI 晶片市場規模約 $5000 億，DRAM 收入預計三倍增至 $4186 億（HBM+DDR 需求爆發驅動）。TSMC 2nm+A16 製程 2026–2028 CAGR 達 70%，長期市場看向 2030 年 $1.5 兆（TSMC 預估）、翻倍成長。
-**Insight:** 數字確認 AI 晶片是結構性成長而非泡沫。MTK ASIC 年目標 $20 億在 $5000 億 AI 晶片市場中僅占 0.4%，成長空間巨大、天花板遠未見頂；HBM 需求三倍增加速 TSMC CoWoS 封裝需求，MTK AI ASIC 設計需同步規劃 HBM 整合能力（CoWoS/SoIC），以符合超大規模客戶下一代算力密度要求。
-🔗 [Motley Fool — Semiconductor market to double to $1.5T by 2030](https://www.fool.com/investing/2026/05/11/the-semiconductor-market-could-double-to-more-than/) | [EE News Europe — Semiconductor heads for $1tn in 2026](https://www.eenewseurope.com/en/semiconductor-industry-heads-for-1tn-in-2026/)
+### 主軸 2: 川習峰會後格局確立——Scenario B 驗證 + 中國 AI 開源 12 天 4 模型爆發
+- **重要性:** ⭐⭐⭐⭐⭐
+- **發生了什麼:** 峰會落幕：關稅 145% → 30%，Boeing 200 架確認，但晶片管制「非主要議題」，Jensen Huang 隨行未解鎖 H200；中美科技脫鉤進入「暫停而非解凍」6–12 個月緩衝期。同週中國 12 天爆出 4 個 frontier 級開源模型（GLM-5.1 / MiniMax M2.7 / Kimi K2.6 / DeepSeek V4），均在 agentic engineering benchmarks 達到西方 frontier 水準；中國 AI 晶片國內市占率預計 2026 年達 50%。
+- **Insight:** 中國 AI 開源爆發是「以開源換生態影響力」的系統性策略，12 天 4 模型顯示迭代進入週更節奏。對 MTK：中國 OEM（MTK 主要客戶群）旗艦機型將面臨支援 DeepSeek V4 / Kimi K2.6 on-device 部署的市場壓力；晶片管制延續確認 MTK ASIC 自主路線差異化窗口持續有效；Google TPU 第二 ASIC 是中立於管制博弈的最佳收入多元化路線。
+- **來源:** [abhs.in — US-China Trade Truce May 12](https://www.abhs.in/blog/us-china-trade-truce-beijing-summit-chip-export-controls-semiconductor-may-2026) | [Built In — Trump Lifts AI Chip Ban China](https://builtin.com/articles/trump-lifts-ai-chip-ban-china-nvidia)
 
-### ⑥ ⭐⭐⭐ 日本＋EU 簽署數位戰略聯盟：AI、半導體、量子、海底纜線四大領域全面協作
-**摘要:** 日本與 EU 於 5/5 在布魯塞爾召開部長級會議，宣布在 AI 技術、半導體供應鏈、量子技術及海底纜線基礎設施四大領域展開全面戰略協作。繼美日半導體合作、CHIP4 聯盟後，民主主義國家 AI 基礎設施外交從雙邊擴展至多邊架構，「主權 AI」從概念進入制度化建設階段。
-**Insight:** 日本+EU 聯盟確立「主權 AI 基礎設施」多邊框架，為 Edge AI 晶片市場打開全新的「合規採購」賽道。MTK 若能取得 EU AI Act 相容認證並符合日本 AI 守則，在政府與大型企業 on-premise Edge AI 採購中將具備超出純技術競爭的合規優勢；台灣作為民主供應鏈關鍵節點的戰略身份被多邊框架再度強化，也提升了 MTK 在日本/歐洲政府客戶中的政治可信度。
-🔗 [economic.jp — 日本とEUがデジタル連携強化 AI・半導体・海底ケーブル](http://economic.jp/?p=111351)
+### 主軸 3: Hormuz 史上最大供應衝擊——Brent $117，亞洲製造業 BOM 進入新均衡
+- **重要性:** ⭐⭐⭐⭐⭐
+- **發生了什麼:** IEA 確認霍姆斯海峽危機為史上最大油市供應中斷：全球供應驟降 10.1 mb/d → 97 mb/d；4 月 Brent 均值 $117/bbl（vs. 2 月 $71）；亞洲煉廠削減 6 mb/d 產出；LPG/乙烷缺口使印度、東南亞食品與肥料通膨飆升。物理原油現貨一度逼近 $150/bbl。
+- **Insight:** $117 不是峰值，是均值。BOM Scenario C（$120+ 結構性高位）觸發條件已接近現實。對 MTK：(1) edge AI SoC 低功耗特性的 TCO 優勢可直接量化為美元節省，$117 Brent 使「MTK NPU vs. GPU 推理省電 X 倍」立即轉化為年度成本差異；(2) 亞洲 OEM 在高 BOM 壓力下更傾向 SoC 整合方案（MTK 優勢），而非多晶片模組。
+- **來源:** [Discovery Alert — Hormuz Oil Supply 2026](https://discoveryalert.com.au/strait-hormuz-oil-supply-disruption-price-impact-2026/) | [IEA — Oil Market Report April 2026](https://www.iea.org/reports/oil-market-report-april-2026)
 
----
+### 主軸 4: TSMC 2026 技術研討會——N2P/A16 藍圖揭幕，台灣成全球 AI 供應鏈戰略中心
+- **重要性:** ⭐⭐⭐⭐
+- **發生了什麼:** 5/14 TSMC Technology Symposium（新竹）：(1) AI 應用從雲端快速擴展至 edge，驅動計算密度/高頻寬連結/能效三重需求爆增；(2) N2P 全面加速布局，先進封裝需求與 N2P 並進；(3) Applied Materials + TSMC EPIC Center 合作揭幕，聯合加速 AI 晶片開發流程；(4) 2026 CapEx $52–56B 創歷史新高。Computex 分析：台灣正成為 AI 供應鏈地緣戰略中心，ASIC/NPU/先進封裝取代傳統 PC SoC 為最高優先。
+- **Insight:** TSMC N2P 搶先布局直接影響 MTK Dimensity 9600 量產排程確定性——OpenAI 手機 2027 H1 量產的產能鎖定窗口現在需要行動。N2P 優先產能競爭（Apple A20 / Nvidia / Google / MTK）已開始，建議 MTK 業務團隊在 5/25 前確認 2026 Q4–2027 Q1 wafer 排程鎖單狀態。
+- **來源:** [Digitimes — TSMC Technology Packaging 2026](https://www.digitimes.com/news/a20260514PD231/tsmc-technology-packaging-demand-2026.html) | [tspasemiconductor — Computex 2026 Taiwan AI Supply Chain](https://tspasemiconductor.substack.com/p/computex-2026-why-taiwan-is-becoming)
 
-## 3️⃣ 🌍 國際新聞
-
-### ⑦ ⭐⭐⭐⭐ 霍姆斯海峽停火延長但通航仍癱瘓：「系統已破碎」，Brent 油價結構性 $100+ 高位確立
-**摘要:** 雖然美伊停火協議持續延長，霍姆斯海峽通航量維持極低水平（每日僅約 3 艘 vs 正常 120–140 艘）。OilPrice.com 分析指出「停火談判或許進展，但海峽系統已然破碎」——超過 10 個月的有效封鎖，已使全球石化供應鏈、船運保險費率、航運路線結構性重組。即使海峽正式宣布重開，全球油價迴歸正常仍需數個月緩衝，Brent 原油 $100+ 結構性高位確立。
-**Insight:** 「停火 ≠ 通航恢復」是製造業 BOM 成本的最重要框架更新——不能再以「地緣風險溢價已消除」為 H2 規劃假設。對 MTK：Q3 產品 BOM 規劃需以 Brent $100+ 為基準、更新 Scenario C 觸發條件；同時能源高位持續強化 MTK 低功耗 edge AI SoC 的 TCO 論述——雲端算力能源成本越高，推理卸載到邊緣的經濟誘因越強，可升格為客戶溝通主訴求。
-🔗 [OilPrice.com — The Strait of Hormuz May Reopen, But the System Has Already Broken](https://oilprice.com/Energy/Energy-General/The-Strait-of-Hormuz-May-Reopen-But-the-System-Has-Already-Broken.html) | [WEF — Beyond oil: 9 commodities impacted by Hormuz crisis](https://www.weforum.org/stories/2026/04/beyond-oil-lng-commodities-impacted-closure-hormuz-strait/)
-
-### ⑧ ⭐⭐⭐⭐ 中國對台推「懷柔新招」：恢復旅遊、直航、經濟惠台，策略從軍事恐嚇轉向政治滲透
-**摘要:** 台灣反對黨領袖訪京後，中國宣布對台灣新一波激勵措施：鬆綁旅遊限制、恢復兩岸直航、推出多項經濟惠台優惠。地緣政治分析指出，北京對台策略正從「軍事恐嚇」轉向「政治經濟滲透」，透過民間交流和商業誘因軟化台灣社會，而非正面訴諸武力威脅。此轉向發生在台灣 Q1 GDP 創 39 年新高（+13.7%）的時間節點，北京戰略意圖更為複雜。
-**Insight:** 中國「懷柔牌」是給台灣技術精英層的最新干擾信號——對 MTK、TSMC 等台灣科技巨頭，兩岸商業關係正常化有助於中國客戶（聯想、OPPO、vivo 等）關係維護與訂單穩定；但「選邊站」政治壓力也可能同步升溫，美方合規審查（TSMC AZ產能移轉、先進封裝出口）將更敏感。台灣 AI 半導體業者需精準管理「美方合規」與「中方市場準入」兩條動態平衡線。
-🔗 [Enterprise Bank — Geopolitical Update: May 2026](https://www.enterprisebank.com/insights/geopolitical-update-may-2026) | [WEF — Geopolitical Stories to Know: May 2026](https://www.weforum.org/stories/2026/05/blockade-diplomacy-and-other-geopolitical-stories-to-know-this-month/)
-
----
-
-## ⚠️ 弱訊號
-1. **Anthropic "Mythos" 在遺留系統中主動發現關鍵漏洞** — AI 主動安全能力（offensive security）首次規模化落地報告。若屬實，AI 將成為有史以來最強大的漏洞挖掘工具，企業資安團隊面臨前所未有的攻防不對稱；MTK SoC 安全飛地（TEE/pKVM）設計需納入「AI 主動攻擊」的威脅模型。🔗 [Mean CEO's Blog — AI News May 2026](https://blog.mean.ceo/ai-news-may-2026/)
-2. **EU 對中國工業過剩（EV、太陽能、半導體）反制分歧擴大** — McKinsey 指出歐洲內部碎片化政治意志難以應對中國產能輸出，若歐洲最終開徵半導體相關關稅，台韓出口路線將出現新的轉移效應，可能意外拉動日本+東南亞替代供應鏈加速建設。🔗 [McKinsey — Geopolitics and the geometry of global trade 2026](https://www.mckinsey.com/mgi/our-research/geopolitics-and-the-geometry-of-global-trade-2026-update)
+### 主軸 5: Qualcomm CEO 宣示「edge AI 獲勝 = AI 競賽獲勝」——MTK vs. Qualcomm 正面對決升溫
+- **重要性:** ⭐⭐⭐⭐
+- **發生了什麼:** Qualcomm CEO 公開宣示 edge AI 競賽勝者將贏得整個 AI 競賽，宣告從手機晶片商全面轉型 edge AI 平台；Snapdragon X2 Elite Extreme 宣稱 85 TOPS NPU + 100 TOPS+ 整合算力；Qualcomm AI Hub 持續擴大 on-device LLM 認證生態。對照：MTK 因 OpenAI 捨 Qualcomm 選 Dimensity 9600，在旗艦 AI 手機賽道取得明確技術背書。
+- **Insight:** 兩年後的 SoC 市場將由 edge AI 能力決定勝負。MTK 的競爭優勢需從「OpenAI 選 MTK」的外部背書出發，積極補強 Gemini Nano / Claude Edge 認證清單。Snapdragon X2 攻 AI PC，MTK Dimensity 9600 鞏固 AI 手機 Agent——垂直市場分割對 MTK 有利，Computex 前應強化此差異化論述。
+- **來源:** [Motley Fool — Qualcomm CEO Edge AI](https://www.fool.com/investing/2026/04/11/qualcomms-ceo-says-the-winner-of-edge-ai-will-win/) | [science-technology.news — Qualcomm Strategic Pivot](https://science-technology.news-articles.net/content/2026/05/11/qualcomm-s-strategic-pivot-moving-beyond-mobile-to-the-ai-driven-edge.html)
 
 ---
 
-*[daily issues](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Adaily)*
+## 4️⃣ ⚠️ 本週 2 個最重要弱訊號
+
+### 弱訊號 1: 中國 AI 開源「週更」化——12 天 4 個 frontier 模型，on-device ASIC 推論需求端規格快速升維
+- **為什麼你不該略過:** GLM-5.1 / MiniMax M2.7 / Kimi K2.6 / DeepSeek V4 在 12 天內連發，均達 frontier agentic benchmark 水準。這是中國 AI 生態在晶片管制壓力下「以開源換生態影響力」的系統性策略。對 MTK：中國 OEM 旗艦機型將面臨「必須支援 DeepSeek V4 / Kimi K2.6 on-device 部署」的市場壓力，NPU 推論規格將在 H2 2026 產品規劃周期快速升維。若 MTK NPU 路線圖未在本季確認對這四個模型的優化支持，OEM 可能轉向 Qualcomm AI Hub 已認證的替代方案。
+- **追蹤指標:** 中國 OEM（OPPO/小米/VIVO）H2 2026 旗艦 AI 功能清單中 DeepSeek V4 / Kimi K2.6 on-device 部署需求；MTK NPU SDK 是否在 Q2 內發布對應優化包
+- **來源:** [Built In — Trump Lifts AI Chip Ban China](https://builtin.com/articles/trump-lifts-ai-chip-ban-china-nvidia) | [semiconductorsinsight — US China H200](https://semiconductorsinsight.com/us-china-chip-export-controls-h200-2026/)
+
+### 弱訊號 2: Applied Materials + TSMC EPIC Center——AI 晶片製造「設計 × 製造共演化」新模式起跑
+- **為什麼你不該略過:** Applied Materials 與 TSMC 聯合成立 EPIC Center，目標加速 AI 晶片從設計到量產的迭代週期——半導體史上首次設備商與晶圓廠在同一屋簷下進行聯合製程開發，N2P/A16 迭代速度預計提升 30%+。對 MTK：若 EPIC Center 優先服務超大規模 ASIC 客戶（Apple / Nvidia / Google），MTK 進入 EPIC Center 合作機制將直接縮短第二 ASIC（Google TPU 客製）的設計驗證週期，是 2027 年底量產時程的關鍵加速槓桿。
+- **追蹤指標:** TSMC EPIC Center 合作客戶清單；MTK 設計中心是否加入聯合開發計畫；EPIC Center 第一批流片時程
+- **來源:** [Digitimes — Applied Materials TSMC EPIC Center](https://www.digitimes.com/news/a20260512PR200/applied-materials-tsmc-development-partnership-equipment.html) | [Semiwiki — TSMC Technology Symposium 2026](https://semiwiki.com/semiconductor-manufacturers/tsmc/368690-tsmc-technology-symposium-2026-overview/)
+
+---
+
+## 5️⃣ 🎤 Monday Talking Points + 部門策略
+
+### Talking Point 1: 「明天 Google I/O 後，MTK NPU 的 Gemini Intelligence 支援狀態是什麼？」
+> Gemini Intelligence 跨 App 系統代理昨天（5/13）預亮相，今天是 5/19 主題演講。Android OEM 下一輪旗艦必須支援持續背景 AI 推理——不再是 NPU TOPS 數字競賽，而是「持續背景 + 多 App 上下文 + 螢幕視覺」三合一架構競賽。MTK Dimensity 是否在 Gemini Intelligence 官方認證清單上？
+
+**背後的部門策略:** 若尚未在清單，本週啟動與 Google Android 團隊技術對齊會議；若已在清單，立即轉化為 OEM 客戶銷售論述——Computex 前是最佳媒體窗口。
+
+### Talking Point 2: 「OpenAI 選 MTK 捨 Qualcomm——2027 N2P wafer 排程鎖單了嗎？」
+> Dimensity 9600 N2P 2nm 量產 2027 H1，但 TSMC N2P 產能在 Apple A20 / Nvidia / Google TPU 搶訂下極度緊張。MTK OpenAI 手機專案的 wafer 排程鎖單是否本季落實？
+
+**背後的部門策略:** 若尚未鎖定，5/25 前與 TSMC 業務窗口確認是緊急優先事項；鎖定後，量產確定性直接強化 2027 ASIC 業績能見度論述。
+
+### Talking Point 3–5:
+- **TP3:** 「Brent $117——edge AI SoC TCO 現在可以用美元數字量化：客戶每部署一台 MTK NPU vs. GPU 推理方案，年度能源成本差距是多少？立即準備這張數字。」
+- **TP4:** 「Qualcomm CEO 說 edge AI 獲勝 = AI 競賽獲勝——MTK 『Dimensity 9600 Agent Phone（手機型態）vs. Snapdragon X2 AI PC』不重疊差異化定位文件 5/25 前必須完成。」
+- **TP5:** 「中國 12 天 4 個 frontier AI 模型：MTK NPU SDK 是否把 DeepSeek V4 和 Kimi K2.6 加入 on-device 優化支援清單？中國 OEM Q2 旗艦規格討論現在需要答案。」
+
+---
+
+## 6️⃣ 📅 下週重點關注
+
+### 📆 預定事件
+- **5/19（明天）** Google I/O 主題演講（10 AM PT / 凌晨 1 AM 台北）— 看點：Gemini 4.0 發布、Gemini Intelligence 完整演示、edge deployment API 路線圖、Android 17 NPU API 更新
+- **5/19 後 48 小時** MTK 第二 ASIC（Google TPU 客製）workload 規格對齊評估窗口
+- **5/25** Computex 媒體日前一週窗口 — MTK edge AI 定位文件截止日
+
+### 📊 下週要追的數字
+- Brent crude spot price（Hormuz 緩解 vs. 持續，$100+ vs. $90 結構分水嶺）
+- Google I/O Gemini 4.0 性能 benchmark（vs. GPT-5.5）
+- MTK Gemini Intelligence 官方 SoC 認證清單收錄狀態
+
+### ⚠️ 可能引爆的風險
+- **Gemini Intelligence 認證清單排除 MTK**：若 5/19 I/O 公告僅支援 Qualcomm Snapdragon，MTK 2027 Android OEM 旗艦份額承壓
+- **Hormuz 升級**：以黎停火失效 + 伊朗局勢惡化 → Brent 突破 $130，BOM Scenario C 完全觸發，Q3 量產需啟動緊急應對
+- **MATCH Act 突然排程**：若本週全院表決通過，稀土管制 A/B/C 情境概率重洗牌，需 24 小時內更新情境分析
+
+---
+
+## 7️⃣ 🚫 Skip Pile
+
+- **UAE 退出 OPEC 細節**：Hormuz 能源主軸已充分涵蓋，個別供應商格局調整無立即 MTK 行動點。
+- **OpenAI 控告蘋果最新進展**：W20 已覆蓋核心邏輯（AI 生態整合走向法律戰），本週無重大新發展。
+- **GLM-5.1 / MiniMax M2.7 個別技術細節**：弱訊號 1 以「中國 AI 開源週更化」整體趨勢涵蓋，個別 benchmark 無 MTK 立即行動點。
+- **波音 200 架採購 / 農業大豆**：川習峰會非半導體議題，無 MTK 相關性。
+- **Googlebook 硬件規格細節**（Acer/ASUS 出貨）：MTK 非 Googlebook SoC 供應商，暫無直接業務影響。
+
+---
+
+*[daily](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Adaily) · [weekly](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Aweekly)*
