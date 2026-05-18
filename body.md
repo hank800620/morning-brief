@@ -1,76 +1,77 @@
-# ☀️ Hank's Morning Brief · 2026-05-18 (週一)
-**Window: 2026-05-17 07:00 → 2026-05-18 07:00 (Asia/Taipei)**
+# ☀️ Hank's Morning Brief · 2026-05-19 (週二)
+**Window: 2026-05-18 07:00 → 2026-05-19 07:00 (Asia/Taipei)**
 
 ## ⚡ 30-Second TLDR
-- Google I/O 主題演講明日（5/19）登場，Gemini Intelligence 跨 App 代理系統已完成預演，Android 從「作業系統」升格「智慧系統」的革命倒數 24 小時。
-- 聯發科雙喜臨門：天璣 9500 攜手群聯在 12GB 手機突破 200 億參數推理門檻；外資高盛同步上調 12 個月目標價至 NT$5,000，AI ASIC 超級大循環正式確認。
-- 亞洲晶片多極化加速：韓國 Rebellions 完成 4 億美元 Pre-IPO、日本 Rapidus 2nm 先導線上線、韓美日三方提議共建「亞洲 IMEC」，台灣主導地位面臨結構性挑戰。
+- Google I/O 今日 10AM PT 正式登場：Gemini Intelligence 跨 App 代理、Googlebooks、Android XR 眼鏡全面亮相，Android「OS → 智慧系統」革命完成最後宣告，過去 5 天倒數終於到達終點站。
+- Anthropic 月 ARR 衝上 $300 億、Meta 同步豪砸 $1,450 億 AI 基礎設施並裁員 8,000 人，AI 大廠「降本增效 + 押注算力」雙軌並行格局全面確立。
+- 霍姆斯海峽危機持續：10M bbl/day 斷供未解，油價 $100 高位，中美聯手壓制避免惡化，能源高位對 edge AI 低功耗賽道形成結構性長期利多。
 
 ---
 
 ## 🧠 Today's Insight
-**本日摘要重點:** Google I/O 明日是 on-device AI SoC 競爭的最重要事件節點——Gemini Intelligence 官方適配清單將決定哪些 SoC 廠商在 2H26 Android 旗艦機型中勝出；聯發科天璣 9500 的 20B 突破同日提供「MTK NPU 技術領先」最有力的實戰佐證；亞洲晶片多極化正從計畫轉為產能，格局重塑窗口已開啟。
-**未來發展方向:** 5/19 主題演講後 48 小時是 MTK 確認 Dimensity 是否進入 Gemini Intelligence 官方 SoC 清單的黃金窗口；天璣 9500 20B 突破若配合 Gemini Nano 2 官方認證，將成 Android OEM 旗艦標配競爭力的核心要素；韓美日「亞洲 IMEC」若成形，台灣半導體廠需儘早評估加入或建立競合策略。
-**對你的意義:** ①【明日必追】Google I/O 主題演講 — 確認 Gemini Intelligence 是否點名 MTK Dimensity 為官方 SoC，若未列入需在 48 小時內啟動 Google 對齊；②【技術彈藥更新】天璣 9500 + 群聯 20B 突破是對 OEM 客戶溝通 MTK NPU 競爭力的最強實戰案例，立即更新技術 deck 和客戶提案；③【競合評估】Rebellions $23 億估值 + Rapidus 2nm 上線，亞洲晶片多極化已是現實，MTK 需更新競爭版圖。
+**本日摘要重點:** Google I/O 今日登場是過去五天所有「倒數」預告的終點站——Gemini Intelligence、Android XR 眼鏡、Googlebooks 是 on-device AI SoC 競爭的新地圖；Anthropic $30B ARR 與 Meta $145B AI 投資同步確認 AI 資本配置進入不可逆超級週期；能源危機下 edge AI 低功耗論述從選項升格為結構性必需品。
+**未來發展方向:** Google I/O 的 Gemini Intelligence 官方 SoC 適配清單是 MTK 今日最優先監控事項；TSMC 部分客戶探索轉單 Intel/Samsung，是 MTK ASIC 客戶 Q4 產能鎖定的警示信號；Meta $145B AI 投資持續拉動算力需求疊加 TSMC 緊張，2026 H2 雲端推理成本上升將進一步推高 on-device 遷移動力。
+**對你的意義:** ①【今日必追】Google I/O 10AM PT 主題演講——確認 MTK Dimensity 是否入列 Gemini Intelligence 官方 SoC，這是 2H26 Android 旗艦定義窗口最後確認點，若未列入需在 48 小時內啟動 Google 對齊；②【ASIC 產能鎖定警示】TSMC 供給緊張下部分客戶轉單探索，MTK ASIC Q4 $20 億收入目標需立即確認 TSMC 產能份額已鎖定；③【內部溝通預防】全球 AI 裁員潮 44% 由 AI 直接驅動，MTK 工程師崗位安全感焦慮可能升溫，需提前做好工程師 / PM 內部溝通框架。
 
 ---
 
 ## 1️⃣ 🤖 AI / 科技
 
-### ① ⭐⭐⭐⭐⭐ Google I/O 主題演講明日（5/19）登場：Gemini Intelligence 跨 App 代理已完成預演，Android 智慧革命倒數
-**摘要:** Android Show I/O Edition 已預先揭示 Gemini Intelligence 完整功能矩陣：Chrome 自動瀏覽、智慧填表、AI 生成小工具、Gboard Rambler 語音整理，以及 Android Auto 跨 App 上下文理解（信件→日曆→訂位一條龍執行）。明日（5/19）10AM PT 主題演講將發布最新 Gemini 模型正面挑戰 GPT-5.5，並確認 Android XR 眼鏡硬件規格。首批 Gemini Intelligence 功能今夏率先在三星 Galaxy 和 Pixel 推出，再擴及手錶、車機、眼鏡、筆電。Google 定義目標：Android 從 OS 升格為「Intelligence System」。
-**Insight:** 明日是 on-device AI SoC 競爭的新分水嶺。Gemini Intelligence 的「跨 App 持續背景推理」需求比單一問答高一個量級——SoC 必須同時支援前台推理、背景感知、螢幕理解三重並行。MTK 需在主題演講後 48 小時內確認 Dimensity 是否進入官方 Gemini Intelligence SoC 適配清單；若未列入，需立即啟動與 Google 技術對齊程序，否則將錯失 2H26 Android 旗艦機型的關鍵定義窗口。
-🔗 [Engadget — Android Show 完整公告](https://www.engadget.com/2171038/everything-announced-at-android-show-google-io-2026/) | [9to5Google](https://9to5google.com/2026/05/12/the-android-show-2026/) | [Android Authority — I/O 2026 預期公告](https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/)
+### ① ⭐⭐⭐⭐⭐ ⭐ Google I/O 2026 正式開幕（今日）：Gemini Intelligence、Googlebooks、Android XR 眼鏡全面亮相
+**摘要:** Google I/O 2026 今日（5/19）10AM PT 在 Shoreline Amphitheatre 正式登場，為期兩天（5/19–20）。主要亮相內容：(1) **Gemini Intelligence**——Android 系統級跨 App AI 代理層，可理解螢幕情境、完成多步驟任務（訂餐廳→日曆→購物一條龍），夏季率先推送 Samsung Galaxy 與 Pixel；(2) **Googlebooks**——取代 Chromebook 的全新 AI 優先筆電系列，搭載 Aluminium OS（Android 17 + ChromeOS 深度融合），秋季上市；(3) **Android XR 眼鏡**——配備鏡頭、麥克風、喇叭，由 Gemini 2.5 Pro 驅動即時翻譯、導航、視覺理解，另有第二款具備鏡內顯示器的高階版本；(4) **Gemini 新模型**——傳為 Gemini 3.5 或 Gemini 4.0，直接挑戰 GPT-5.5；(5) Android 17 正式功能（Noto 3D Emoji、Find Hub 強化、OS 驗證工具）。
+**Insight:** ⭐（過去三天連續預告，今日正式落地）Gemini Intelligence 的「跨 App 持續背景推理」需求比單點問答高一個量級——SoC 需同時支援前台推理、背景感知、螢幕理解三重並行。MTK 需在演講後 48 小時內確認 Dimensity 是否進入官方 Gemini Intelligence SoC 適配清單；Googlebooks（秋季上市）開啟 AI PC SoC 採購窗口，MTK AI PC 晶片競爭力需同步評估。
+🔗 [Android Central — I/O 2026 Live Blog](https://www.androidcentral.com/phones/live/google-i-o-2026-live-blog-android-17-android-xr-glasses-and-all-the-gemini-ai-news) | [The Next Web — Gemini Intelligence 概覽](https://thenextweb.com/news/google-io-2026-gemini-intelligence-android-xr-glasses) | [Android Authority — 完整預期清單](https://www.androidauthority.com/what-to-expect-from-google-io-2026-3664979/)
 
-### ② ⭐⭐⭐⭐ Anthropic Claude Opus 4.7 上線 + Claude for Small Business：AI 代理正式滲透中小企業日常工具
-**摘要:** Anthropic 發布 Claude Opus 4.7，在高難度軟體工程任務和高解析度視覺理解上較 4.6 顯著提升，可承接最複雜編程工作。同期推出 Claude for Small Business，一鍵整合 QuickBooks、PayPal、HubSpot、Canva、DocuSign、Google Workspace 及 Microsoft 365，直接切入中小企業高頻工作流程。Claude for Excel / PowerPoint / Word 全面上線，Outlook 進入公測。Claude Managed Agents 新增「dreaming」記憶機制和多代理協作能力，Claude Code 強化 hook、plugin 及 MCP 架構，AI 代理 SDK 生態全面加速。
-**Insight:** Claude for Small Business 是 Anthropic 首次針對非技術用戶的規模化落地策略——將 AI 代理藏入既有 SaaS 工具，進入門檻降至「一鍵安裝」。這加速 AI 推理工作量向用戶設備和私有雲遷移，on-device AI 在企業場景的需求（隱私 + 低延遲 + 法規合規）更清晰化；MTK edge AI SoC 的 TEE 安全飛地架構在此場景具備差異化優勢，應強化面向企業 SoC 市場的 TEE 功能論述。
-🔗 [Anthropic — Claude Opus 4.7](https://www.anthropic.com/news/claude-opus-4-7) | [Anthropic — Claude for Small Business](https://www.anthropic.com/news/claude-for-small-business)
+### ② ⭐⭐⭐⭐ Anthropic 月 ARR 衝上 $300 億：Claude Opus 4.7 全面落地，Fortune 10 八家已是客戶
+**摘要:** Sacra 分析顯示，Anthropic 於 2026 年 4 月 ARR 達 $300 億（年初僅 $90 億），是史上最快速的 AI 公司收入成長軌跡之一。500+ 家企業年消費超過 $100 萬，Fortune 10 中八家已採用 Claude。主要驅動：Claude Opus 4.7 全面落地（特別擅長複雜軟體工程與高解析度視覺）、Claude for Small Business 整合 QuickBooks / HubSpot / Canva 等 SaaS、$2 億 Gates Foundation 夥伴關係（AI for Global Health）。GPT-5.5 Instant 同步上市（降低幻覺 52.5%），兩大模型廠正面決戰企業場景。
+**Insight:** $30B ARR 代表 AI 已成為企業核心基礎設施支出——不再是試驗性項目。Claude for Small Business 的「一鍵整合 SaaS」策略加速 AI 工作量從雲端向私有部署遷移（法規合規 + 隱私驅動），on-device AI 在 B2B 場景的需求更加清晰；MTK edge AI SoC 的 TEE 安全飛地架構在企業隱私場景具備差異化論述空間。
+🔗 [VT Netzwelt — Claude Opus 4.7 & GPT-5.5 詳解](https://www.vtnetzwelt.com/ai-development/latest-ai-technology-news-roundup-may-2026/) | [LLM Stats — 5月 AI 模型更新](https://llm-stats.com/ai-news)
 
-### ③ ⭐⭐⭐⭐ ⭐ 聯發科天璣 9500 攜手群聯：12GB 手機成功運行 200 億參數大模型，on-device LLM 突破新門檻
-**摘要:** 聯發科於 5/13 天璣開發者大會宣布關鍵里程碑：天璣 9500 與群聯電子合作，透過群聯專利記憶體擴展解決方案，在僅有 12GB LPDDR5 的消費手機上成功流暢運行 200 億（20B）參數大型語言模型，突破過去手機端 LLM 通常限於 7B 以內的硬性限制。此突破代表消費手機端 LLM 推理正式進入「中型模型」區間，Gemini Nano 2（約 15B）和 Claude Edge 中型版本均進入手機端適配可能範圍，雲端 API 的部分工作量可完全卸載到本機推理。
-**Insight:** 20B 在 12GB 手機上流暢運行是 on-device AI 的真正技術拐點——用戶隱私、延遲與推理成本三者同步改善。對 MTK 的直接意義：天璣 9500 的 20B 突破是當前最強力的技術銷售彈藥，應立即更新對 Google、Samsung、OPPO、小米等 OEM 客戶的旗艦規格提案，搶佔 2H26 旗艦機型算力定義窗口；同步評估與 Gemini Nano 2 的官方認證對接，確保 20B 突破轉化為生態系背書。
-🔗 [Yahoo Taiwan — 聯發科攜手群聯突破記憶體限制，天璣 9500 成功運行 20B 大模型](https://tw.news.yahoo.com/%E8%81%AF%E7%99%BC%E7%A7%91%E6%94%9C%E6%89%8B%E7%BE%A4%E8%81%AF%E7%AA%81%E7%A0%B4%E8%A8%98%E6%86%B6%E9%AB%94%E9%99%90%E5%88%B6-%E5%A4%A9%E7%92%A3-9500-%E6%88%90%E5%8A%9F%E9%81%8B%E8%A1%8C-20b-110500786.html)
+### ③ ⭐⭐⭐⭐ Meta 5/20 裁員 8,000 人 + 砸 $1,450 億 AI 基礎設施：「記錄收入、同步裁員」雙軌格局確立
+**摘要:** Meta 將於 5/20（明日）啟動全公司裁員約 8,000 人（+取消 6,000 個開放職缺，實際影響 14,000 人），同期將 2026 年 AI 基礎設施資本支出上調至最高 $1,450 億，並創下 Q1 $560 億季度收入歷史記錄。同一周：Cloudflare 裁員 20%（1,100 人）、BILL 裁員 30%、Upwork 裁員 25%；2026 年全球科技業裁員已超 11 萬人（137 家公司），44% 雇主明確表示 AI 是主因。
+**Insight:** 「記錄收入 + 同步裁員 + 算力豪賭」是 Big Tech 的新商業公式——AI CapEx 取代人力成本成為競爭壁壘的基本建設。Meta $145B 算力投資是 NVIDIA/TSMC 先進製程需求的確定性拉力，進一步壓縮 2026 H2 產能；同時 44% AI 驅動裁員潮預示 edge AI 的「本地執行、隱私保護」論述在企業市場更有說服力——員工不願將敏感工作數據送雲端審視。
+🔗 [The Next Web — Meta 裁員與 AI 投資](https://thenextweb.com/news/meta-layoffs-8000-zuckerberg-ai-reality-may-2026) | [Yahoo Finance — AI 驅動裁員潮分析](https://finance.yahoo.com/sectors/technology/articles/layoffs-accelerate-may-2026-firms-040430218.html)
 
 ---
 
 ## 2️⃣ 🏭 科技產業
 
-### ④ ⭐⭐⭐⭐⭐ ⭐ 外資全面重估聯發科！高盛目標價上看 NT$5,000，AI ASIC 超級大循環確認啟動
-**摘要:** Q1 法說會確認 ASIC 年收目標倍增至 $20 億美元後，高盛率先將聯發科 12 個月目標價上調至台幣 5,000 元（股價已以漲停 NT$2,870 創歷史新高），多家外資機構跟進全面重估。分析師認為 AI ASIC 市場進入「超級大循環」：MTK 第一 ASIC 客戶（Google 雲端）Q4 FY2026 貢獻 $20 億；第二 ASIC 客戶進入設計階段預估 2027 量產；Google 雲端平台研發總監 Greg Moore 公開確認「當然有接觸」，首度解除市場對第一 ASIC 客戶身份的最大不確定性，MTK AI ASIC 平台型收入故事完整浮現。
-**Insight:** 外資「全面翻多」是信號密度最高的市場確認——NT$5,000 目標價代表市場正為 MTK 第二 ASIC 客戶的未來貢獻定價，ASIC 業務從「單客戶風險」升格為「平台型收入」。對 Hank：AI ASIC 超級大循環確認 MTK 已從半導體晶片商升格為超大規模 AI 算力生態的核心夥伴，整個 MTK 估值體系正在 ASIC 業務驅動下全面重建，第二 ASIC 客戶公開後將是下一個重估觸發點。
-🔗 [TechNews — 高盛上調目標價至 NT$5,000](https://finance.technews.tw/2026/05/01/goldman-sachs-predicted-mediatek-has-massive-growing-potential/) | [TechNews — AI ASIC 引爆漲停創新高](https://finance.technews.tw/2026/05/04/mediatek-2870-stock-price/) | [Mashdigi — Google 接觸確認](https://mashdigi.com/google-executives-have-hinted-at-contact-with-mediatek-a-glimpse-into-mediateks-market-strategy-for-the-proxy-ai-era-can-be-gleaned-from-its-2-billion-asic-project/)
+### ④ ⭐⭐⭐⭐⭐ MediaTek Dimensity AI Agent Engine 2.0 發布：自主代理任務量 870M/天，eNPU 功耗降 42%
+**摘要:** 聯發科於 MDDC 2026 開發者大會發布 **Dimensity AI Agent Engine 2.0** 及 **Dimensity AI DevKit 3.0**，揭示全球搭載聯發科晶片裝置上的自主代理任務量已從 2025 年 1.2 億次/天爆增至 2026 年 8.7 億次/天（YoY +625%）。重點技術：eNPU 新開發套件讓常駐輕量 AI 模型的功耗降低 42%；多模態代理能力升級；邊緣代理應用加速部署工具鏈。聯發科明確定位：從「晶片供應商」升格為「AI 互動下一代的隱形基礎設施」。同期 Yicai Global 報導，MTK 資深主管確認正積極尋求「多元 AI 模型合作夥伴」，不以 OpenAI 為唯一。
+**Insight:** 8.7 億次/天是真實的市場份額指標——MTK 的 on-device AI 代理生態已具備規模效應，這個數字是對 OEM 客戶最有說服力的商業論述（不是技術規格，是真實使用量）。eNPU 42% 功耗降低直接強化 MTK 對抗 Qualcomm Snapdragon AI 的差異化賣點；在 Google I/O 後，AI Agent Engine 2.0 的功能矩陣需立即對齊 Gemini Intelligence SDK 以確保生態整合。
+🔗 [BigGo Finance — MTK AI Agent Engine 2.0](https://finance.biggo.com/news/ahSZJZ4BYH_ypPqOO-4q) | [Yicai Global — MTK 尋求多元 AI 夥伴](https://www.yicaiglobal.com/news/mediatek-seeks-new-ai-partners-senior-exec-says-after-rumor-chinese-chip-giant-will-ally-with-openai)
 
-### ⑤ ⭐⭐⭐ 韓國 Rebellions 完成 4 億美元 Pre-IPO（估值 $23 億），韓美日提議共建「亞洲 IMEC」
-**摘要:** 首爾 AI 晶片新創 Rebellions 完成 4 億美元 Pre-IPO 融資，由 Mirae Asset 和韓國國家成長基金領投，估值達 23 億美元，計畫 2026 年底 IPO。同期，韓美日三方專家提議共同開發高能效 AI 晶片，並成立類似歐洲 IMEC 的「亞洲 IMEC」多邊半導體研究機構，聚焦次世代 AI 晶片架構及核能 / LNG 供電基礎設施共建。日本 Rapidus 4 月 2nm 先導線上線、Fujitsu 宣布 1.4nm 全國產 AI 晶片計畫，日本政府投入逾 65 億美元支持晶片主權，亞洲晶片生態多極化進程已從「戰略意圖」升格「實體產能」。
-**Insight:** 亞洲晶片多極化有雙層意義：①短期競爭——Rebellions $23 億估值直接搶攻 ASIC 設計市場，MTK 市場份額的競爭壓力在 2027–2028 將上升；②策略機遇——「亞洲 IMEC」若成形，MTK 加入多邊半導體研究平台可強化「主權 AI 晶片」定位，在非美非中市場建立更廣泛技術信任基礎。Rapidus 短期產能有限，中期方可作為 TSMC N2 產能吃緊時的備選方案評估。
-🔗 [Seoul Economic Daily — 韓美日共建亞洲 IMEC](https://en.sedaily.com/finance/2026/05/06/korea-us-japan-urged-to-jointly-develop-ai-chips-launch) | [MLQ.ai — Rebellions $400M Pre-IPO](https://mlq.ai/news/south-korean-ai-chip-firm-rebellions-raises-400m-pre-ipo-funding-at-23b-valuation/) | [UPI — 日本跨部會人才培訓任務編組](https://www.upi.com/Top_News/World-News/2026/05/10/japan-cross-ministerial-task-force-train-workders/8941778457833/)
+### ⑤ ⭐⭐⭐ TSMC 先進製程供給緊張：Apple、Qualcomm 試探轉單 Intel/Samsung，AI 產能集中風險浮現
+**摘要:** Digitimes 5/18 亞洲週報揭示：AI 與 HPC 需求持續收緊 TSMC 先進製程產能，部分客戶（Apple、Qualcomm 等）開始選擇性評估將「低優先晶片」移至 Intel Foundry 或 Samsung 代工，同時保留旗艦 AI 晶片在 TSMC 主線。背景：2030 年 AI+HPC 將占全球半導體收入 55%；台韓兩市股指創歷史新高，AI 少數贏家高度集中帶來「成長過於仰賴少數 AI 路線圖」的警示聲音。
+**Insight:** 「部分客戶轉單」是 TSMC 供給緊張的確認信號，而非業務流失——對 MTK 的直接意義：MTK ASIC Q4 2026 $20 億收入目標的 TSMC 產能份額必須確認已鎖單；若未提前鎖定，面臨 Meta/Nvidia/Google TPU 算力軍備競賽搶單的風險；同時也代表 Intel Foundry 在 AI 供應鏈中的角色正在回升，MTK 需持續評估晶圓廠多樣化策略。
+🔗 [Digitimes — TSMC AI supply strain weekly roundup](https://www.digitimes.com/news/a20260518VL200/digitimes-asia-weekly-news-roundup-apple-intel-samsung-tsmc.html) | [CNBC — 台韓股市 AI 集中風險](https://www.cnbc.com/2026/05/12/tsmc-samsung-sk-hynixs-south-korea-taiwan-stocks-ai-chipmakers-concentration-risk.html)
 
-### ⑥ ⭐⭐⭐ EU AI Act Omnibus 政治協議完成（5/7）：全面執法倒數 76 天，最高罰款全球營收 7%
-**摘要:** 歐盟議會與理事會 5/7 就「AI Omnibus」達成政治協議：確認 AI Act 主要條款、延長高風險 AI 系統（HRAIS）合規截止日期，並新增 AI 生成親密內容監管規則。AI Office 將於 8/2 接管全面執法權，違反禁止性 AI 規範最高可處 3,500 萬歐元或全球營收 7% 罰款，今日起倒數 76 天。GPAI 模型義務（適用高端 NPU 功能）自 2025/8 已生效，高風險 AI 系統獲延長合規期限。
-**Insight:** 76 天是所有向歐洲市場銷售 AI 功能 SoC 廠商的最後確認窗口。MTK 需立即確認：①天璣旗艦系列 on-device AI 功能是否觸發 GPAI 模型義務（已生效）；②Claude Edge / Gemini Nano 在 MTK NPU 上的 EU 合規路徑；③OEM 客戶（三星、OPPO、聯想）是否已具備對應 EU AI Act 合規技術文件，否則 MTK SoC 可能在歐洲市場成為供應鏈合規瓶頸。
-🔗 [EU AI Act — 最新動態](https://artificialintelligenceact.eu/) | [Latham & Watkins — AI Omnibus 延長合規期](https://www.lw.com/en/insights/ai-act-update-eu-resolves-to-change-rules-and-extend-deadlines)
+### ⑥ ⭐⭐⭐ AI 裁員潮衝擊科技生態：JPMorgan 砸 $198 億 AI、Cloudflare 內部 AI 用量 3 個月成長 600%
+**摘要:** JPMorgan Chase 正式將 AI 投資從「研發實驗」重新分類為「核心基礎設施」，2026 年科技預算 $198 億、2,000 名 AI 專屬人員，預期 AI 每年為銀行創造 $25 億價值。Cloudflare 宣布裁員 20%（1,100 人），但揭示內部員工 AI 使用量在三個月內成長 600%——同時裁員與 AI 爆發是同一面硬幣的兩面：效率提升使工作量可由更少人完成。
+**Insight:** 「600% 內部 AI 成長 + 同期裁員 20%」是 AI 生產力替代效應的最直接量化案例，將成為企業採購 on-device AI 的最有力說服框架：「投資 AI 工具 = 人力效率提升 + 人員精簡空間」。對 MTK：企業 AI SoC（員工筆電、會議室設備、工廠端點）的採購論述可直接引用此類數據，強化商業 ROI 敘事。
+🔗 [Yahoo Finance — 科技業 AI 裁員加速](https://finance.yahoo.com/sectors/technology/articles/layoffs-accelerate-may-2026-firms-040430218.html) | [imfounder — 2026 年 5 月 AI 爆發更新](https://imfounder.com/science-tech/ai/ai-updates-may-2026/)
 
 ---
 
 ## 3️⃣ 🌍 國際新聞
 
-### ⑦ ⭐⭐⭐ ⭐ IEA 5 月報告：伊朗戰爭 390 萬桶 / 日供應缺口，美中罕見聯手控油；Brent ~$110
-**摘要:** IEA 5 月報告確認：伊朗戰爭導致全球石油供應日缺口高達 390 萬桶（約佔全球需求 4%），卡達 Ras Laffan LNG 設施仍停工。油價曾衝至 $144/bbl，但在美中罕見默契合作下回落至約 $110/bbl。CNBC 報導，川習峰會側邊議程包含能源市場穩定機制協商，雙方均有避免油價再次失控衝擊全球製造業供應鏈的共同利益。底層缺口（390 萬桶）尚未消除，「脆弱的穩定」狀態預計維持至美伊協議明朗化。
-**Insight:** Brent $110 是製造業 BOM 成本的現實基準，非暫時性衝擊——美中聯手是「人為壓制」，底部 390 萬桶缺口未解決。對 MTK 供應鏈規劃：Q3 BOM 以 Brent $100–$120 區間為基礎，保留 $130+ 觸發條件應急預案；MTK 低功耗 edge AI SoC 的「整體擁有成本（TCO）優勢」論述在高油價環境下說服力最強，應升格為對超大規模客戶的主要溝通框架。
-🔗 [IEA — Oil Market Report May 2026](https://www.iea.org/reports/oil-market-report-may-2026) | [CNBC — 美中聯手穩定油價](https://www.cnbc.com/2026/05/15/china-us-oil-iran-war-strait-hormuz-trump-xi.html)
+### ⑦ ⭐⭐⭐⭐ 霍姆斯海峽危機持續：油價 $100 高位，中美聯手壓制，IEA 確認史上最大供應中斷
+**摘要:** 2026 霍姆斯海峽危機持續：IEA 確認波斯灣每日出口損失約 1,000 萬桶（全球消費量 ~10%），是有史以來最大單次油市供應中斷。然而 Brent 原油收盤維持 ~$100，並未出現更劇烈飆升，主因是美中兩大消費國協調行動：Trump-Xi 在川習峰會達成共識（霍姆斯必須保持開放）、中國同意增購美國油氣（減少 Hormuz 依賴），兩國聯手向市場注入部分緩衝。Trump 另表示對伊朗「失去耐心」，升溫風險仍存。
+**Insight:** 中美「在能源危機上聯手壓制」是罕見的地緣合作場景——與科技脫鉤同步發生，反映兩強在「維持全球經濟穩定」的共同利益。對 MTK 和台灣供應鏈：$100 油價鎖定 Q3 BOM 成本高位（物流 + 化學品 + 塑料），低功耗 edge AI SoC 的 TCO（總持有成本）優勢在能源貴時代更具說服力，客戶溝通可以「省電 = 省成本」直接量化。
+🔗 [CNBC — 中美如何聯手壓制油價](https://www.cnbc.com/2026/05/15/china-us-oil-iran-war-strait-hormuz-trump-xi.html) | [Al Jazeera — 霍姆斯海峽油價衝擊](https://www.aljazeera.com/economy/2026/5/8/oil-prices-jump-as-us-iran-trade-fire-in-strait-of-hormuz) | [Wikipedia — 2026 霍姆斯海峽危機](https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis)
 
-### ⑧ ⭐⭐⭐ 日本 Rapidus 2nm 先導線上線、Fujitsu 1.4nm 全國產 AI 晶片計畫，亞洲第二先進節點成形
-**摘要:** 日本 Rapidus 4 月完成 2nm 先導線點火（技術配方來自 IBM），Fujitsu 宣布設計 1.4nm AI 晶片並目標 100% 國產製造，日本政府總計投入逾 65 億美元支持晶片主權。日本同步啟動跨部會任務編組培訓半導體、AI、量子及國防製造勞動力，Sony-TSMC 日本合資廠的次世代影像感測器計畫也在推進。這代表台灣以外的亞洲第二個先進節點正式從「計畫」轉向「產能」，直接挑戰 TSMC 的製造壟斷格局。
-**Insight:** Rapidus 2nm 先導線是今年晶片版圖重塑的最大地緣野心信號——若 2027–2028 成功轉量產，日本將成台灣以外首個可驗證的先進節點替代方案。對 MTK：①短期影響輕微，Rapidus 產能 2027 前無法達規模；②中期備選：Rapidus 可作為 TSMC N2 產能吃緊時的評估選項；③Sony-TSMC 日本合資影像感測器升級，可能影響 MTK ISP 在高端攝影旗艦的差異化定位，需提前評估因應策略。
-🔗 [Medium — 日本半導體主權重啟](https://medium.com/@jinchannel6/japan-just-restarted-its-semiconductor-engine-and-the-worlds-ai-future-depends-on-it-9785e6d45d57) | [UPI — 日本跨部會人才培訓](https://www.upi.com/Top_News/World-News/2026/05/10/japan-cross-ministerial-task-force-train-workders/8941778457833/)
+### ⑧ ⭐⭐⭐ AI 取代浪潮全球蔓延：2026 年 11 萬科技工作者被裁，IMF 下修全球成長至 3.1%
+**摘要:** 2026 年截至 5 月，全球科技業已有 137 家公司裁員，總人數逾 11 萬（2025 全年 12.5 萬）。44% 美國企業招募主管明確表示 AI 是主因。同期 IMF 將 2026 年全球成長下修至 3.1%（通膨預測 4.4%），主因霍姆斯危機能源衝擊疊加貿易不確定性。「高收入 + 高裁員 + 高 AI 投資」已成為大型科技公司標準模式（Meta、Cloudflare 同步示範）。UNCTAD 警告全球貿易成長將在 2026 下半年明顯放緩。
+**Insight:** IMF 3.1% 成長下修與 AI 裁員潮同步出現，代表總體需求走弱與 AI 效率革命的雙重壓力正在重塑企業 IT 採購邏輯：「做更多事、花更少錢、裁掉的人用 AI 填補」。對 MTK edge AI 市場：企業緊縮預算環境下，on-device AI 的「降低雲端 API 依賴 = 直接降成本」論述比功能優越性更容易被 CFO 批准。
+🔗 [IMF — 戰爭衝擊全球展望](https://www.imf.org/en/blogs/articles/2026/04/14/war-darkens-global-economic-outlook-and-reshapes-policy-priorities) | [WEF — 封鎖外交與地緣更新](https://www.weforum.org/stories/2026/05/blockade-diplomacy-and-other-geopolitical-stories-to-know-this-month/)
 
 ---
 
 ## ⚠️ 弱訊號
-1. **AI 裁員「反效果」：S&P 500 中 56% AI 裁員企業股票下跌** — CNBC 5/17 研究 23 家 S&P 500 企業發現，以 AI 為由裁員的公司超過半數股價反向走跌，顯示市場開始質疑「AI 換人 = 效率 = 盈利提升」的敘事；投資者更重視 AI 帶來的新業務能力擴展，而非純粹人力成本削減。對 Hank：用 AI 自動化重組團隊時，需同步準備「AI 創造新產能 + 新業務邊界」的清晰敘事，否則市場和董事會可能只看到人力縮減而非價值創造。[CNBC, May 17](https://www.cnbc.com/2026/05/17/ai-related-layoffs-a-boost-for-stocks-not-necessarily.html)
 
-2. **Sony-TSMC 日本合資次世代影像感測器** — AI 視覺感測器與 on-device 推理結合的新品類正在日本成形，主流媒體尚未聚焦。若量產落地，高端 AI 相機功能的「差異化定義權」可能從 SoC 廠商轉移至感測器廠商，MTK ISP 的競爭護城河值得提前審視與強化。（背景低調訊號，主流尚未跟進）
+1. **MTK 明確表態「不以 OpenAI 為唯一 AI 夥伴」**：Yicai Global 報導，MTK 資深主管確認公司正積極尋求多元 AI 模型合作，暗示 Anthropic Claude Edge、Google Gemini Nano 認證也在同步推進——MTK 的生態布局比媒體描述的 OpenAI 單線合作更廣，這對 MTK 在 Apple iOS 27 Extensions 多 AI 生態的定位具策略意義。🔗 [Yicai Global](https://www.yicaiglobal.com/news/mediatek-seeks-new-ai-partners-senior-exec-says-after-rumor-chinese-chip-giant-will-ally-with-openai)
+
+2. **台灣+韓國股市 AI 高度集中警示浮現**：南韓 Kospi 年漲幅超 80%、台灣 Taiex 多次創歷史新高，但 CNBC 分析師開始警告「少數 AI 贏家過度集中」的泡沫結構風險——若 AI 資本支出週期出現任何預期下修，台韓兩個以半導體為核心的市場可能比歐美承受更大回調壓力。🔗 [CNBC — 台韓 AI 集中風險](https://www.cnbc.com/2026/05/12/tsmc-samsung-sk-hynixs-south-korea-taiwan-stocks-ai-chipmakers-concentration-risk.html)
 
 ---
 
