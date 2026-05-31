@@ -1,78 +1,134 @@
-# ☀️ Hank's Morning Brief · 2026-05-29 (週五)
-**Window: 2026-05-28 07:00 → 2026-05-29 07:00 (Asia/Taipei)**
-
-## ⚡ 30-Second TLDR
-- Computex 2026 台北盛大開幕：聯發科攜 NVIDIA 展示 on-device 大模型推理+6G 世界首測，MTK「AI Without Limits」打響邊緣 Agentic AI 的發令槍。
-- Anthropic 年收入突破 $300 億、AMD 宣布 $100 億台灣押注 2nm，AI 基礎設施軍備競賽白熱化不見頂。
-- 解放軍 9 架戰機越台海中線，美伊談判油價單日暴跌 5%，地緣衝擊雙線同步升溫。
+# 📊 Hank's Weekly Brief · 2026-06-01 (2026-W23)
+**Window: 2026-05-25 06:30 → 2026-06-01 06:30 (Asia/Taipei)**
 
 ---
 
-## 🧠 Today's Insight
-**本日摘要重點:** Computex 2026 揭幕是今日最大主線——MTK 與 NVIDIA 聯手展示 on-device 大模型推理，Anthropic $300 億年收入與 AMD $100 億台灣押注同步印證 AI 基礎設施投資仍在加速而非見頂；三星 Q1 營業利益年增 755% 更確認算力供應鏈從訓練端向推理端遷移不可逆。
-**未來發展方向:** 當 on-device AI（MTK×NVIDIA DGX Spark）與雲端 AI（Anthropic+Google+Broadcom）同步加速，「混合邊緣-雲端 Agentic AI」已成產業共識架構；6/1 Jensen Huang GTC Taipei 演講將揭示 NVIDIA「五層 AI 生態」，預計成為下半年產業佈局的最重要定調。
-**對你的意義:** MTK 在 Computex 展示的 Agentic AI Edge-to-Cloud 方向與邊緣 AI 工作場域高度吻合——6G Radio Interoperability 世界首測與 CPO 400Gbps 是被大廠光芒掩蓋的 MTK 中長期護城河。台海 PLA 越線再升溫，地緣風險場景規劃仍是持續進行中的必要課題。
+## 1️⃣ 🧠 Weekly Insight
+**本週主旋律:** N1/N1X 正式發布 × OpenAI 選 MTK × Apple WWDC 邊緣 AI 倒計時 — 邊緣 AI 主導權爭奪週
+
+**結構性變化:**
+- **N1/N1X 在 Computex 揭幕，MTK 借勢策略全面兌現：** 6/1 Jensen Huang 於台北音樂廳親自發布 N1/N1X（MTK 20 核 ARM CPU × NVIDIA Blackwell GPU，媲美 RTX 5070），OEM 陣容 Dell/Lenovo/ASUS/MSI 確認，2026 年假日季前首批設備。MTK「讓主場」換來 NVIDIA 背書，品牌溢價遠超自辦 keynote。
+- **OpenAI 選 MTK Dimensity 9600，AI 手機打破高通壟斷：** 郭明錤分析，OpenAI 首款 AI 手機採用客製化 Dimensity 9600（雙 NPU 架構、LPDDR6＋UFS 5.0、pKVM 安全），量產時程從 2028 提前至 2027 H1。這是 MTK ASIC 飛輪從雲端（Google TPU）延伸至終端設備的關鍵一步。
+- **Apple WWDC 6/8 全面押注 on-device AI：** Apple 計畫以 15 年 Silicon 優勢為核心，發布 iOS 27 與 Siri 大改造，並以 Google Gemini 蒸餾版在裝置端執行——邊緣推理 vs 雲端代理人的定義之戰正式進入決戰倒計時。
+
+**對你的下一步:**
+- **本週 Computex 主場（6/2-5）：** 追蹤 6/3 蔡力行 keynote，確認 Dimensity 9600 正式規格及 ASIC 2027 展望數字。
+- **N1/N1X 媒體 Q&A 口徑：** MTK ARM CPU 設計在 N1/N1X 中貢獻的具體功耗/效能數字，是獨立差異化的核心素材。
+- **Apple WWDC 6/8（10:00 PT）必看：** on-device NPU 算力需求確立後，手機 SoC NPU 的定價基準將重新設定，直接影響 MTK Dimensity 9600 的市場敘事。
 
 ---
 
-## 1️⃣ 🤖 AI / 科技
+## 2️⃣ 🪞 上週對賬（W22 預測 → W23 驗證）
 
-### ① ⭐⭐⭐⭐⭐ Computex 2026 台北開幕：NVIDIA GTC Taipei 6/1 Jensen Huang 揭次世代「五層 AI 架構」
-**摘要:** Computex 2026 於台北南港展覽館盛大開幕，為全球最重要的 AI 硬體年度盛事。NVIDIA CEO Jensen Huang 確認於 6/1 台北時間 11:00 在台北流行音樂中心獨家發表 GTC Taipei 主題演講，主題聚焦 AI 進化下一階段：從能源、運算、物理 AI 到代理人應用的「五層蛋糕」AI 生態架構。6/2 Jensen Huang 將與 Marvell CEO Matt Murphy 同台，揭示 NVIDIA NVLink Fusion 整合 Marvell 互聯方案的全新 AI 資料中心藍圖，合作夥伴包括 MediaTek。
-**Insight:** Computex 三天連爆——今日 MTK/AMD 展示到 6/1 Jensen Huang 主題演講，台北正成為繼舊金山後 AI 硬體最重要的披露舞台。本週所有大客戶（NVIDIA/AMD/TSMC 供應鏈）核心決策者都在台北，是深化夥伴關係的黃金視窗，對 MTK 邊緣 AI 事業的 BD 行動意義重大。
-🔗 [VideoCardz: GTC Taipei June 1 確認](https://videocardz.com/newz/nvidia-confirms-jensen-huang-gtc-taipei-keynote-on-june-1st-day-before-computex) ｜ [COMPUTEX NVIDIA Keynote 公告](https://www.computextaipei.com.tw/en/news/5F511A9E6A5A8E05/info.html?lt=data&cr=8) ｜ [WCCFTech: 次世代 AI 突破預告](https://wccftech.com/nvidia-ceo-jensen-huang-to-host-gtc-taipei-keynote-ahead-of-computex-2026/)
-
-### ② ⭐⭐⭐⭐⭐ Anthropic×Google×Broadcom 史上最大算力擴張：年收入破 $300 億，千家百萬美元企業客戶 ⭐
-**摘要:** Anthropic 宣布與 Google 和 Broadcom 達成計算基礎設施深度擴張合作，為迄今最大算力承諾，以支應前所未見的需求成長。年化營收已超過 $300 億美元（年初約 $90 億），年內增幅逾三倍；年費超過 $100 萬美元的企業客戶數已突破 1,000 家，且僅兩個月前才剛翻倍。Anthropic 同步宣布在義大利米蘭開設辦公室，持續布局全球企業市場。
-**Insight:** Anthropic 的商業化速度遠超市場預期——$300 億年化收入使其估值與 OpenAI 差距持續縮小，千家 $1M+ 企業客戶代表深度黏著而非試用。Google+Broadcom 算力聯盟意味 Anthropic 推理成本將持續下降，「合規+高品質」定位在 AI 安全監管壓力下愈來愈具備商業護城河。
-🔗 [Anthropic×Google×Broadcom 官方公告](https://www.anthropic.com/news/google-broadcom-partnership-compute) ｜ [Axios: Google 如何贏 AI 戰爭](https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war) ｜ [LLM Stats AI 最新動態](https://llm-stats.com/ai-news)
-
-### ③ ⭐⭐⭐⭐ AMD 宣布 $100 億投資台灣：全球首批 2nm HPC 晶片 Venice 量產，Helios Rack-Scale AI 平台發布
-**摘要:** AMD 宣布在台灣電子生態系統投資逾 $100 億美元，加速次世代 AI 晶片量產。旗艦產品為第六代 EPYC CPU「Venice」，採用台積電 2nm 製程，成為全球首批進入 2nm 量產的 HPC 晶片，部分產能未來將遷移至台積電亞利桑那廠。同期發布 Helios 機架規模 AI 平台，整合 Venice CPU 與 MI450X GPU，預計 2026 下半年部署。合作夥伴涵蓋 TSMC、ASE Technology、SPIL、Powertech Technology。
-**Insight:** AMD $100 億台灣投資與 NVIDIA 台灣中心戰略互相呼應——台灣正式成為「全球 AI 晶片最重要的製造決策中心」。AMD Venice 2nm 與 MTK 旗艦晶片同搶台積電 2nm 先進製程產能，先進製程排產競爭即將白熱化；Helios rack-scale 設計也是 MTK 資料中心事業的重要競品參考座標。
-🔗 [EE Times: AMD $100 億台灣投資](https://www.eetimes.com/amd-plans-10b-investment-in-taiwan-to-boost-ai-infrastructure/) ｜ [IndexBox: AMD Venice 2nm 量產](https://www.indexbox.io/blog/amd-invests-over-10-billion-in-taiwans-electronics-ecosystem-for-ai-chip-production/) ｜ [PCGamer: AMD 台灣押注詳情](https://www.pcgamer.com/software/ai/amd-is-putting-usd10-billion-into-taiwan-investments-to-accelerate-next-gen-ai-infrastructure-with-some-fancy-new-tech-on-the-way/)
+| 狀態 | W22 預測 / 任務 | W23 驗證結果 |
+|------|----------------|-------------|
+| ✅ Confirmed | 6/1 Jensen Huang N1/N1X 揭幕 | 已在 GTC Taipei 正式發布；OEM Dell/Lenovo/ASUS/MSI 確認；2026 Q4 首批 |
+| ✅ Confirmed | N1/N1X OEM 名單 + 量產時程確認 | Dell/Lenovo/ASUS/MSI 確認；2026 假日季首批，2027 Q1 廣泛上市 |
+| ✅ Confirmed | MTK 借勢策略品牌效益 | NVIDIA 主場背書，N1/N1X 全球媒體覆蓋遠超 MTK 自辦 keynote 量級 |
+| ⏳ Pending | 6/3 蔡力行 Computex 主題演講 | 6/1 今天，6/3 尚未到，繼續追蹤 |
+| ⏳ Pending | MATCH Act 全院表決 | 連續三週無新動態，持續掛起 |
 
 ---
 
-## 2️⃣ 🏭 科技產業
+## 3️⃣ 🔭 本週 5 條主軸線
 
-### ④ ⭐⭐⭐⭐⭐ 聯發科 Computex「AI Without Limits」：×NVIDIA DGX Spark on-device 大模型＋6G 全球首測＋CPO 400Gbps ⭐⭐
-**摘要:** 聯發科在 Computex 2026 以「AI Without Limits」為主題三大技術首秀同步登場：①MTK×NVIDIA 聯合展示 DGX Spark（NVIDIA GB10 Grace Blackwell）搭載 LPDDR5x 統一記憶體實現 on-device 大模型推理，1 PetaFLOP GPU+20 核 CPU 重新定義桌面生產力；②全球首個 6G Radio Interoperability（無線互通）演示，支援超低延遲 Agentic AI 協作，6G Co-MIMO 提升下行頻寬逾 60%；③資料中心共封裝光學（CPO）400Gbps 展示，為 AI 資料中心網路節能鋪路。汽車端：Dimensity AX C-X1 整合 NVIDIA AI 支援 Agentic AI 智慧座艙，Primax 同日宣布深化 Genio AIoT 邊緣 AI 機器人戰略合作。
-**Insight:** MTK 在 Computex 的技術宣示是迄今最全面的品牌轉型聲明——已從手機晶片廠進化為涵蓋 edge AI、6G 通訊、資料中心、汽車的全棧 AI 基礎設施玩家。DGX Spark on-device 推理架構是今年最具市場教育價值的展示，直接強化「端側推理優先」定位；6G 世界首測是 2030 年代通訊卡位戰的靜默宣示。
-🔗 [MediaTek Computex 2026 官網](https://www.mediatek.com/computex2026) ｜ [GadgetBridge: MTK Computex 全覽](https://www.gadgetbridge.com/news/mediatek-at-computex-2026-wi-fi-8-6g-agentic-ai-and-everything-in-between/) ｜ [TaiwanNews: Primax×MTK 5/28](https://www.taiwannews.com.tw/news/6371651)
+### 主軸 1: NVIDIA N1/N1X 正式發布，MTK ARM CPU 進入 PC 生態
+- **重要性:** ⭐⭐⭐⭐⭐
+- **發生了什麼:** 6/1 Jensen Huang 於 GTC Taipei 揭幕 N1/N1X：20 核 MTK ARM CPU 搭配 RTX 5070 等效 NVIDIA Blackwell GPU，完整 CUDA 軟體棧。OEM 合作夥伴 Dell、Lenovo、ASUS、MSI 確認，2026 年假日季首批，2027 年初廣泛上市。NVIDIA Vera Rubin 平台同步宣布全面量產（vs Blackwell：訓練 3.5x、推理 5x）。
+- **Insight:** MTK 以「不出現」換取 NVIDIA 全程背書，這是一次精準的品牌槓桿操作。更關鍵的是：N1/N1X 讓 MTK ARM CPU IP 正式進入 PC 生態，估值敘事從「手機 SoC」升格為「跨裝置 AI 平台」，與 ASIC 翻倍故事形成雙引擎。
+- **來源:** [TechTimes - Computex 2026 N1X](https://www.techtimes.com/articles/317446/20260530/computex-2026-jensen-huang-keynote-n1x-reveal-arc-g3-snapdragon-c-all-land-this-week.htm) · [VideoCardz](https://videocardz.com/newz/nvidia-teases-new-era-of-pc-ahead-of-n1-and-n1x-laptop-chip-announcement)
 
-### ⑤ ⭐⭐⭐⭐ 三星 Q1 2026 營業利益年增 755% 創歷史新高，微軟／Google 雙雙洽談 3-5 年 HBM 長約 ⭐
-**摘要:** 韓國三星電子發布 2026 年第一季財報，營業利益較去年同期暴增 755%，創下歷史單季新高，AI 驅動 HBM 與 DRAM 需求超乎預期。微軟與 Google 正分別與三星、SK 海力士洽談為期 3-5 年的長期 DRAM/HBM 供應合約，確保 AI 算力軍備競賽下的記憶體供應穩定。KOSPI 年初至今漲幅已超 78%，三星+SK 海力士合計佔指數逾 42%，北亞股市繼續由 AI 浪潮驅動。
-**Insight:** HBM 長約化是結構性轉變——從現貨採購走向長期策略採購，意味微軟、Google 已確認 AI 基礎設施投資的多年期確定性。對 MTK ASIC 業務：若 MTK AI 晶片產品可搭配提供長期配套供應保障方案，商業對話的說服力將大幅提升；三星 755% 利潤成長也強化了邊緣 AI 晶片「順周期」的市場背景論述。
-🔗 [BigGo Finance: 三星 HBM 記憶體現物價格](https://finance.biggo.jp/news/USt7Z50BvbjfYyetpOom) ｜ [Amiko Consulting 日本 AI 週報 5/18-5/23](https://amiko.consulting/2026%E5%B9%B45%E6%9C%8818%E6%97%A5%E3%80%9C5%E6%9C%8823%E6%97%A5%E9%80%B1%E3%81%AEai%E4%B8%BB%E8%A6%81%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%E3%81%A8%E8%A3%BD%E9%80%A0%E6%A5%AD%E3%81%B8%E3%81%AE/) ｜ [FX.co 全球市場 5/28](https://www.fx.co/en/analysis/447333)
+### 主軸 2: OpenAI 選 MTK Dimensity 9600，AI 手機打破高通壟斷
+- **重要性:** ⭐⭐⭐⭐⭐
+- **發生了什麼:** 郭明錤（Ming-Chi Kuo）報告確認 OpenAI 首款 AI 手機採用客製化 MTK Dimensity 9600（雙 NPU 異質計算架構、LPDDR6＋UFS 5.0、pKVM 內核虛擬化安全），TSMC N2P 製程，量產時程提前至 2027 H1。MTK 被評為「更有條件成為獨家供應商」，勝出 Qualcomm。
+- **Insight:** 這不只是一張大訂單。OpenAI 主動要求客製化雙 NPU 架構，意味著 MTK 首次展現出「與頂級 AI Lab 共同設計推理架構」的能力——這個角色升格對 MTK ASIC 的長期議價能力，市場尚未充分定價。
+- **來源:** [WCCFtech - OpenAI picks MediaTek](https://wccftech.com/openai-picks-mediatek-over-qualcomm-for-its-first-smartphone-customizing-the-dimensity-9600-with-a-dual-npu-architecture-to-challenge-the-iphone/) · [Android Authority](https://www.androidauthority.com/openai-phone-development-specs-availability-3663415/)
 
-### ⑥ ⭐⭐⭐ 美國 CHIPS 辦公室押注量子計算：$20 億注資 IBM、GlobalFoundries，後矽時代戰略佈局啟動
-**摘要:** 美國政府透過 CHIPS 研究與發展辦公室宣布向量子計算企業注資約 $20 億，獲獎廠商包括 IBM 與 GlobalFoundries。此舉被視為美國在 AI 算力佈局之後，在後矽時代計算技術的下一個戰略投注，目標是確保量子計算領域的技術領導地位。半導體產業協會（SIA）正式表態支持。
-**Insight:** 量子計算距商業化仍有距離，但政府戰略資金是 10 年後競爭格局的關鍵播種。GlobalFoundries 獲獎暗示量子製造端正在尋找非台積電路徑，這為台灣先進製程在量子時代的地位提出長期思考。MTK 目前無直接量子業務，但研究資源分配和人才方向值得提前關注。
-🔗 [SIA: CHIPS R&D 量子計算獎項](https://www.semiconductors.org/news-events/latest-news/) ｜ [IndexBox 半導體 5 月動態](https://www.indexbox.io/blog/industry-insights-semiconductor-and-computing-developments-may-20-2026/)
+### 主軸 3: Apple WWDC 2026（6/8）押注 on-device AI，邊緣推理決戰倒計時
+- **重要性:** ⭐⭐⭐⭐
+- **發生了什麼:** Apple 確認以 6/8 WWDC 為舞台，全面展示 on-device AI 差異化：iOS 27 + Siri 大改造、Apple Silicon 本地推理優勢，並首次披露與 Google Gemini 合作——利用大型雲端模型蒸餾出可在 iPhone/Mac 端執行的小模型，形成隱私保護＋成本節省的雙重護城河。
+- **Insight:** Apple 的策略等於在公開宣告：「最好的 AI 不需要雲端。」這對整個手機 SoC 市場意義深遠——NPU 算力將成為溢價定價的核心戰場，直接提升 MTK Dimensity 9600 對 OpenAI 等客戶的談判籌碼。
+- **來源:** [MacRumors - WWDC on-device AI](https://www.macrumors.com/2026/05/28/apple-to-make-on-device-ai-key-focus/) · [AppleInsider](https://appleinsider.com/articles/26/05/28/apple-doubling-down-on-on-device-ai-at-wwdc-2026)
 
----
+### 主軸 4: 美國遠程訪問安全法案通過眾議院，雲端算力納入出口管制
+- **重要性:** ⭐⭐⭐⭐
+- **發生了什麼:** 美國眾議院通過《遠程訪問安全法案》（Remote Access Security Act），將透過第三國雲端服務繞過晶片限制的行為納入《出口管制改革法》管轄。BIS 2026 年預算增加 23% 至 2.35 億美元，重點執行先進計算晶片管制。台積電南京廠同步獲得年度出口許可，從逐案審批改為年度授權。
+- **Insight:** 「雲端也要管制」讓中國企業的替代路徑收窄，但台積電南京廠年度授權是結構性鬆綁信號——顯示美方在維持管制高壓的同時，為可信賴供應鏈保留清晰通道。MTK 雙軌 ASIC 策略（美系客戶 vs 非美系市場）的合規護城河繼續加固。
+- **來源:** [金杜律師事務所 - 美國對華出口管制](https://www.kingandwood.com/cn/zh/insights/latest-thinking/us-export-controls-on-china-trends-in-2026-and-compliance-strategies-for-enterprises.html) · [鉅亨網 - 台積電南京廠](https://news.cnyes.com/news/id/6295452)
 
-## 3️⃣ 🌍 國際新聞
-
-### ⑦ ⭐⭐⭐⭐ 台灣海峽：解放軍 9 架戰機越中線，Computex 週期間緊張程度攀升
-**摘要:** 台灣國防部最新通報，解放軍共 9 架軍機與 6 艘艦艇進行台海周邊活動，其中 9 架全數越過台灣海峽中線——此為非正式分隔線，越線被視為刻意挑釁。發生時機恰在 Computex 2026 開幕日與 NVIDIA/AMD 主要台灣投資宣布之後，為近期最大規模越線紀錄之一。
-**Insight:** PLA 越線的時機選擇並非偶然——Computex 週期間台灣技術能見度達到全年頂峰，軍事壓力測試在此時具有強烈政治信號意義。對 MTK 供應鏈風險管理：台海緊張程度進入新節點，董事會層面的地緣風險情境規劃需持續更新，對外投資人溝通的台海風險框架也需同步完善。
-🔗 [FX.co 台灣海峽最新情勢 5/28](https://www.fx.co/en/analysis/447333) ｜ [Lazard 2026 地緣政治趨勢](https://www.lazard.com/research-insights/top-geopolitical-trends-in-2026/)
-
-### ⑧ ⭐⭐⭐ 美伊核談判關鍵時刻：盧比奧稱「給機會」，油價單日暴跌 5%、黎巴嫩遭以色列空襲 47 處
-**摘要:** 美國國務卿盧比奧於 5/27 公開表示將給予美伊核談判「成功的機會」，全球油市即時反應，布倫特原油單日暴跌逾 5%。同期，以色列空軍對黎巴嫩南部、貝卡谷地 47 個定居點進行大規模空襲，伊朗持續以結束攻擊真主黨為談判前提，胡塞武裝仍威脅霍爾木茲海峽航運。
-**Insight:** 油價 -5% 的即時反應揭示市場對地緣去風險化的渴望——若美伊協議落地，能源成本下降將直接降低全球半導體製造業的電費負擔。然而中東局勢（以色列/黎巴嫩/伊朗三角）與霍爾木茲海峽航運不確定性並未解除，半導體設備運輸與能源供應的供應鏈備案仍是必要項目。
-🔗 [FX.co 5/28 全球市場與地緣政治](https://www.fx.co/en/analysis/447333) ｜ [WEF: 5 月封鎖外交與地緣故事](https://www.weforum.org/stories/2026/05/blockade-diplomacy-and-other-geopolitical-stories-to-know-this-month/)
-
----
-
-## ⚠️ 弱訊號
-
-1. **MTK 6G Radio Interoperability 世界首測（被 NVIDIA/AMD 光芒掩蓋）** — Computex 上全球唯一展示真正 6G 無線互通的廠商是聯發科，而非任何歐美電信設備商。6G 標準制定正在進行，2030 年代的通訊霸主卡位戰已悄悄開局。若 MTK 在 6G 標準中保持主導地位，未來邊緣 AI 裝置的無線連接規格將由自家定義——護城河比 5G 更深。[MediaTek Computex 2026](https://www.mediatek.com/computex2026)
-
-2. **CPO 共封裝光學：資料中心能耗的下一場靜默革命** — AMD Helios 和 MTK 資料中心方案都在 Computex 展示 CPO 技術，可將網路功耗降低 70%、傳輸速度大幅提升。幾乎沒有主流媒體報道這一細節，但 AI 資料中心電費已成最大成本變數；CPO 商業化時程是 MTK 資料中心事業值得深度追蹤的隱藏座標。[SIA Semiconductor Latest](https://www.semiconductors.org/news-events/latest-news/)
+### 主軸 5: Edge AI 市場突破 $600 億預測，製造/醫療/自駕三引擎
+- **重要性:** ⭐⭐⭐
+- **發生了什麼:** 多份市場報告確認 Edge AI 市場將於 2027 年超過 $600 億，CAGR 25%＋。主要驅動力：製造業（毫秒級決策）、醫療（資料主權法規）、自駕系統（雲端往返不可接受），以及消費電子（隱私＋成本壓力）。Edge IR 等產業媒體分析顯示，邊緣推理成本已從「昂貴妥協」轉為「雲端替代」。
+- **Insight:** 這個趨勢對 MTK 的意義超越財務預測：當邊緣推理成為標配，MTK 在手機、PC（N1/N1X）、汽車（Dimensity AX）、物聯網的多終端布局將成為唯一覆蓋全場景的 edge AI SoC 廠商敘事。
+- **來源:** [Edge AI gaining on cloud - PYMNTS](https://www.pymnts.com/news/artificial-intelligence/2026/edge-ai-is-gaining-cloud/) · [Agentic Edge AI - Federal News](https://federalnewsnetwork.com/commentary/2026/05/milliseconds-matter-how-agentic-edge-ai-delivers-autonomous-action-at-the-source/)
 
 ---
 
-*[daily issues](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Adaily)*
+## 4️⃣ ⚠️ 本週 2 個最重要弱訊號
+
+### 弱訊號 1: OpenAI 客製化雙 NPU 架構 — MTK「共同設計」角色首度浮現
+- **為什麼你不該錯過:** 大多數報導聚焦於「OpenAI 選 MTK vs Qualcomm」的商業勝負，但真正值得注意的是：OpenAI 要求「雙 NPU 異質計算」這個架構決策本身。這意味著 MTK 不再只是「執行客戶規格的代工方」，而是能與 OpenAI 協同設計 AI 推理架構的夥伴。這個角色躍升，是未來 ASIC 議價能力的先行指標，市場尚未定價。
+- **追蹤指標:** 2027 H1 Dimensity 9600 量產時間點；OpenAI 手機 NPU benchmark 是否披露；MTK 後續 ASIC 客戶是否出現類似「共同設計」條款。
+- **來源:** [WCCFtech OpenAI dual-NPU](https://wccftech.com/openai-picks-mediatek-over-qualcomm-for-its-first-smartphone-customizing-the-dimensity-9600-with-a-dual-npu-architecture-to-challenge-the-iphone/)
+
+### 弱訊號 2: NVIDIA Vera Rubin 全面量產（3.5x 訓練 / 5x 推理 vs Blackwell）
+- **為什麼你不該錯過:** Vera Rubin 的量產不是產品發布，而是基礎設施定價基準的更新。當 MTK 的 ASIC 客戶（如 Google TPU）面臨「升級至 Vera Rubin 級算力 vs 繼續客製 ASIC」的選擇，MTK ASIC 的差異化說法（效率、定制、成本）將面臨更嚴格的技術對比。這是 $20 億 ASIC 故事的壓力測試起點。
+- **追蹤指標:** Google TPU v8 vs Vera Rubin 效能對比任何分析；MTK ASIC 客戶合約更新週期（H2 2026 是否有大客戶重簽）。
+- **來源:** [Computex 2026 Tradingkey](https://www.tradingkey.com/analysis/stocks/us-stocks/261937540-computex-2026-jensen-huang-chip-titans-ai-highlights-watch-taipei-tradingkey)
+
+---
+
+## 5️⃣ 🎤 Monday Talking Points + 部門策略
+
+### Talking Point 1: N1/N1X OEM 陣容確認 — MTK ARM CPU 的獨立差異化如何量化？
+> "N1/N1X 是 MTK 第一次讓 ARM CPU IP 進入全球頂級 PC OEM 的出貨清單。Dell、Lenovo、ASUS、MSI 同時背書，這不是巧合，是 NVIDIA 替我們做了品牌驗證。"
+
+**背後的部門策略:** 現在的問題是：MTK 在 N1/N1X 中的 CPU IP 貢獻（核心架構、功耗管理、睡眠/喚醒時延）如何獨立量化？這個數字是 2027 年 PC AI SoC 合作談判的底牌，需要技術行銷團隊本週開始整理。
+
+### Talking Point 2: OpenAI 選 MTK — AI 手機打破高通壟斷，ASIC 飛輪加速
+> "OpenAI 不只是選了我們的晶片，他們要求我們幫他們設計雙 NPU 架構。這是客戶關係質變的信號——從供應商到共同設計夥伴。"
+
+**背後的部門策略:** 將 OpenAI 手機專案定位為「ASIC 客製能力 showcase」，而非一般量產訂單。對外溝通重點：MTK 的 ASIC 差異化來自「架構共同設計」，不是「照單生產」。
+
+### Talking Point 3: Apple WWDC 6/8 on-device AI — NPU 戰場決策點
+> "Apple 用蒸餾版 Gemini 在裝置端執行，等於替整個行業宣告：最好的 AI 體驗不需要雲端。這對我們的 Dimensity 9600 是利多——NPU 算力現在有了消費者可感知的具體敘事。"
+
+### Talking Point 4: 遠程訪問安全法案 — 合規護城河再加固
+> "美國把雲端算力也納入管制，繞道路徑持續收窄。MTK 的雙軌策略（美系 ASIC 客戶合規化 + 非美系市場分開）現在看起來越來越像是先見之明，而不是保守選擇。"
+
+### Talking Point 5: Edge AI $600 億市場 — MTK 多終端布局是唯一全場景選手
+> "手機、PC（N1/N1X）、汽車（Dimensity AX）、物聯網——能同時在這四個場景提供 edge AI SoC 的廠商，目前只有我們。這個故事到今年底應該能翻譯成具體的市場份額數字。"
+
+---
+
+## 6️⃣ 📅 下週重點關注（2026-06-01 → 2026-06-08）
+
+### 📆 預定事件
+- **6/2-5** Computex 2026 主場（台北南港展覽館）— 看點：MTK "AI Without Limits" 展區，Wi-Fi 8、6G、Dimensity AX 汽車晶片實機展示
+- **6/3** 蔡力行（Rick Tsai）Computex 主題演講（Hall 2）— 看點：Dimensity 9600 正式規格、ASIC 2027 展望數字（是否正式宣布 ASIC > 手機業務？）
+- **6/8** Apple WWDC 2026 keynote（10:00 PT = 台北 01:00 6/9）— 看點：iOS 27、Siri 大改造、on-device AI benchmark、Google Gemini 蒸餾版細節
+
+### 📊 下週要追的數字
+- MTK N1/N1X：首批 OEM 設備的 TDP/效能規格（MTK CPU 的功耗貢獻）
+- Dimensity 9600 官方 NPU TOPS 數字（預計 6/3 揭露）
+- ASIC 2027 展望是否升至 $30 億以上
+- Apple WWDC：on-device model size（幾 B 參數可在 iPhone 端跑？）
+
+### ⚠️ 可能引爆的風險
+- 蔡力行 keynote 再度取消或縮水（上週 N1/N1X 搶鏡，MTK 自身訊息可能繼續被 NVIDIA 光環壓制）
+- MATCH Act 突然排入院會表決（連三週沉寂後突破往往更劇烈）
+- Apple WWDC on-device AI 若效果不如預期，可能反向引發「雲端 AI 依賴不可避免」敘事，對邊緣 AI 市場預期構成短期壓力
+
+---
+
+## 7️⃣ 🚫 Skip Pile
+
+- **Intel Arc G3 Handheld Gaming** — Computex 展場主角之一，但非 MTK 核心業務交集，不影響本週決策。
+- **Qualcomm Snapdragon C 系列** — Computex 配角，OpenAI 手機敗選後已邊緣化，值得長期追蹤但本週不到爆點。
+- **MATCH Act 全院表決** — 連三週無新動態，繼續掛起；若本週有動態會進入 Daily。
+- **MediaTek Pentonic 800 AI TV SoC** — Computex 展示亮點，但 TV SoC 市場規模和 MTK 整體估值貢獻有限，跳過本週深析。
+- **Gemini Omni 視頻生成** — 5/18-25 Daily 已深度覆蓋，本週無重大更新，不重複。
+
+---
+
+*[daily](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Adaily) · [weekly](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Aweekly)*
