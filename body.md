@@ -1,137 +1,89 @@
-# 📊 Hank's Weekly Brief · 2026-06-08 (2026-W24)
-**Window: 2026-06-01 06:30 → 2026-06-08 06:30 (Asia/Taipei)**
+# ☀️ Hank's Morning Brief · 2026-06-13 (週六)
+**Window: 2026-06-12 07:00 → 2026-06-13 07:00 (Asia/Taipei)**
+
+## ⚡ 30-Second TLDR
+- 美伊停戰重大突破：巴基斯坦宣告兩國已就結束戰爭的協議措辭達成共識，若荷莫茲重開，全球能源與供應鏈壓力將大幅緩解。
+- 美最高法院廢除 IEEPA 關稅令 + 美台半導體貿易協定成型，台灣晶片進入美國市場結構性改善，MTK 全球佈局需重新試算。
+- Meta 裁 8,000 人 + Snap 65% 新代碼由 AI 生成：AI 替代人力從「預告」正式進入「大規模執行」，2026 年成科技業 AI 替代元年。
 
 ---
 
-## 1️⃣ 🧠 Weekly Insight
-**本週主旋律:** COMPUTEX 2026 台北心臟發光 × Anthropic $1 兆估值衝關 × 供應鏈雙軌化 — AI 商業兌現週
-
-**結構性變化:**
-- **COMPUTEX 2026（6/2–6）MTK 三引擎齊發：** 聯發科以「AI Without Limits」主題展出 C-X1 汽車智慧座艙晶片（整合 NVIDIA AI+遊戲技術）、資料中心 ASIC/DCS 平台（400Gbps CPO 互連）、N1/N1X PC 量產時程確認（Q4 2026 首批）。三條產品線同時在全球最大 AI 科技展亮相，「邊緣到雲端」敘事首次具象化。
-- **Anthropic 正式叩關 $1 兆：** 6/1 秘密向 SEC 申請 IPO，$65B Series H 完成（Sequoia/Coatue/Altimeter 領投），估值 $965B，年化收入 $47B（+130% YoY），80% 企業客戶，超 1,000 個年費逾 $1M 客戶。Claude 超過 80% 程式碼由 AI 自主撰寫——AI-native 遞迴飛輪首次量化呈現，Anthropic 超越 OpenAI 成最高估值 AI 新創。
-- **AMD 轉單 Samsung，TSMC 2nm 排到 2028 滿載：** 算力供應鏈雙軌化正式執行。TSMC 先進製程需求遠超供給；Samsung Taylor fab（德州）7 月完工，Tesla AI6/NVIDIA LPU/AMD 已依序入列。每家 AI 晶片設計者都需要 TSMC 備案，這是結構性變化而非短期缺口。
-
-**對你的下一步:**
-- **COMPUTEX 後 48 小時：** 統一「MTK AI Platform Company」三引擎估值敘事，推動分析師 briefing，避免市場以三種分立框架割裂定價（汽車 PE / ASIC EV·Revenue / PC AI 市佔率）。
-- **Anthropic S-1 上路後：** 指派研究員挖 capex 算力需求數字，這是 MTK DCS ASIC 業務的潛在客戶開發素材。
-- **Samsung 2nm 評估：** 確認 MTK 2026 ASIC $20 億目標中是否已有 Samsung 產能備案——TSMC 2028 排滿是警報，不是未來的事。
+## 🧠 Today's Insight
+**本日摘要重點:** 今天三個平行維度同步移動：地緣政治（美伊停戰曙光）、半導體政策（IEEPA 廢止+美台協定）、AI 勞動市場（Meta/Snap AI 替代真正落地）——三者互相強化，形成 2026 年下半年最關鍵的宏觀背景轉折點。
+**未來發展方向:** 若美伊停戰成真，荷莫茲重開後能源成本回落，AI capex 緊張格局緩解；美台半導體協定確立後台灣晶片在美優先待遇清晰，MTK 美國市場路徑受惠；AI 替代裁員加速，能整合「AI 協同 + 人類判斷」的技術管理者身價水漲船高。
+**對你的意義:** 美台半導體協定 + 美伊降溫是 MTK AI ASIC 進入美國市場的罕見「政策順風」；Snap 65% AI 代碼是 on-device edge AI coding assistant 最強市場論據；Korea-US-Japan「亞洲版 IMEC」提議需持續監控，若成真，台灣半導體聯盟優勢將面臨三邊稀釋。
 
 ---
 
-## 2️⃣ 🪞 上週對賬（W23 預測 → W24 驗證）
+## 1️⃣ 🤖 AI / 科技
 
-| 狀態 | W23 預測 / 任務 | W24 驗證結果 |
-|------|----------------|-------------|
-| ✅ Confirmed | COMPUTEX 6/3 蔡力行 keynote MTK 展示 | 「AI Without Limits」全面展出：C-X1 汽車、DCS ASIC、400Gbps CPO、Wi-Fi 8、6G，ASIC 2026 目標 $20 億再確認，2027 市場 $70-80 億 |
-| ✅ Confirmed | Anthropic IPO 估值市場反應 | 6/1 秘密 SEC 申請；$965B / $65B Series H；年化收入 $47B；Fortune/CNBC/TechCrunch 頭條全覆蓋；超越 OpenAI 成最高估值 AI 新創 |
-| ✅ Confirmed | AMD 2nm 轉單 Samsung 訂單確認 | Digitimes + SamMobile 雙重確認；TSMC 2nm 2028 排滿；Samsung Taylor fab 7 月完工，雙軌算力供應鏈落地 |
-| 🔥 今日進行中 | 6/8 WWDC on-device AI 揭幕 | 今日 10:00 PT 揭幕（窗口截止後）；Siri 2.0 + iOS 27 多 AI 後端即將登台 → W25 完整對賬 |
-| ⏳ Pending | MATCH Act 全院表決 | 連續四週無新動態，持續掛起 |
+### ① ⭐⭐⭐⭐⭐ Meta 裁 8,000 人 + Snap 65% 新代碼由 AI 生成：AI 替代浪潮正式登陸
+**摘要:** Meta 宣布裁員 8,000 人（佔員工總數 10%），追加 AI 部門 Superintelligence Labs 再砍 600 人，同時將 7,000 人轉入新設 Applied AI Engineering、Agent Transformation Accelerator XFN 等 AI 部門；Meta 2026 年資本支出規劃 $1,250-$1,450 億。Snap 同步裁 1,000 人（16% 員工），執行長揭露 AI 現已生成超過 65% 的 Snap 新程式碼。2026 年科技業裁員累計已超 15 萬人（Meta、LinkedIn、Salesforce、Intuit 為主）。
+**Insight:** 65% AI 代碼的數字是劃時代的——這不是「AI 輔助編程」，而是「AI 主導編程」。Snap 的例子說明，AI coding 工具讓小型工程團隊實現過去大型團隊的輸出，這正是 on-device AI coding assistant 的最強市場論據，也是 MTK AI PC 場景最有力的外部觸媒。
+🔗 [Meta 裁員報告 Yahoo Finance](https://finance.yahoo.com/sectors/technology/articles/meta-layoffs-2026-8-000-114209703.html) | [The Workers Rights](https://www.theworkersrights.com/meta-snap-layoffs-2026-ai-job-cuts/)
 
 ---
 
-## 3️⃣ 🔭 本週 5 條主軸線
-
-### 主軸 1: COMPUTEX 2026 — MTK「AI Without Limits」C-X1 + DCS + CPO 三箭齊發
-- **重要性:** ⭐⭐⭐⭐⭐
-- **發生了什麼:** COMPUTEX 2026（6/2–6，台北南港）MTK 核心展示：(1) **C-X1 汽車智慧座艙旗艦晶片**，整合 NVIDIA AI 與遊戲技術，支援 Agentic AI + 感知運算 + 邊雲混合 + HMI 同時算力，全球首款支援 AAA 遊戲的車載 SoC；(2) **資料中心解決方案（DCS）**：客製 ASIC/XPU、2.5D/3.5D 封裝、機架級整合，2026 ASIC 目標 $20 億；(3) **CPO 400Gbps 互連 + MicroLED 資料中心鏈路**，首度公開展示；(4) N1/N1X 量產確認（Q4 2026 首批），Wi-Fi 8 與 6G 路線圖亮相。
-- **Insight:** MTK 本次展示的意義不在單一產品，而在「三引擎同框」：C-X1（汽車 AI）+ DCS（雲端 ASIC）+ N1/N1X（PC AI），覆蓋裝置端、邊緣端、雲端三層算力。這是對「MTK 只是手機晶片商」定位的全面反擊，但媒體窗口只有一週，必須儘快在資本市場完成再定價。
-- **來源:** [MediaTek Computex 2026](https://www.mediatek.com/computex2026) · [T客邦 C-X1 NVIDIA](https://www.techbang.com/posts/129895-mediatek-computex-2026-agentic-ai-6g)
-
-### 主軸 2: Anthropic $965B 估值 + IPO 啟動 — AI 公司估值框架正式重設
-- **重要性:** ⭐⭐⭐⭐⭐
-- **發生了什麼:** 6/1 Anthropic 秘密向 SEC 申請上市，$65B Series H（Sequoia/Altimeter/Coatue 等領投），估值 $965B，年化收入 $47B（+130% YoY），80% 企業客戶（Fortune 10 八家），付費 $1M+ 年費客戶從 2 月 500 家增至 4 月逾 1,000 家；Claude 程式碼超 80% 由 AI 自主產出。最快 Q4 2026 在 Nasdaq/NYSE 上市，Anthropic 成首家估值逼近 $1 兆的 AI 新創。Fortune 分析師出現「.com 泡沫比較」論述，但反面解讀更重要：+130% 增速 + 80% 企業黏度 + $47B 年化，代表 AI 基礎模型需求是真實的。
-- **Insight:** $965B / 20x EV/Revenue 對 MTK 有兩層意涵：(1) Anthropic 算力採購（訓練 + 推理）是 MTK DCS ASIC 的潛在長期客戶線索；(2) Claude 的 iOS 27 多後端整合（預計今日 WWDC 確認）意味著 MTK 裝置端的 Claude API 呼叫量將大幅放量，edge AI SoC「使用率」首次有了外部量化錨點。
-- **來源:** [TechCrunch Anthropic $65B IPO](https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/) · [Fortune IPO 申請](https://fortune.com/2026/06/01/anthropic-confidentially-files-ipo-965-billion-valuation/)
-
-### 主軸 3: AMD 轉單 Samsung 2nm，TSMC 2028 排滿 — 算力供應鏈正式雙軌
-- **重要性:** ⭐⭐⭐⭐
-- **發生了什麼:** AMD 正式將 2nm 訂單部分轉給 Samsung（Digitimes 5/11，SamMobile 確認）。背景：TSMC 2nm 產能已售罄至 2028，AI 晶片需求遠超供給；Samsung Texas（Taylor fab）7 月完工，Tesla AI6/NVIDIA LPU 已確認入列，AMD 加入後雙軌格局確立。TSMC 官方 SEC 6-K 顯示 AI 相關收入比例 2026 大幅上升，消費電子 SoC 優先順序相對下滑。AMD CEO Lisa Su 3 月訪韓後合作進展穩健。
-- **Insight:** MTK 直接影響三點：(1) Dimensity 旗艦手機 SoC（TSMC N2P）的產能保障可能受壓；(2) Samsung 2nm 可成為 MTK ASIC 的代工備案，降低 TSMC 依賴；(3) 雙軌代工局面整體提升 AI 晶片設計者的 wafer 議價籌碼。本週應確認 MTK 2026 ASIC $20 億中有多少比例走 Samsung 或已有備案。
-- **來源:** [Digitimes AMD Samsung 2nm](https://www.digitimes.com/news/a20260511PD215/samsung-tsmc-amd-2nm-supply-chain.html) · [BigGo TSMC 2nm sold out](https://finance.biggo.com/news/PCgHPp0BDPbb-ItTwAgo)
-
-### 主軸 4: WWDC 2026 今日揭幕 — Siri 2.0 多 AI 後端，邊緣 AI SoC 最大外部背書
-- **重要性:** ⭐⭐⭐⭐⭐ (今日發生，窗口截止後)
-- **發生了什麼:** Apple WWDC 2026 主題演講 6/8（今日）10:00 PT（台灣 6/9 01:00）。預期：Siri 2.0 由 Google Gemini 自定義模型驅動，完整對話歷史跨裝置同步；iOS 27 讓使用者自由切換 Gemini/Claude/ChatGPT 作為 AI 後端；macOS 27 / iPadOS 27 / homeOS 新平台同步揭幕；iOS 27 developer beta 當日釋出，公測 7 月，正式版 9 月。
-- **Insight:** Apple 「多 AI 後端」策略是 MTK 邊緣 AI 開放平台主張的最大外部背書。14 億 iPhone 成為 Anthropic/OpenAI/Google 最大消費端入口，等於公開確認「NPU 算力 = 行動端 AI 差異化核心」。MTK Dimensity 9600 的 OpenAI 雙 NPU 架構在 WWDC 後的市場敘事中更具說服力；WWDC 後 24 小時應立即更新客戶簡報首頁。
-- **來源:** [Macworld WWDC 2026 完整預覽](https://www.macworld.com/article/678333/wwdc-keynote-event-time-what-launch-ios-macos-watchos-hardware.html) · [cryptobriefing WWDC preview](https://cryptobriefing.com/apple-wwdc-2026-siri-ai-overhaul/)
-
-### 主軸 5: 亞洲 AI 半導體投資競賽全面啟動 — 韓日中三國算力布局加速
-- **重要性:** ⭐⭐⭐
-- **發生了什麼:** 亞洲三大經濟體同步加速：韓國 2026 年 AI 預算達 10.1 兆韓元（前年三倍以上），2.6 兆韓元用於全產業 AI 導入；中國 AI 半導體工廠 2025 年底前產能三倍擴張計劃執行中；日本日東電工宣布 2029 前 4,500 億日圓成長投資，半導體佔 630 億以上。全球 2026 年半導體市場預測達 $9,754 億，亞太佔 $5,262 億（54%），推論晶片市場 Deloitte 預測突破 $500 億。COMPUTEX 2026 Edge AI 嵌入式技術（Intel Arc G3、DeepX NPU）也顯示亞洲硬體生態快速成熟。
-- **Insight:** 亞洲各國政府資本加速 AI 半導體布局，是 MTK 非美系 edge AI SoC 的地緣政治利多。韓日中三國都在尋找不受 BIS 出口管制的算力供給，MTK Dimensity / Genio / Dimensity AX 系列具備天然競爭優勢。COMPUTEX 後 90 天應確認亞洲政府 OEM 通路的開發優先序。
-- **來源:** [COMPUTEX 2026 Edge AI 日文報導](https://engineer-go.net/computex-2026-edge-ai-embedded-roundup/) · [NeuralCoreTech Edge AI Chips 2026](https://neuralcoretech.com/edge-ai-hardware-2026-chip-comparison/)
+### ② ⭐⭐⭐ 日本 Rapidus 2nm + 印度 $100 億 fab：亞洲 AI 晶片製造版圖快速重組
+**摘要:** 亞太地區正進行三場平行半導體競賽：日本 Rapidus 推進 2nm 製程路線圖、印度啟動 $100 億晶片補貼計畫吸引 fab 落地、中國 7nm 昇騰 910C 加速國內替代部署。全球邊緣 AI 晶片市場 2026 年達 $300 億（年增 20.3%），亞太為最快成長區域，出貨量將達 16 億顆。
+**Insight:** 三場同步進行的亞洲半導體競賽正在重繪 MTK 的競爭座標系。MTK 在亞太邊緣 AI 晶片市場的主場優勢，取決於能否在日本/印度規模化量產之前建立足夠的客戶壁壘與生態系鎖定。
+🔗 [Seoul Economic Daily](https://en.sedaily.com/finance/2026/05/06/korea-us-japan-urged-to-jointly-develop-ai-chips-launch) | [COMPUTEX 2026](https://www.prnewswire.com/news-releases/computex-2026-opens-amid-surging-global-demand-for-ai-infrastructure-302788497.html)
 
 ---
 
-## 4️⃣ ⚠️ 本週 2 個最重要弱訊號
-
-### 弱訊號 1: OpenAI 同時與 Qualcomm + MTK 合作自製手機晶片 — 「獨家夥伴」地位待確認
-- **為什麼你不該錯過:** Decrypt 新報導顯示 OpenAI 正同時與 Qualcomm 和 MTK 合作開發智慧型手機晶片，這與先前郭明錤「MTK Dimensity 9600 獨家」分析出現矛盾。若 OpenAI 採取雙軌策略，MTK 在 OpenAI 生態的「共同設計夥伴」角色可能從「獨家」降為「主力供應商之一」。但若 Qualcomm 扮演「既有授權移植」角色而 MTK 負責「新架構共同設計」，差異化優勢依然存在。這個細節值得在 WWDC 後的 OEM 溝通中主動釐清。
-- **追蹤指標:** 郭明錤後續報告是否修正；OpenAI 手機晶片 NDA 規格細節外洩；Qualcomm 在合作中的具體角色定義（授權 vs 新架構共同設計）
-- **來源:** [Decrypt OpenAI Qualcomm MediaTek](https://decrypt.co/365726/openai-smartphone-chip-qualcomm-mediatek)
-
-### 弱訊號 2: TSMC SEC 6-K 顯示 AI 算力吃掉先進製程超 50% — 消費電子 SoC 產能保障風險浮現
-- **為什麼你不該錯過:** TSMC 2026 年度 SEC 6-K 顯示 AI 相關收入比例大幅上升，3nm/2nm 產能幾乎全被 AI 算力客戶佔滿，傳統消費電子 SoC 在 TSMC 排程優先順序中已實質下滑。MTK Dimensity 9600 是 TSMC N2P 製程——若 2027 量產窗口被 AI 資料中心客戶擠壓，OpenAI 手機的 2027 H1 出貨目標可能面臨風險。這是 MTK 最高優先的供應鏈風險，需在 Q2 法說前主動確認。
-- **追蹤指標:** MTK Q2 法說（預計 7 月底）關於 N2P 產能 commitment 的明確聲明；TSMC 2026 H2 調漲通知；Samsung Taylor fab 月產能達到 50K wafer/月時點
-- **來源:** [TSMC SEC 6-K FY2026](https://www.sec.gov/Archives/edgar/data/1046179/000104617926000199/a1q26e_withguidancexfinal.htm) · [BigGo TSMC 2nm sold out 2028](https://finance.biggo.com/news/PCgHPp0BDPbb-ItTwAgo)
+### ③ ⭐⭐⭐ 英國《促成長監管法》：AI 監管重心全球首例從「防範」轉向「賦能」
+**摘要:** 英國政府發布《Regulating for Growth Bill》（促成長監管法），明確點名 AI 為核心，監管框架目標改為「主動支持創新與成長」同時維持必要防護。這是主要經濟體中第一個明確以「賦能」而非「防範」為核心的 AI 監管立法方向，與歐盟 AI Act 的「風險預防」模式形成鮮明對比。
+**Insight:** 英國的監管轉向可能引發 AI 企業「監管套利」——選擇監管最寬鬆的市場作為首發市場，再向其他市場擴張。對跨境 AI 部署而言，英國有望成為測試新型 AI 應用的首選跳板市場。
+🔗 [TLT AI Brief June 2026](https://www.tlt.com/insights-and-events/insight/tlts-ai-brief-june-2026)
 
 ---
 
-## 5️⃣ 🎤 Monday Talking Points + 部門策略
+## 2️⃣ 🏭 科技產業
 
-### Talking Point 1: COMPUTEX 三引擎同框 — MTK AI Platform Story 的再定價窗口
-> "COMPUTEX 2026 我們第一次讓全球觀眾同時看到三件事：C-X1 汽車 AI、DCS 雲端 ASIC、N1/N1X PC AI。這不是三個產品，是一個 AI Platform 的完整閉環。問題是：資本市場現在用哪個框架定你的價？我們需要主動推一份統一的 Valuation Story。"
-**背後的部門策略:** 立即整理三引擎 TAM 估算（汽車 AI SoC / 雲端 ASIC / AI PC），推動 Investor Day 或分析師 briefing 在 Q3 前完成，確保「AI Platform Company EV/Revenue 框架」優先於傳統「手機 SoC PE 框架」出現在法人報告中。
-
-### Talking Point 2: Anthropic $1T 是我們的客戶估值天花板上修信號
-> "Anthropic 年化收入 $47B 增長 130%，估值 $965B——這個數字告訴我們 AI 基礎設施的需求規模比所有人預期都高。他們的訓練和推理算力要去哪裡？ASIC/XPU 是必然路徑。MTK DCS 要開始主動研究 Anthropic S-1 裡的 capex 數字。"
-**背後的部門策略:** 指派 ASIC 業務開發一名專注 Anthropic/OpenAI 算力需求的研究員，建立主動接洽流程。Anthropic IPO 路演期是最佳入場時機——他們需要向機構投資人展示供應商多元化。
-
-### Talking Point 3: WWDC 今天揭幕，14 億 iPhone 是我們最大外部背書
-> "Apple 今天把 Gemini/Claude/ChatGPT 全部放進 iOS 27 讓用戶選。這等於 Apple 替整個行業宣告：多模型並存、NPU 算力是核心。MTK 的開放平台策略現在有全球最高市值的科技公司做背書。"
-**背後的部門策略:** WWDC 後 24 小時立即更新 OEM 客戶簡報，把「Apple 確認多模型 NPU 戰場」作為 Dimensity 9600 差異化頁面的首行。WWDC 結果確認後同步推送給 OpenAI 手機專案的 OEM 合作窗口。
-
-### Talking Point 4: Samsung 2nm 是 MTK 的代工備案，現在談比被動等通知好
-> "TSMC 2nm 排到 2028，AMD 已經轉單 Samsung。MTK 的 Dimensity 9600 在 TSMC N2P——我們需要知道產能保障是否足夠，以及 Samsung 是否已在 ASIC 備案清單上。主動比被動好。"
-**背後的部門策略:** 要求供應鏈團隊本週確認 TSMC N2P 產能 commitment 狀態；若有缺口，立即啟動 Samsung Taylor fab NRE 評估流程，目標 Q3 前完成可行性評估。
-
-### Talking Point 5: 亞洲 AI 算力投資浪潮 — MTK 是非美系 Edge AI SoC 的自然選擇
-> "韓國翻三倍、中國擴三倍、日本千億——亞洲各國政府都在加速，都在找不受美國出口管制的 AI 晶片。MTK 在這個框架下有天然優勢。問題是：我們有沒有一個專注亞洲政府 OEM 通路的銷售故事？"
-**背後的部門策略:** 與 APAC 銷售團隊對齊「地緣政治角度的 MTK edge AI SoC 銷售框架」，Q3 前完成韓日印東南亞政府 OEM 通路評估並確認 2026 H2 優先序。
+### ④ ⭐⭐⭐⭐⭐ 美最高法院廢止 IEEPA 關稅令 + 美台半導體貿易協定成型，台灣晶片進美市場結構性改善
+**摘要:** 美國最高法院裁定 IEEPA（國際緊急經濟權力法）關稅令違憲，移除川普政府以緊急行政令加徵關稅的法律基礎。裁決同步配合美台半導體新貿易協定框架，重塑台灣晶片進入美國市場的進口關稅政策，對 TSMC 美國廠擴張及台灣 IC 設計廠商出口美國均有直接利多。
+**Insight:** 這是 2026 年半導體供應鏈最具結構性影響的政策判決。IEEPA 廢止等於移除了「行政令即可加關稅」的隨機性風險；美台協定建立可預測的框架後，MTK 對美業務路徑的不確定性大幅降低，有利於 AI ASIC 美國客戶談判中的成本可預期性論述。
+🔗 [2026 Semiconductor Outlook - Deloitte](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/semiconductor-industry-outlook.html) | [Yahoo Finance Semiconductor Revenue](https://finance.yahoo.com/sectors/technology/article/semiconductor-industry-revenue-to-hit-13-trillion-in-2026-as-memory-crunch-hits-consumers-151202545.html)
 
 ---
 
-## 6️⃣ 📅 下週重點關注（W25: 2026-06-08 → 2026-06-15）
-
-### 📆 預定事件
-- **6/8 今日** WWDC 2026 10:00 PT — Siri 2.0 / iOS 27 / homeOS 揭幕，NPU 規格是核心看點
-- **6/11** FIFA 世界盃 2026 正式開幕（美國-加拿大-墨西哥主辦），美伊首戰高度政治敏感
-- **本週** iOS 27 developer beta 預計釋出 — A19 Pro NPU 規格公開，Dimensity 9600 比較基準確立
-- **本週** Anthropic IPO S-1 公開版可能釋出（SEC 慣例 21 天後可轉公開）
-
-### 📊 下週要追的數字
-- WWDC 後 Apple A19 Pro NPU TOPS（比較 Dimensity 9600 NPU 差距，更新競品矩陣）
-- Anthropic S-1 算力 capex 數字（訓練 vs 推理比例，DCS ASIC 業務開發參考）
-- Samsung Taylor fab 7 月完工 milestone 確認（MTK ASIC 備案可行性前提）
-- MTK 2026 Q2 法說預期數字（ASIC $20 億進度，N1/N1X OEM 出貨量）
-- 油價 Brent：FIFA + 美伊政治敏感賽事引發地緣風險波動監控
-
-### ⚠️ 可能引爆的風險
-- **WWDC on-device AI 低於預期**：若 Siri 2.0 功能延期或表現平庸，市場對 edge AI SoC 需求預期可能修正，MTK Dimensity 9600 敘事受影響
-- **TSMC 告知調漲 + 手機 SoC 排程延遲**：若 Q3 法說前有訊號外洩，OpenAI 手機 2027 H1 量產目標面臨風險
-- **美中出口管制再升級**：BIS 2026 預算增 23%，執法加強可能觸發新一輪供應鏈重組，MTK ASIC 客戶合規審查成本上升
+### ⑤ ⭐⭐⭐ AI 驅動半導體設備銷售年增 9% 至 $1,260 億，2026 年創歷史新高
+**摘要:** 受 AI 基礎設施投資驅動，2026 年全球半導體製造設備銷售額預估達 $1,260 億美元（年增 9%），創歷史峰值。先進邏輯、HBM 記憶體、AI 資料中心基礎設施的設備需求同步爆發，SEMICON India 2026 亦吸引大批國際設備廠商布局亞洲。
+**Insight:** 設備銷售是 2-3 年後產能的領先指標。2026 年高峰設備採購將在 2028-2030 年轉化為大量供給，與 SIA/Deloitte 預測 AI 晶片市場 2028 年達 $1.2T 的時間軸完美對齊——供需兩端同步擴張，但過熱風險也同步升高。
+🔗 [Yahoo Finance chipmaking equipment](https://finance.yahoo.com/news/ai-boom-seen-lifting-chipmaking-152903092.html)
 
 ---
 
-## 7️⃣ 🚫 Skip Pile
-
-1. **FIFA 各組賽程細節分析** — 球賽本身不影響 AI 半導體決策；待美伊賽事後地緣政治走向更清晰再進場
-2. **Intel Arc G3 詳細規格** — 顯示卡市場競爭，短期對 MTK edge AI SoC 市場地位無直接影響
-3. **homeOS 功能細節**（若 WWDC 揭露）— 新平台起量至少 12–18 個月後，本週無需深挖，等實際開發者採用率出現再追
-4. **中國 AI 大模型個別廠商版本更新**（DeepSeek/Qwen 等）— 本週不是主旋律，除非出現影響推論晶片需求的架構突破
-5. **BYD 人形機器人量產細節** — 早期階段，等 MTK Genio 正式 NRE 合約簽訂再進場，本週過度解讀邊際效益低
+### ⑥ ⭐⭐⭐ 2026 年科技業累計裁員超 15 萬人，AI 人才重組進入大規模執行期
+**摘要:** 2026 年至今科技業裁員已超過 150,000 人，主要波及 Meta（8,000）、LinkedIn、Salesforce、Intuit 等主要企業。裁員模式一致：非 AI 崗位被精簡，AI 相關崗位同步擴招或轉型。整體趨勢與各公司對 AI capex 的大幅增加同步發生，形成「AI 替代 → 節省人力成本 → 再投資 AI」的強化循環。
+**Insight:** 「AI 替代人力」不再是預測而是財報數字。對 MTK 這樣的技術公司，AI 效能工具在研發流程中的深度整合，現在既是競爭力問題，也是工程師與 PM 招募/留才的緊迫挑戰。
+🔗 [Tech layoffs 2026 Yahoo](https://tech.yahoo.com/general/article/tech-layoffs-2026-more-than-150000-jobs-cut-at-meta-linkedin-salesforce-intuit-and-more-144545224.html)
 
 ---
 
-*[daily](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Adaily) · [weekly](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Aweekly)*
+## 3️⃣ 🌍 國際新聞
+
+### ⑦ ⭐⭐⭐⭐⭐ ⭐連三日主線 美伊停戰突破：巴基斯坦宣告兩國已達成協議措辭共識
+**摘要:** 2026/6/12，巴基斯坦總理公開表示，美國與伊朗已就結束戰爭的協議措辭達成共識，為 2026 年 2 月美以突擊伊朗、伊朗封鎖荷莫茲海峽以來最重大的和平進展。若協議落實，荷莫茲海峽重開後，全球 20% 石油貿易與大量 LNG 運輸路線將恢復正常，能源成本、航運成本將大幅回落。
+**Insight:** 停戰若成真，連鎖效應龐大：油價下跌緩解 AI 資料中心能源成本壓力、台灣供應鏈解除「繞道好望角」的緊急模式、全球 AI capex 因能源成本下降而獲得更大的擴張空間。需持續關注協議細節與執行機制——措辭共識 ≠ 正式停火協定。
+🔗 [CNBC Iran Hormuz](https://www.cnbc.com/2026/06/01/iran-us-negotiations-strait-of-hormuz.html) | [Wikipedia 2026 Hormuz Crisis](https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis)
+
+---
+
+### ⑧ ⭐⭐⭐ FIFA 世界盃 2026 AI 網路攻擊威脅升溫，成全球最大安全壓測場
+**摘要:** FIFA 世界盃 2026（美墨加主辦，6/11-7/19，48 隊、104 場、16 城市）面臨史上最大規模網路安全挑戰：AI 生成假票、深偽影片假情報散布、跨國犯罪組織 AI 釣魚攻擊同步爆發。地緣政治背景（美伊戰爭、美墨關稅摩擦）使安全威脅複雜度倍增，賽事支付與供應鏈系統成核心保護目標。
+**Insight:** 世界盃是全球最大的「AI 網路安全即時壓測」場景，誰能在這裡展示 AI 防禦能力，誰就能拿到下個週期的政府與大型活動合約。這也是 AI 紅隊（攻擊）與藍隊（防禦）技術在真實世界最高能見度的競技場。
+🔗 [ZeroFox Geopolitical Report June 2026](https://www.zerofox.com/intelligence/monthly-geopolitical-report-june-2026/) | [Geopolitical Futures](https://geopoliticalfutures.com/)
+
+---
+
+## ⚠️ 弱訊號
+
+1. **Snap 65% 新代碼由 AI 生成，主流媒體幾乎無人放大這個數字** — 這個比例意味著 AI coding 工具在實際商業環境的滲透速度，遠比多數產業分析師預期的快。若這個比例延伸到 MTK 的軟體研發，工程師的「AI 助理協同」轉型已是立即的管理課題，而非 2-3 年後的事。
+
+2. **Korea-US-Japan 提議聯合建立「亞洲版 IMEC」** — 首爾經濟日報（韓文）報導，主流英文科技媒體幾乎零轉述。三國若真的組成聯合 AI 晶片研發平台，台灣的半導體地緣優勢將面臨新的三邊挑戰，值得持續追蹤。
+🔗 [Seoul Economic Daily](https://en.sedaily.com/finance/2026/05/06/korea-us-japan-urged-to-jointly-develop-ai-chips-launch)
+
+---
+
+*[daily issues](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Adaily)*
