@@ -1,134 +1,81 @@
-# 📊 Hank's Weekly Brief · 2026-06-22 (2026-W26)
-**Window: 2026-06-15 06:30 → 2026-06-22 06:30 (Asia/Taipei)**
+# ☀️ Hank's Morning Brief · 2026-06-22 (週一)
+**Window: 2026-06-21 07:00 → 2026-06-22 07:00 (Asia/Taipei)**
+
+## ⚡ 30-Second TLDR
+- Anthropic Fable 5 / Mythos 5 出口禁令第 10 天持續斷線，The Economist 以「美國 AI 霸權奪取」定性，AI 模型首次成為國家管制武器
+- ChatGPT 全球市占首次跌破 50%（46.4%），三年半多數地位終結，AI 助理市場正式進入多元格局
+- ⭐ Colorado AI 保護法 **8 天**後 (6/30) 生效；全球半導體 4 月銷售年增 93.9%、AI chip 市場 2026 估值 $500B，超級週期仍在上升軌道
 
 ---
 
-## 1️⃣ 🧠 Weekly Insight
-**本週主旋律:** SpaceX/xAI $2T 史上最大 IPO × 中國人形機器人政府 10,000 台部署令 × EU AI Act 8/2 六週倒計時 — AI 估值公開化、具身 AI 強制部署、監管東西分叉三合一
-
-**結構性變化:**
-- **SpaceX/xAI 史上最大 IPO 落地:** SpaceX（已於今年初並入 xAI）6/12 以 $135/股 IPO（融資 $750 億），首日+19% 收 $160.95，市值突破 $2 兆，成人類有史以來最大 IPO。Anthropic（$965B）與 OpenAI（$852B，月收入 $20 億）同步在 SEC 排隊，三大 AI 公司年底前全數公開定價，「AI 估值黑箱」正式終結。
-- **中國政府強制令:** 2026/12/31 前 10,000 台人形機器人必須在工廠/醫院/倉儲/災難應對場景正式上工，各省月底提交計劃。Unitree 6/1 通過科創板 IPO 審核。中國佔全球人形機器人出貨量 90%，RoboChallenge 排行榜頂端全由中國開源模型包辦。
-- **監管東西分叉:** 美國 SB 26-189（Polis 5/14 簽署）大幅重寫 Colorado AI Act——移除算法歧視防止義務、廢除風險管理計劃要求，改採窄範圍「揭露+透明度」框架，生效延至 2027/1/1。歐洲反向：EU AI Act 8/2/2026 全面合規截止（六週後），高風險 AI 系統透明度義務強制生效。
-
-**對你的下一步:**
-- **SpaceX/xAI $2T 校準後:** OpenAI/Anthropic S-1 公開前，請 IR 主動安排外資分析師 MTK 管理層 briefing，提供 DCS ASIC 客戶 ROI 數字——若等 S-1 公開後才反應，敘事主導權就被市場套公式搶走了。
-- **中國具身 AI 令下達後:** MTK Genio 系列在中國市場的機會窗口實質關閉；但東南亞/中東政府機器人採購計劃正在形成，本季是 MTK「非中非美」具身 AI 連接晶片 BD 預定位的最佳時機。
-- **EU AI Act 8/2 前六週:** 立即確認主要歐洲 OEM 客戶（聯想/宏碁/華碩 EMEA）的 MTK 邊緣 AI 功能 EU 高風險系統分類狀況；「Privacy-by-Design」現在是法規要求的答案，不只是行銷說詞。
+## 🧠 Today's Insight
+**本日摘要重點:** Fable 5 禁令揭示美國將頂尖 AI 模型的「訪問權」列為戰略武器，首次讓「AI 地緣政治」從抽象威脅變成具體斷網事件；同日 ChatGPT 失去多數市占，印證市場多元化加速——兩個訊號同步指向：2026 年 AI 產業核心矛盾是「誰控制最強 AI 的存取閘」。
+**未來發展方向:** AI 模型出口管制將觸發全球廠商加速布局本地部署（Edge AI、私有雲）以規避斷網風險；ChatGPT 多數市占瓦解意味第三方 AI 助理（含端側）進入爭奪窗口；Colorado AI Act 6/30 生效是 8 天內的法規確認紅線，聯邦框架草案討論同步加速。
+**對你的意義:** Anthropic 被迫全球斷線是 Edge AI 「離線不斷網、資料不離端、免地緣政治斷供」論點的最強現實背書——建議立即將 Fable 5 事件加入向 CEO 報告的 Edge AI 商業論證文件。MTK Genio 3nm「主權 AI」定位在此事件後獲主流媒體框架背書，是本週 BD 材料最強的外部訊號。
 
 ---
 
-## 2️⃣ 🪞 上週對賬（W25 預測 → W26 驗證）
+## 1️⃣ 🤖 AI / 科技
 
-| 狀態 | W25 預測 / 任務 | W26 驗證結果 |
-|------|----------------|-------------|
-| ✅ Confirmed | Anthropic IPO 持續推進 | SEC 機密申請確認，排在 SpaceX 之後，預計 Q4 2026；OpenAI 同步在審 |
-| ✅ Confirmed | MTK 非中國市場邊緣 AI 機會窗口 | 中國人形機器人 90% 出貨 + 政府部署令，本土壁壘確立；非中國 BD 視窗正式開啟 |
-| ✅ Confirmed | AI 算力公開市場估值校準 | SpaceX/xAI $2T 首日登場，AI 基礎設施估值公開錨點確立 |
-| 🔄 大幅更新 | Colorado AI 6/30 生效 → 倒計時 | SB 26-189 大逆轉：義務大幅移除，生效日延至 2027/1/1；EU AI Act 8/2 補位 |
-| ⏳ Pending | MATCH Act 全院表決 | 連續六週無動態，持續掛起 |
-| ⏳ Pending | OpenAI MTK 晶片細節 + N2P 產能 | 量產前移至 2027 H1 確認；Qualcomm 雙軌；N2P 產能鎖定狀況待 Q2 法說揭露 |
+### ① ⭐⭐⭐⭐⭐ Anthropic Fable 5 + Mythos 5 出口禁令：第 10 天斷線，The Economist 定性「AI 霸權奪取」
+**摘要:** 美國商務部 6 月 12 日向 Anthropic 發出出口管制指令，Fable 5 與 Mythos 5 全球下線（含美國境內外籍用戶），截至 6/21 API 仍返回錯誤。Anthropic 稱政府口頭提示「潛在非通用越獄」為由，但尚未提供書面證據。The Economist 6/20 封面報導以「America's AI Power Grab」框架，定性為美國以安全名義行使 AI 存取控制的地緣政治宣示。
+**Insight:** AI 模型「出口管制」首次以即時斷線形式執行，歷史意義高於任何監管草案。對 MTK 最直接的影響有三層：(1) 凡依賴 Anthropic API 的 SaaS 客戶已驗證其脆弱性，Edge AI 端側推論「不依賴境外 API」成為採購安全論點；(2) 台灣廠商若使用 Fable 5 企業授權，需立即評估替代方案；(3) 「主權 AI」討論從歐洲延燒到亞洲，MTK Genio 平台在政府與國防採購的定位需要立即更新。
+🔗 [US orders Anthropic to disable AI models for all foreign nationals — Al Jazeera](https://www.aljazeera.com/news/2026/6/13/us-orders-anthropic-to-disable-ai-models-for-all-foreign-nationals)
+🔗 [Anthropic's Fable 5 ban: what enterprises should do — VentureBeat](https://venturebeat.com/technology/anthropic-blocks-all-public-access-to-claude-fable-5-mythos-5-following-us-government-order-what-enterprises-should-do)
 
----
+### ② ⭐⭐⭐⭐ ChatGPT 市占首次跌破 50%：AI 助理市場三年半多數地位終結
+**摘要:** ChatGPT 全球 AI 助理市場佔有率在 2026 年 5 月底降至 46.4%，為三年半以來首次跌破多數門檻。市場多元化加速：Google Gemini、Anthropic Claude、Perplexity、本地開源模型共同侵蝕 ChatGPT 份額，部分分析師指出 Fable 5 斷線恰在此時進一步加速了市場分散。
+**Insight:** ChatGPT 失去多數市占意味「AI 助理即 ChatGPT」的時代已結束。對 MTK 而言，這是端側 AI 助理生態最好的切入窗口——當雲端 AI 助理出現斷線風險且市場已分散，消費者對「跑在設備上、不需聯網」的 AI 助理接受度最高。MTK Dimensity 平台上的端側 LLM 部署（如 Llama 3 / Qwen 量化版）現在有了比過去更強的市場動機。
+🔗 [ChatGPT loses majority market share for first time — unrot.co](https://unrot.co/blogs/ai-news-today-june-21-2026)
 
-## 3️⃣ 🔭 本週 5 條主軸線
-
-### 主軸 1: SpaceX/xAI 史上最大 IPO — $2T 市值首日公開，AI 估值黑箱終結
-- **重要性:** ⭐⭐⭐⭐⭐
-- **發生了什麼:** SpaceX（含 xAI 部門）6/12 Nasdaq SPCX 上市，$135/股 IPO 定價，融資 $750 億（人類史上最大 IPO），首日收 $160.95（+19%），市值突破 $2 兆。Elon Musk 今年初已將 xAI（Grok 模型）並入 SpaceX AI 部門，太空基礎設施 + AI 的混合估值框架由此確立。Anthropic（$965B）與 OpenAI（$852B、月收入 $20 億）緊接排隊，三大 AI IPO 將在 2026 年底前完成市場定價。
-- **Insight:** $2T 估值建立全球最高「AI 基礎設施公司」公開錨點。MTK 的機會：(1) Anthropic/OpenAI S-1 公開後，算力採購成本與每 Token 推理成本會被市場看透，MTK DCS ASIC 的「算力成本降低多少」數字需搶先備妥；(2) xAI 作為 SpaceX AI 部門，Grok 推論算力需求是 MTK 未來 Hyperscaler ASIC 客戶的候選追蹤對象。
-- **來源:** [NPR SpaceX IPO $75B](https://www.npr.org/2026/06/11/nx-s1-5853199/spacex-ipo-price-elon-musk) | [CNBC SPCX 首日](https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html)
-
-### 主軸 2: 中國政府令 — 2026/12/31 前 10,000 台人形機器人上工
-- **重要性:** ⭐⭐⭐⭐⭐
-- **發生了什麼:** 中國政府本週發出具體指令：各省月底提交部署計劃，2026/12/31 前 10,000 台人形機器人須在工廠、醫院、倉儲與災難場景正式上工。Unitree 6/1 通過科創板 IPO 審核，成首家 A 股「具身 AI」上市企業。數據：中國佔全球人形機器人 2025 年出貨量 90%；RoboChallenge 排行榜第一名自 2026 年 1 月起從未被美國模型取回。
-- **Insight:** 這是全球具身 AI 的第一個「政府強制量化部署」里程碑。MTK Genio 工業邊緣 AI 在中國本土空間實質關閉（政策偏好 + 國產替代），但東南亞/印度/中東政府正在觀察中國模板——其自主機器人採購計劃最快 2027 成型，MTK「非中非美」定位的 BD 預佈局需在本季完成。
-- **來源:** [TechTimes 中國人形機器人 90%](https://www.techtimes.com/articles/318641/20260618/humanoid-robots-china-ships-90-global-units-now-leads-ai-benchmarks.htm) | [KraneShares 人形機器人 2026](https://kraneshares.com/humanoid-robotics-in-2026-the-race-from-pilot-to-platform/)
-
-### 主軸 3: Colorado AI Act 大逆轉 + EU AI Act 8/2 六週倒計時
-- **重要性:** ⭐⭐⭐⭐
-- **發生了什麼:** 美國：Colorado SB 26-189（Governor Polis 5/14 簽署）大幅重寫 AI Act——移除「算法歧視防止義務」、廢除部署者風險管理計劃與 AG 報告義務，生效日從 6/30/2026 延至 1/1/2027，框架收窄至「特定自動決策揭露+透明度」。歐洲：EU AI Act 8/2/2026 高風險 AI 系統全面合規截止（六週後），成員國須建立 AI 監管沙盒；跨國 OEM 在歐售含 NPU AI 設備需完成透明度要求。
-- **Insight:** 監管天平東西分叉：美國去監管，歐洲強制合規。MTK 的戰術機會在歐洲：端側 AI SoC 的「Privacy-by-Design」說詞從「差異化優勢」升格為「EU 法規要求的合規解方」。本週應推動與主要歐洲 OEM 的高風險 AI 分類諮詢，並準備「MTK 端側 AI EU 合規白皮書」草稿，8/2 前對外釋出。
-- **來源:** [Hunton Colorado AI Act 修訂](https://www.hunton.com/privacy-and-cybersecurity-law-blog/colorado-ai-act-amended-and-effective-date-delayed) | [Holland & Knight EU AI Act US 公司](https://www.hklaw.com/en/insights/publications/2026/04/us-companies-face-eu-ai-acts-possible-august-2026-compliance-deadline)
-
-### 主軸 4: OpenAI/MTK Dimensity 9600 量產前移至 2027 H1 — TSMC N2P 成最大瓶頸
-- **重要性:** ⭐⭐⭐⭐ (直接相關)
-- **發生了什麼:** Android Authority 更新郭明錤分析：OpenAI AI 手機採用客製化 Dimensity 9600（TSMC N2P、雙 NPU 架構、LPDDR6+UFS 5.0、pKVM 安全），量產時程從 2028 正式前移至 2027 H1。ISP 強化（HDR pipeline）為主要差異化功能。Qualcomm 雙軌確認（角色仍待釐清：既有授權移植 vs 新架構共同設計）。最大風險：TSMC N2P 產能緊俏，消費電子 SoC 在 AI 算力需求下優先順序持續下滑。
-- **Insight:** 量產前移 1.5 年是好消息，但也將 N2P 產能鎖定壓力從「2026 Q3 的事」提前至「本週就該確認」。另，Qualcomm 雙軌角色若未釐清，MTK 的「獨家共同設計夥伴」定位有被稀釋風險。本週兩個必做：① 確認 2026 Q4 N2P 試產 wafer 鎖定狀況；② 向 OpenAI 主動確認 MTK vs Qualcomm 分工框架。
-- **來源:** [Android Authority OpenAI 手機規格](https://www.androidauthority.com/openai-phone-development-specs-availability-3663415/) | [Decrypt OpenAI MTK Qualcomm](https://decrypt.co/365726/openai-smartphone-chip-qualcomm-mediatek)
-
-### 主軸 5: AI 三大 IPO 定價週 — 外資持續重估 MTK AI Platform Company
-- **重要性:** ⭐⭐⭐⭐
-- **發生了什麼:** SpaceX $2T 首日登場後，外資對 MTK「AI Platform Company」定價邏輯持續強化：高盛 5000 TWD、摩根士丹利 2088 TWD，Computex 後分析師全面上修，AI ASIC 目標 $20 億年化進度追蹤中。Anthropic/OpenAI S-1 一旦公開，算力採購成本與每 Token 推理成本將全面透明——AI 晶片供應鏈的估值將再被丈量一遍。
-- **Insight:** MTK 現在的機會窗口：在 Anthropic/OpenAI S-1 公開前，主動向分析師提供「DCS ASIC 客戶算力 ROI 降低幅度」對照數字，搶先建立「AI Platform Company 財務模型的 MTK 版本」。若等 S-1 公開後才反應，市場會用自己的套利模型定價，IR 主動性優先。
-- **來源:** [CMoney 聯發科外資目標價](https://cmnews.com.tw/article/newsyoudeservetoknow-b69d5b68-5379-11f1-8c79-81a24da40b85) | [CNN OpenAI IPO](https://www.cnn.com/2026/06/09/tech/openai-ipo-anthropic-wall-street)
+### ③ ⭐⭐⭐ Agentjacking：首個針對 AI 程式碼 Agent 的新型注入攻擊類型揭露
+**摘要:** 安全研究人員在 2026 年 6 月揭露「Agentjacking」攻擊類型：攻擊者偽造 Sentry 錯誤追蹤報告，透過 markdown injection 讓 AI 程式碼 agent（Claude Code、Cursor、OpenAI Codex）誤判為合法 debug 指引並執行惡意程式碼。攻擊不需要取得系統存取權，只要污染 agent 讀取的外部數據源即可。
+**Insight:** AI agent 進入企業開發流程後，攻擊面從「人的滑鼠點擊」擴展到「agent 讀取的任何外部數據」。對 MTK 軟體工程團隊的立即行動項目：(1) 確認 CI/CD 流程中 Claude Code / Cursor 使用的外部數據源來源可信性；(2) 設立 agent 執行沙箱邊界；(3) 在 AI agent 安全框架中加入 Sentry / monitoring 數據源的信任驗證層。此類攻擊在 2026 下半年將快速增加，現在布防的成本遠低於事後補救。
+🔗 [Agentjacking: new attack class disclosed June 2026 — AI News Today](https://unrot.co/blogs/ai-news-today-june-21-2026)
 
 ---
 
-## 4️⃣ ⚠️ 本週 2 個最重要弱訊號
+## 2️⃣ 🏭 科技產業
 
-### 弱訊號 1: TSMC N2P × OpenAI 手機 2027 H1 交叉風險 — 產能若未鎖定，量產滑後自動觸發
-- **為什麼你不該錯過:** 量產從 2028 前移至 2027 H1 意味著 N2P 試產須在 2026 Q4 啟動。但根據 W24 分析，TSMC N2P 幾乎被 Hyperscaler AI 算力客戶預訂至 2028，消費電子 SoC 優先順序持續下滑。若 MTK 未在本季鎖定足量 N2P wafer，OpenAI 手機 2027 H1 出貨自動滑後，這不只是 MTK 業績問題，更衝擊 OpenAI「先鋒手機品牌」的市場時機窗口。Samsung Taylor fab（德州，7 月完工）是唯一現實備案。
-- **追蹤指標:** MTK Q2 法說（7 月底）N2P 產能 commitment 聲明；TSMC 7 月季報 AI vs 消費電子產能比例；Samsung Taylor fab 月產能達 50K wafer/月時點
-- **來源:** [Android Authority OpenAI 手機](https://www.androidauthority.com/openai-phone-development-specs-availability-3663415/)
+### ④ ⭐⭐⭐ 全球半導體 4 月銷售 $110.5B，年增 93.9%；AI chip 市場 2026 估值 $500B
+**摘要:** 美國半導體產業協會 (SIA) 最新數據：全球半導體銷售額 4 月達 $110.5B，較 3 月環增 11%、較去年同期年增 93.9%。Deloitte 估計 2026 年 AI 晶片市場規模約 $500B，AI 資料中心晶片年收入預測 2028 年將突破 $1.2T（四年十倍增長）。2026 年全球半導體總銷售預測達 $1.5T，年增約 90%。
+**Insight:** 半導體超級週期數據第一次以接近翻倍的年增率出現，意味 AI 基礎建設投資仍在加速、未到頂點。對 MTK 的直接意義：(1) 產能預訂與台積電封裝排期需提前至少 18-24 個月，否則將面臨代工排程風險；(2) Genio Edge AI SoC 的定價策略應在超級週期中果斷上調，現在是議價最強的時間窗口；(3) 向 CEO 報告時，$500B AI chip 市場數字可作為 MTK Edge AI 市場定位的外部錨點。
+🔗 [Global semiconductor sales April 2026 — SIA](https://www.semiconductors.org/global-semiconductor-sales-increase-11-month-to-month-in-april/)
 
-### 弱訊號 2: EU AI Act 8/2 — 歐洲 OEM 高風險系統分類壓力傳遞至 MTK 晶片
-- **為什麼你不該錯過:** 8/2 截止不只是「歐洲公司的事」。三星/聯想/宏碁/華碩在歐洲銷售含 NPU 的 AI 設備，若 MTK 預載邊緣 AI 功能觸發「高風險 AI 系統」分類，OEM 有合規義務，壓力直接轉嫁 MTK：透明度文件要求、功能限制、或強制歐洲版停用預載功能。MTK 目前是否已協助主要 OEM 完成 EU AI Act 高風險系統分類評估，是本週最高優先事項之一。
-- **追蹤指標:** 歐洲 OEM 發出 MTK 功能分類詢問的時點；EU AI Office 針對手機晶片商的指導意見；EU AI Act Article 6 高風險系統清單最終版（8/2 前）
-- **來源:** [Holland & Knight EU AI Act](https://www.hklaw.com/en/insights/publications/2026/04/us-companies-face-eu-ai-acts-possible-august-2026-compliance-deadline)
+### ⑤ ⭐⭐⭐⭐ ⭐[連續3天] Colorado AI 保護法 6/30 生效倒計時 **8 天**
+**摘要:** 美國科羅拉多州《消費者 AI 保護法》將於 6 月 30 日正式生效，成為全美第一部全面性州級 AI 法律。同步，聯邦《Great American AI Act》269 頁草案仍在眾議院討論中。「高風險 AI 系統」的定義與合規要求是最關鍵的不確定因素，其範疇是否涵蓋邊緣 AI 推論設備尚未釐清。
+**Insight:** ⭐ 此議題已連續 3 天追蹤，今日距生效僅 8 天，法規確認窗口正在關閉。MTK 法務與合規團隊的最後行動機會：逐條比對 Colorado Act「高風險 AI 系統」定義，確認 MTK Genio / Dimensity 端側推論模組是否落入監管範疇；若是，6/30 後需準備技術說明文件與合規聲明。明日 (6/23) 為本週最後一個工作日可安排法務評估啟動會議。
+🔗 [Colorado Consumer AI Protection Act — Congress.gov context](https://www.congress.gov)
 
----
-
-## 5️⃣ 🎤 Monday Talking Points + 部門策略
-
-### Talking Point 1
-> 「SpaceX/xAI 以 $2 兆市值首日公開，成史上最大 IPO。Anthropic 和 OpenAI 排在後面。2026 年底前，AI 算力公司的估值全數攤在陽光下——MTK 必須在那之前，讓分析師先聽到我們自己說的故事，不能等市場拿我們套公式。」
-
-**背後的部門策略:** 請 IR 在 Anthropic S-1 公開前安排外資分析師 MTK 管理層 briefing，主動提供 DCS ASIC 客戶 ROI 數字，搶占「AI Platform Company 財務模型 MTK 版本」的敘事主導權。
-
-### Talking Point 2
-> 「中國月底前要求各省提交 10,000 台人形機器人部署計劃，Unitree 已過科創板 IPO。具身 AI 從演示進入政策強制部署。我們在中國市場的窗口關了，但東南亞、中東的政府機器人計劃正在形成——現在不去布局，就等中國廠商先進去。」
-
-**背後的部門策略:** 本週啟動 Genio 系列在東南亞/中東政府機器人採購通路的 BD 預定位，確認本季是否有可接觸的政府 OEM 合作窗口，並識別具體國家與場景。
-
-### Talking Point 3
-> 「EU AI Act 8/2 六週後生效。我們的邊緣 AI SoC『隱私不出設備』架構，在歐洲現在是法規要求的答案，不只是行銷說詞。現在去找 OEM 客戶談合規 co-marketing，是最自然的時機。」
-
-**背後的部門策略:** 推動與歐洲市場主要 OEM（聯想/宏碁/華碩 EMEA 部門）進行 EU AI Act 高風險 AI 分類諮詢，同步準備「MTK 端側 AI EU 合規白皮書」草稿，8/2 前對外釋出強化品牌定位。
-
-### Talking Point 4-5
-> TP4: 「OpenAI 手機用我們的客製化 Dimensity 9600，量產從 2028 前移到 2027 H1。好消息是協同加速了，但 TSMC N2P 產能是最大變數。本週最重要行動：確認 wafer 產能鎖定狀況，同步向 OpenAI 確認 MTK vs Qualcomm 的分工框架。」
-
-> TP5: 「Colorado AI Act 義務大幅縮水，美國繼續去監管方向；歐洲 8/2 強制生效。AI 產品 2026 下半年地域分版策略是必選題——功能版本、透明度文件、合規說法，需要歐美兩套。」
+### ⑥ ⭐⭐⭐ SandboxAQ 獲 CHIPS $500M：AI 加速下一代半導體材料發現
+**摘要:** 美國商務部 CHIPS R&D 辦公室與 SandboxAQ 簽署 $500M 定案協議，目標是利用 AI 加速半導體製造所需的材料發現，重點在 2nm 以下製程的新材料開發。SandboxAQ 融合量子計算與 AI，可在原子層級模擬新材料特性，大幅縮短從材料發現到製程驗證的週期。
+**Insight:** 「AI for Materials」是目前被主流晶片媒體低估的長週期訊號：若 AI 能將新製程材料的研發週期從 10 年壓縮到 3-5 年，台積電 / MTK 的節點推進時程表將面臨根本性重寫。短期可觀察：TSMC Research 是否跟進類似的 AI 驅動材料研究合作，這是判斷技術曲線加速是否到來的先行指標。
+🔗 [June 2026 semiconductor news roundup — ts2.tech](https://ts2.tech/en/june-2026-semiconductor-news-roundup-u-s-chip-controls-sandboxaq-funding-and-intel-18a-p/)
 
 ---
 
-## 6️⃣ 📅 下週重點關注
+## 3️⃣ 🌍 國際新聞
 
-### 📆 預定事件
-- **6/30 (週二)** 中國各省人形機器人部署計劃截止 — 看點：各省提交量化數字，Unitree 等廠商訂單規模首次可見
-- **7月底** MTK Q2 法說（確切日期待確認）— 看點：AI ASIC 實際 Q2 營收 vs $20 億年化目標進度；N2P 產能 commitment 聲明
-- **8/2** EU AI Act 高風險系統全面合規截止 — 看點：OEM 合規聲明、AI Office 首批高風險系統認定案例
+### ⑦ ⭐⭐⭐⭐ ⭐[美伊連續4+天] Vance 瑞士 Bürgenstock 六方峰會：荷莫茲協議進入穩定執行期
+**摘要:** 美國副總統 Vance 於 6 月 21 日在瑞士 Bürgenstock 主持高層會談，會見巴基斯坦總理 Sharif 及伊朗談判代表，重心是推進中東衝突終止（含黎巴嫩戰線）的協議框架。荷莫茲協議目前進入執行第 2 週，伊朗外交部表示「所有戰線終戰」將在討論範疇，談判氛圍持續正面。
+**Insight:** ⭐ 荷莫茲議題已連續 4+ 天追蹤。本週瑞士峰會是協議從「備忘錄」走向「全面和平框架」的關鍵催化節點。若談判取得實質進展，Brent 油價將維持 $80-90/bbl 區間，亞洲能源進口成本持續緩解，台積電與 MTK 的製造能源成本壓力也間接受益。下一個觀察點：本週末油輪保費是否啟動第二波下調，確認航運業對協議可持續性的信心。
+🔗 [Vance travels to Switzerland for talks as Iran negotiators arrive — Fox News Live Updates](https://www.foxnews.com/live-news/us-iran-peace-deal-nuclear-talks-israel-lebanon-conflict-june-20)
 
-### 📊 下週要追的數字
-- TSMC 7 月法說：AI vs 消費電子 N2P 晶圓分配比例
-- Anthropic/OpenAI SEC 申請狀態：S-1 公開時點
-- 中國各省人形機器人部署計劃數量（6/30 截止後）
-
-### ⚠️ 可能引爆的風險
-- TSMC N2P 官方產能警示 → OpenAI 手機 2027 H1 目標自動滑後，市場反應
-- EU AI Act OEM 客戶壓力傳遞 → 歐洲版 MTK 功能限制要求出現
-- SpaceX/xAI IPO 後市震盪 → AI 整體估值波動，MTK 股價連帶重新定價
+### ⑧ ⭐⭐⭐ 烏克蘭打擊克里米亞油料補給；波蘭撤銷澤倫斯基最高榮譽，歐洲聯盟出現裂痕
+**摘要:** 烏克蘭軍隊持續在克里米亞半島對俄羅斯油料補給設施發動攻擊，俄佔克里米亞當局宣布暫停平民汽油銷售。同步，波蘭總統撤銷澤倫斯基的波蘭最高榮譽國家勳章，原因是烏克蘭以二戰 UPA 游擊隊命名軍事單位（涉及波蘭歷史傷痕），歐洲支援烏克蘭的聯合陣線出現首個明顯外交裂縫。
+**Insight:** 波蘭-烏克蘭外交摩擦是歐洲安全格局中被低估的尾部風險：波蘭是北約東翼最大地面軍事力量，若雙邊關係持續惡化，可能影響烏克蘭西方援助的協調效率，進而改變戰場均衡。半導體供應鏈角度：烏克蘭是全球最大氖氣產地（晶圓製程必需），若戰事升級衝擊生產設施，台積電 N2/N3 製程氣體採購成本將承壓，值得納入 Q3 供應鏈風險矩陣。
+🔗 [World news headlines and analysis June 2026 — The Multiplural World](https://multipluralworld.com/world-news-headlines-and-analysis-for-june-2026/)
 
 ---
 
-## 7️⃣ 🚫 Skip Pile
-- **MATCH Act 全院表決** — 連續六週無立法動態，不值得花時間，繼續掛起
-- **Samsung Taylor fab 月產能進度** — 本週無新揭露，等 TSMC 七月法說一起對比再看
-- **Apple Atlas 自研伺服器晶片** — W25 弱訊號持續監控，本週無新資訊，跳過
-- **Meta 可穿戴 AI 三線布局** — 本週無里程碑事件，下次有具體出貨數字再看
-- **美伊荷莫茲後市況** — 已進入穩定執行期，油價無重大異動，不需週報版面
+## ⚠️ 弱訊號
+
+1. **Fable 5 禁令觸發開源模型崛起反射弧** — The New Stack 報導：4 個開源模型（含 Llama 4、Qwen 3.5）在 Anthropic 斷線期間迅速填補企業缺口，開源 AI 「地緣政治緩衝能力」首次獲得實戰驗證。若此趨勢持續，對 MTK 的意義是：Genio 平台與開源 LLM 生態的深度整合（GGUF/INT4 量化優化）將成為下一波採購差異化點，需要在今年 Q3 提前完善技術支援。
+🔗 [4 open models responded before Anthropic could restore access — The New Stack](https://thenewstack.io/fable-ban-open-weights/)
+
+2. **日本數位大臣示警「AI 殖民地」，亞洲主權 AI 意識覺醒** — 日本數位大臣松本尚公開表示，若日本無法跟上 AI 技術發展，恐在 AI 時代淪為新型「殖民地」，日本政府正透過補貼與修法扶植本土 AI 產業。此訊號雖在 6/5 報導，但在 Fable 5 禁令背景下，「AI 主權」意識在亞洲政策圈的發酵速度已明顯加快，預計本週將引發更多亞洲政府的跟進討論。
+🔗 [日本數位大臣示警：若AI發展落後恐淪AI殖民地 — 中央社 CNA](https://www.cna.com.tw/news/aopl/202606050170.aspx)
 
 ---
 
-*[daily](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Adaily) · [weekly](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Aweekly)*
+*[daily issues](https://github.com/hank800620/morning-brief/issues?q=is%3Aissue+label%3Adaily)*
