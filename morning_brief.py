@@ -29,6 +29,7 @@ import json
 import os
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 
 
@@ -39,7 +40,7 @@ def fetch_recent(label: str, limit: int) -> str:
     repo = os.environ.get("GITHUB_REPO", "hank800620/morning-brief")
     url = (
         f"https://api.github.com/repos/{repo}/issues"
-        f"?state=all&labels={label}&per_page={limit}"
+        f"?state=all&labels={urllib.parse.quote(label)}&per_page={limit}"
         f"&sort=created&direction=desc"
     )
     req = urllib.request.Request(
@@ -60,11 +61,16 @@ def fetch_recent(label: str, limit: int) -> str:
     # in later sections of the body — those need a higher cap so cross-issue
     # memory in the next cadence can still see them.
     # Caps sized so a TYPICAL issue fits fully, with headroom for anomalies.
+    cap_key = "daily"
+    for key in ["monthly", "weekly", "daily"]:
+        if key in label.lower():
+            cap_key = key
+            break
     body_cap = {
         "daily": 5000,    # typical 3500-4500 chars, full body fits
         "weekly": 7000,   # typical ~5000 chars, full body fits
         "monthly": 12000, # typical ~7000+ chars, full body fits
-    }.get(label, 5000)
+    }[cap_key]
     parts: list[str] = []
     for issue in issues:
         parts.append(f"=== {issue['title']} ===")
