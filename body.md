@@ -1,123 +1,117 @@
-# ☀️ Hank's Morning Brief · 2026-08-01 (週六)
-**Window: 2026-07-31 07:00 → 2026-08-01 07:00 (Asia/Taipei)**
+# ☀️ Hank's Morning Brief · 2026-08-02 (週日)
+**Window: 2026-08-01 07:00 → 2026-08-02 07:00 (Asia/Taipei)**
 
 ## ⚡ 30-Second TLDR
-- TSMC 創 Q2 營收新高達 400 億美元並宣布追加 1,000 億美元亞利桑那投資，AI 晶片需求確認進入第二波加速
-- Anthropic 發布 Claude Opus 5，效能接近 Fable 5 但成本減半，邊緣推論成本競爭白熱化
-- FCC 將對中硬體禁令升級至零部件層級，美中供應鏈脫鉤進入晶片級深水區
+- NVIDIA × SK hynix 宣布史上最大 AI 記憶體合作（規模逾 $5,000 億美元），HBM4 鎖定 Vera Rubin 超算供應鏈，記憶體正式升格為 AI 基礎設施核心戰場
+- 中國 IC 出口上半年暴增 96% 至 $1,772 億美元，表象亮眼但實質是記憶體價格通膨，非自主 AI 晶片技術突破
+- 伊朗 IRGC 向約旦美軍基地發射多枚彈道飛彈，拒絕霍爾木茲海峽均分調停，中東黑天鵝能源風險驟升
 
 ---
 
 ## 🧠 Today's Insight
-**本日摘要重點:** 七月以 TSMC 創記錄財報和 AMD-Meta 史上最大 AI 晶片採購案作結，AI 基礎設施投資浪潮確認進入第二波加速期；Anthropic Opus 5 低成本突破同步壓縮推論晶片利潤空間，封裝技術取代製程節點成為下個供給瓶頸。
-**未來發展方向:** TSMC EMIB-like 先進封裝技術與 2nm 節點並行落地，AI 晶片供給瓶頸將從製程轉向封裝；FCC 零部件級禁令則加速台灣、東南亞供應商重組訂單，非中國供應鏈紅利持續釋放。
-**對你的意義:** 聯發科 CEO 重申 TSMC 長期合作正當其時——Qualcomm 面臨相同 N2P 成本壓力，若聯發科在 edge AI 差異化（Genio/Dimensity AX）早 Qualcomm 一步落地工業客戶，可在漲價周期建立換機護城河；FCC 禁令亦為非中元件方案創造明確商機。
+**本日摘要重點:** NVIDIA-SK hynix $5,000 億合作確立 HBM 成 AI 超算主戰場；中國 IC 出口數字雖亮眼，基本面是記憶體漲價紅利而非技術自主突破；伊朗對美軍動武讓霍爾木茲局勢急劇升溫，能源與供應鏈系統性風險同步上升。
+**未來發展方向:** HBM4/HBM5 路線圖由 SK hynix-NVIDIA 聯盟主導，Samsung、Micron 面臨夾擊；AI Overwatch Act 若通過，中國 AI 晶片採購節奏被迫長延遲；霍爾木茲緊張持續惡化將推升台積電等高耗能晶圓廠能源成本，並對全球 AI 資本支出信心造成壓力。
+**對你的意義:** 聯發科 Genio Pro/Dimensity AX 系列高度依賴 HBM/LPDDR 供應；SK hynix 優先配額集中給 NVIDIA 生態後，其他客戶排隊期延長風險上升——建議加速確認 2027 旗艦 SoC 的記憶體多元 Sourcing 策略，並密切追蹤霍爾木茲局勢對台灣能源進口成本的連動影響。
 
 ---
 
 ## 1️⃣ 🤖 AI / 科技
 
-### ① ⭐⭐⭐⭐ Anthropic 發布 Claude Opus 5：效能接近 Fable 5，成本砍半
-> **2026-07 | Anthropic**
+### ① ⭐⭐⭐⭐⭐ NVIDIA × SK hynix 宣布史上最大 AI 記憶體合作，規模逾 $5,000 億美元
+> **2026-07 | NVIDIA / SK Group**
 
-Anthropic 在七月底推出 Claude Opus 5，CursorBench 3.2 得分僅落後 Fable 5 約 0.5%，但定價降至每百萬 token $5/$25，為 Fable 5 的一半。此前 Claude Sonnet 5 已成為 Free 與 Pro 用戶預設模型，並享有到 8 月底的優惠定價。
+NVIDIA 與 SK hynix 六月首度宣布多年技術合作後，七月底進一步擴大至 SK Group 整體，總規模逾 5,000 億美元。合作範疇涵蓋共同開發 HBM 記憶體（對應 Vera Rubin AI 超算、Vera CPU、RTX Spark PC、Jetson Thor 機器人平台），並聯合利用 NVIDIA CUDA-X 及 PhysicsNeMo 加速晶片設計與製造仿真工作流。
 
-**Insight:** 大模型「效能/成本比」快速提升直接壓縮推論 SoC 的差異化空間——邊緣裝置的競爭軸正從「跑得動」轉向「跑得省」，聯發科 Genio Pro 系列的功耗優勢值得在此時加速量化。
+**Insight:** HBM 從晶片周邊元件升格為 AI 基礎設施核心，SK hynix-NVIDIA 聯盟鎖定優先供給後，Samsung 與 Micron 競爭壓力劇增；對聯發科等 SoC 廠商而言，HBM 採購優先序可能被擠壓，需盡早布局替代記憶體供應或評估 LPDDR5X/LPDDR6 替代方案。
 
-🔗 [ThursdAI Releases Tracker](https://thursdai.news/releases/2026-07)
-
----
-
-### ② ⭐⭐⭐⭐⭐ ⭐TSMC 自研 EMIB-like 封裝技術，Intel 股價單日飆 12%
-> **2026-07 | TSMC / Kinsus**
-
-TSMC 與台灣 Kinsus 合作開發內部代號「EMIB Like」的先進晶片封裝技術，功能對標 Intel EMIB（Embedded Multi-die Interconnect Bridge）。消息傳出後 Intel 股價單日大漲 12%（市場解讀為授權合作可能）、TSMC 漲 7%；NVIDIA 亦被報導正評估採用 Intel EMIB 封裝未來處理器。
-
-**Insight:** CoWoS 封裝已是 AI 晶片最大量產瓶頸，TSMC EMIB-like 技術若量產將開闢第二條高頻寬封裝路徑，直接擴大 AI 晶片供給天花板；對聯發科而言，先進封裝能力是未來 Chiplet 設計的核心籌碼。
-
-🔗 [Benzinga](https://www.benzinga.com/markets/tech/26/07/60829355/tsmc-is-reportedly-developing-advanced-chip-packaging-tech-to-challenge-intels-dominance) | [Yahoo Finance](https://finance.yahoo.com/technology/ai/articles/tsmcs-next-ai-chip-move-195343067.html)
+🔗 [NVIDIA Newsroom](https://nvidianews.nvidia.com/news/sk-group-and-nvidia-expand-strategic-partnership-across-ai-factories-and-next-generation-memory) | [SK hynix Newsroom](https://news.skhynix.com/en/skhynix-nvidia-partnership-2026/)
 
 ---
 
-### ③ ⭐⭐⭐⭐ AMD × Meta：史上最大 AI 晶片採購案，規模上看 6 GW
-> **2026-07 | AMD / Meta**
+### ② ⭐⭐⭐⭐ 中國 IC 出口 H1 暴增 96%，達 $1,772 億美元，本質是記憶體漲價泡沫
+> **2026-07 | 中國海關總署**
 
-AMD 與 Meta 宣布擴大戰略合作，Meta 承諾採購高達 6 GW 的 AMD Instinct GPU 部署於其 AI 基礎設施，被業界形容為「半導體史上規模最大的 AI 晶片採購案」。此案確立 AMD MI300 系列為 NVIDIA 超規模替代選項。
+中國 2026 年前六個月出口積體電路 1,794 億顆、價值 1,772 億美元，年增 96%。然而分析師指出，增長主因是全球 DRAM/NAND 價格飆升，並非中國先進 AI 晶片自主突破——中國主要出口的仍是商品化低階記憶體，而非高性能 AI 推論晶片。六月單月出口更衝至 $4,120 億美元歷史新高，但 GDP 數據卻不如預期。
 
-**Insight:** 6 GW 單一超規模採購打破 NVIDIA 的事實壟斷，競爭格局鬆動將對整個加速器堆疊（含邊緣推論晶片）帶來定價壓力；AMD 以此鞏固的營收基礎也將加速下世代架構研發，值得追蹤其邊緣 AI 路線圖動態。
+**Insight:** 穿透「金額」看「顆數」和「ASP 趨勢」才能判斷技術進展——數字亮眼但結構脆弱，一旦記憶體週期反轉，出口數字可能急速回落；這也是分析競爭對手時應警惕的認知陷阱。
 
-🔗 [Intellectia AI – AI Semiconductor Stocks July 2026](https://intellectia.ai/blog/ai-semiconductor-stocks-july-2026)
+🔗 [Yahoo Finance](https://finance.yahoo.com/technology/articles/china-claims-chip-exports-nearly-145227205.html) | [TechTimes](https://www.techtimes.com/articles/320531/20260715/china-exports-surge-record-ai-chips-gdp-miss-tariff-cliff-signal-deeper-trouble.htm)
+
+---
+
+### ③ ⭐⭐⭐ 日本 AI 地震預測準確率達 93.8%，熊本 M7.1 後 AI 偽資訊同步爆發
+> **2026-07-28 | NHK / 國土地理院**
+
+2026 年 7 月 28 日下午，九州熊本發生 M7.1 強震（最大震度 7），引發海嘯警戒。日本 AI 地震預測系統融合衛星 SAR、紅外音及多源地殼觀測數據，對震度 5 以上事件的預測準確率已達 93.8%。然而地震後社群媒體迅速出現以生成 AI 偽造的受災者求援影片，加劇緊急應變混亂，NHK 緊急提醒民眾辨別真偽。
+
+**Insight:** AI 在災難預測端能力快速成熟，但「AI 偽資訊放大災情混亂」成為應急管理新挑戰；邊緣 AI 裝置若能即時媒體真偽比對，是 Genio 系列值得探索的公安垂直場景。
+
+🔗 [NHK](https://news.web.nhk.or.jp/newsweb/na/na-k10015189631000) | [國土地理院](https://www.gsi.go.jp/uchusokuchi/20260728kumamoto.html)
 
 ---
 
 ## 2️⃣ 🏭 科技產業
 
-### ④ ⭐⭐⭐⭐⭐ ⭐TSMC Q2 2026 創歷史新高：營收 402 億美元，再宣布 1,000 億美元亞利桑那投資
-> **2026-07-16 | TSMC**
+### ④ ⭐⭐⭐⭐ 全球半導體設備銷售 2026 年增 23%，衝上 $1,660 億美元歷史新高
+> **2026 | SIA / Deloitte Insights**
 
-台積電公布 2026 年第二季財報：合併營收達 402 億美元（年增 36%）、稅後純益年增 77.4%、毛利率 67.7%，全面創歷史新高。同步宣布追加 1,000 億美元投資美國亞利桑那廠，Q3 2026 營收指引 446~458 億美元，3nm + 5nm 合計佔晶圓收入 63%。
+根據 SIA 及 Deloitte 最新數據，2026 年全球半導體設備市場規模預計達 1,660 億美元，年增 23%。AI 基礎設施的龐大資本支出是最主要驅動力，TSMC 和 Samsung 擴充先進製程及先進封裝產能帶動光刻、CMP 及沉積設備需求全面攀升；整體半導體市場 2026 年銷售額預計達 $9,750 億美元，年增 26%。
 
-**Insight:** TSMC 財報確認 AI 晶片需求進入長期高成長軌道，且先進製程（3nm/5nm）已是主力營收來源——對聯發科的正面意涵是先進製程產能分配優先級提升，但成本端的 N2P 轉換壓力也同步加大。
+**Insight:** 設備市場通常領先晶片銷售 6-12 個月，強勁設備需求預告 2027 年供給將顯著擴張；但若 AI 訓練需求成長趨緩，過度投資的折舊攤提壓力恐於 2028 年衝擊業者獲利率。
 
-🔗 [TechPowerUp](https://www.techpowerup.com/350807/tsmc-reports-record-q2-2026-earning-results) | [CNBC](https://www.cnbc.com/2026/07/16/tsmc-second-quarter-profit-.html)
-
----
-
-### ⑤ ⭐⭐⭐⭐ ⭐Qualcomm 醞釀雙位數漲價；聯發科 CEO 重申 TSMC 是長期最重要夥伴
-> **2026-07-27 | Taipei Times / TrendForce**
-
-高通因 TSMC N2P 製程成本與 DRAM 價格高漲，擬對旗艦行動 SoC 實施雙位數百分比漲價。聯發科面臨相同成本壓力，但 CEO 公開重申 TSMC 為「最重要且長期」的代工合作夥伴，否認三星搶單傳言，雙方均以 TSMC N2P 節點為 H2 2026 下世代晶片目標。
-
-**Insight:** 漲價週期中，聯發科若能在 edge AI（Genio/Dimensity AX）建立充分差異化，即可轉移部分成本壓力至客戶；此時加速在 UAV、工業 HMI、車載等垂直場景落地，將是比純拼規格更有效的護城河策略。
-
-🔗 [Taipei Times](https://www.taipeitimes.com/News/biz/archives/2026/07/27/2003861423) | [TrendForce](https://www.trendforce.com/news/2026/05/29/news-mediatek-ceo-reaffirms-tsmc-as-key-long-term-partner-amid-samsungs-reported-push-for-foundry-orders/)
+🔗 [SIA](https://www.semiconductors.org/news-events/latest-news/) | [Deloitte Insights](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/semiconductor-industry-outlook.html)
 
 ---
 
-### ⑥ ⭐⭐⭐ AWS 雲端 AI 營收爆發，企業代理 AI 進入量產部署階段
-> **2026-07-30 | TechCrunch / AWS**
+### ⑤ ⭐⭐⭐ 南亞科技擬斥資 $160 億美元在台灣新建 DRAM 廠，2028 年首期量產
+> **2026 | Nanya Technology**
 
-亞馬遜 Q2 財報中 AWS 雲端營收成為最大亮點，帶動股價盤後漲近 10%；分析師指出 AI 雲端基礎設施已進入「量產代理 AI」（mass agentic AI）部署階段。然而 Google 委託調查顯示，仍有逾 80% 企業需要重大技術棧升級，方能在生產環境運行 AI 代理。
+台灣南亞科技計畫投資約 160 億美元興建新世代 DRAM 廠，第一期預計 2028 年達到月產能 3 萬片晶圓。此計畫展示台灣記憶體廠商趁美國推動記憶體去中化趨勢，積極擴張本地製造能力，補充現有 Micron 在台廠區（台中）所形成的非中記憶體供給叢集。
 
-**Insight:** 「雲端爆發、邊緣尚未普及」的剪刀差正在加大——這對邊緣 AI 晶片廠商既是機會（企業補上技術棧缺口時邊緣部署需求將釋放），也是警示（80% 企業仍在學習，邊緣 AI 導入時程可能比預期慢半年到一年）。
+**Insight:** 台灣本土 DRAM 新增產能對聯發科等台廠有正面意義——在地採購可降低 Genio 等工業 IoT 產品的記憶體供應集中風險，並可能享有地緣關係帶來的採購優先序。
 
-🔗 [TechCrunch](https://techcrunch.com/2026/07/30/investors-love-ai-as-long-as-youre-a-cloud-host/)
+🔗 [Deloitte Semiconductor Outlook](https://www.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/semiconductor-industry-outlook.html)
+
+---
+
+### ⑥ ⭐⭐⭐⭐ 美 AI Overwatch Act 提案：AI 晶片售中每案須強制 30 天審查
+> **2026 | 美國國會 / BIS**
+
+美國國會推出《AI Overwatch Act》，要求任何先進 AI 晶片出口至中國前須經 30 天強制審查，BIS 在此期間可暫停出口。此提案方向與 2026 年 1 月 BIS 出口管制鬆綁（從「推定拒絕」改為「逐案評估」）相反，反映國會對行政部門出口政策搖擺不定的強烈不滿。目前最先進的可合法出口中國晶片為 NVIDIA H200，且受 50% 出口量上限及 25% 關稅限制。
+
+**Insight:** 30 天審查使採購方「備貨」策略失效，中國採購商年度 AI 晶片計畫充滿不確定性；聯發科布局歐美及非中東南亞客戶可完全規避此類管制風險，是現階段明確的差異化定位商機。
+
+🔗 [Morgan Lewis](https://www.morganlewis.com/pubs/2026/01/bis-revises-export-review-policy-for-advanced-ai-chips-destined-for-china-and-macau) | [Oplexa](https://oplexa.com/us-china-chip-war-2026-semiconductor/)
 
 ---
 
 ## 3️⃣ 🌍 國際新聞
 
-### ⑦ ⭐⭐⭐⭐⭐ ⭐FCC 將對中禁令升級為零部件層級，美中供應鏈脫鉤入晶片深水區
-> **2026-07-22 | FCC | 來源：大紀元繁體中文**
+### ⑦ ⭐⭐⭐⭐⭐ 伊朗 IRGC 向約旦美軍基地射彈，拒霍爾木茲均分提議，中東局勢急劇升溫
+> **2026-08-01 | Euronews / AP**
 
-美國聯邦通信委員會（FCC）於 7 月 22 日以國安為由，禁止銷售任何含有中國企業製造之具邏輯運算功能硬體零件的設備，將過去針對整機的「產品封禁」升級為供應鏈上游的「零件級封堵」。8 月美方尚預計公布對中國永久正常貿易關係（PNTR）地位的審查結論，為下半年中美經貿博弈添加新變數。
+伊朗革命衛隊（IRGC）向駐紮約旦的美軍基地發射多枚彈道飛彈，德黑蘭同時拒絕阿曼提議均分霍爾木茲海峽控制的調停方案，聲稱霍爾木茲「永遠不會回到戰前狀態」。此舉令中東緊張局勢急劇升溫，全球原油期貨盤後大幅拉升，布倫特原油突破 $95/桶。
 
-**Insight:** 禁令從整機深入至零部件，代表所有使用中國 logic IC 的設備都面臨合規審查——這對台灣、東南亞方案供應商是巨大換單機會，聯發科作為非中國 SoC 廠商在此波重組中具明確受益位置。
+**Insight:** 霍爾木茲封鎖風險升高直接影響全球 20% 原油及 LNG 運輸，台積電、三星等晶圓廠能源成本將受連動；同時，中東衝突對台灣半導體廠商的地緣政治曝險管理提出更高要求，能源費用占晶圓廠成本約 15%，若油氣價格持續攀升，2027 年晶片成本結構將面臨重估。
 
-🔗 [大紀元繁體 (Epoch Times)](https://www.epochtimes.com/b5/26/7/28/n14818826.htm/amp) | [Yahoo奇摩股市](https://tw.stock.yahoo.com/news/%E7%BE%8E%E4%B8%AD%E6%8E%80ai%E6%99%B6%E7%89%87%E4%B8%96%E7%B4%80%E4%B9%8B%E6%88%B0-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%88%90%E5%85%A8%E7%90%83%E7%A7%91%E6%8A%80%E5%86%B7%E6%88%B0%E9%97%9C%E9%8D%B5-114712743.html)
+🔗 [Euronews](https://www.euronews.com/news/international)
 
 ---
 
-### ⑧ ⭐⭐⭐ 台灣出口抗地緣衝擊，半導體競爭軸從「製程」轉向「科技信任」
-> **2026-07-27 | Digitimes / CommonWealth Magazine**
+### ⑧ ⭐⭐⭐ Trump 宣布 Hamas 同意解除武裝，加沙出現最大外交突破
+> **2026-08-01 | AP**
 
-台灣經濟研究院 7 月底指出台灣出口與投資動能足以部分吸收地緣政治衝擊。《天下雜誌》英文版分析指全球半導體競爭已從廠址與製程節點，轉向「誰的 AI、雲端與國防基礎設施可信賴」的「科技信任」競賽；6 月「矽和平峰會」（Pax Silica Summit）將台灣定位為此新秩序的核心節點，但同時凸顯台灣面對每日 260 萬次中國網路入侵的脆弱性。
+美國總統 Trump 宣布哈馬斯已同意解除武裝，這是加沙衝突以來最重大的外交宣示。若和平協議最終落地，將顯著降低中東地區緊張局勢，並為以色列科技產業及能源基礎設施重建創造投資機遇。然而，外部觀察人士對承諾的可信度和執行機制普遍持保留態度。
 
-**Insight:** 「科技信任」成為半導體競爭新軸線，意味著技術規格之外，品牌來源國與資安可信度將成為採購決策的關鍵因素——這對聯發科開拓歐美國防、政府及關鍵基礎設施市場具有戰略意義。
+**Insight:** 加沙潛在和平與伊朗-美國緊張同步升溫，顯示中東不同衝突線正在分歧演化——風險評估需精細化到子地區層級，而非以「中東局勢」一刀切概括，否則容易錯判油氣和地緣風險的走向。
 
-🔗 [Digitimes](https://www.digitimes.com/news/a20260727PD201/taiwan-investment-exports-gdp-2026.html) | [CommonWealth Magazine](https://english.cw.com.tw/article/article.action?id=4888)
+🔗 [AP via Euronews](https://www.euronews.com/news/international)
 
 ---
 
 ## ⚠️ 弱訊號
 
-1. **TSMC EMIB-like 技術的授權模糊地帶**：目前報導未明確 TSMC 與 Intel 之間是否存在 IP 授權協議，或純屬 TSMC 自研競品——若為後者，Intel 股價飆漲反而可能在消息澄清後修正，形成短期波動機會。值得追蹤正式公告。🔗 [Benzinga](https://www.benzinga.com/markets/tech/26/07/60829355/tsmc-is-reportedly-developing-advanced-chip-packaging-tech-to-challenge-intels-dominance)
-
-2. **80% 企業尚未準備好跑 AI Agent**：主流報導聚焦 AI Agent 成功案例，但 Google 調查顯示絕大多數企業仍卡在技術棧升級階段——這個「基礎設施就緒度」缺口，對系統整合商（SI）和邊緣 AI 硬體廠商而言是比雲端 API 更大的商機，卻鮮少被討論。🔗 [Solutions Review](https://solutionsreview.com/ai-news-for-the-week-of-july-24-updates-from-booz-allen-gartner-microsoft-more/)
-
----
-
-ℹ️ *Cross-issue 分析：⭐ 加分主題本週持續出現 — TSMC 供應鏈 (3+ 天)、美中科技脫鉤 (3+ 天)，已標記 ⭐ bonus。*
+1. **AI 訓練數據品質危機悄然加劇，「模型崩塌」風險靜默累積**: 主流研究觀察指出，大量 AI 生成內容已大規模污染網路訓練語料，劣質 AI 輸出正被新一輪爬取重新用於訓練，形成「模型崩塌（Model Collapse）」迴圈——新一代大模型的邏輯推理與事實準確性可能因此逐步退化。邊緣端部署的模型若從雲端同步更新，此問題同樣無法豁免。 🔗 [Crescendo AI News](https://www.crescendo.ai/news/latest-ai-news-and-updates)
 
 ---
 
