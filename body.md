@@ -1,123 +1,123 @@
-# ☀️ Hank's Morning Brief · 2026-07-23 (週四)
-**Window: 2026-07-22 07:00 → 2026-07-23 07:00 (Asia/Taipei)**
+# ☀️ Hank's Morning Brief · 2026-08-01 (週六)
+**Window: 2026-07-31 07:00 → 2026-08-01 07:00 (Asia/Taipei)**
 
 ## ⚡ 30-Second TLDR
-- 上海世界人工智能大會閉幕，習近平首次主講、29 國共組全球 AI 合作組織，AI 地緣政治進入新階段
-- AI 晶片股遭遇估值衝擊，Micron 領跌 13% 抹去 1380 億美元市值，半導體產業高估值泡沫疑慮升溫
-- 美伊軍事衝突第 11 天，戰費突破 370 億美元，伊朗反擊美軍海灣基地，中東緊張局勢持續升高
+- TSMC 創 Q2 營收新高達 400 億美元並宣布追加 1,000 億美元亞利桑那投資，AI 晶片需求確認進入第二波加速
+- Anthropic 發布 Claude Opus 5，效能接近 Fable 5 但成本減半，邊緣推論成本競爭白熱化
+- FCC 將對中硬體禁令升級至零部件層級，美中供應鏈脫鉤進入晶片級深水區
 
 ---
 
 ## 🧠 Today's Insight
-**本日摘要重點:** 世界 AI 大會象徵中美 AI 地緣政治博弈進入多邊框架競逐階段，中國以「全球 AI 共治」回應美方出口管制，AI 軍備競賽從晶片延伸至國際規範制定；同步，半導體估值修正與軍事地緣風險雙重疊加，市場情緒承壓。
-**未來發展方向:** AI 晶片出口管制與記憶體高價格的結構性張力，將驅動日本、印度、台灣等節點加速供應鏈在地化；非英語系 AI 生態（含中文、阿拉伯語、印度語）的崛起速度將超過主流預期。
-**對你的意義:** 聯發科 Edge-to-Cloud 全端策略（Genio Pro 5100 鎖定 UAV、Dimensity AX 瞄準車端、Pentonic 800 攻智慧電視）正好落在多國政府優先的在地邊緣 AI 場景，此時加速工業 AI 客戶落地，能建立出口管制衝擊最小的護城河。
+**本日摘要重點:** 七月以 TSMC 創記錄財報和 AMD-Meta 史上最大 AI 晶片採購案作結，AI 基礎設施投資浪潮確認進入第二波加速期；Anthropic Opus 5 低成本突破同步壓縮推論晶片利潤空間，封裝技術取代製程節點成為下個供給瓶頸。
+**未來發展方向:** TSMC EMIB-like 先進封裝技術與 2nm 節點並行落地，AI 晶片供給瓶頸將從製程轉向封裝；FCC 零部件級禁令則加速台灣、東南亞供應商重組訂單，非中國供應鏈紅利持續釋放。
+**對你的意義:** 聯發科 CEO 重申 TSMC 長期合作正當其時——Qualcomm 面臨相同 N2P 成本壓力，若聯發科在 edge AI 差異化（Genio/Dimensity AX）早 Qualcomm 一步落地工業客戶，可在漲價周期建立換機護城河；FCC 禁令亦為非中元件方案創造明確商機。
 
 ---
 
 ## 1️⃣ 🤖 AI / 科技
 
-### ① ⭐⭐⭐⭐⭐ 世界 AI 大會閉幕：習近平首次主講，29 國成立全球 AI 合作組織
-> **2026-07-17~20 | 上海**
+### ① ⭐⭐⭐⭐ Anthropic 發布 Claude Opus 5：效能接近 Fable 5，成本砍半
+> **2026-07 | Anthropic**
 
-2026 年世界人工智能大會（WAIC）於 7 月 20 日在上海閉幕，習近平發表主題演講《攜手構建公正合理的全球人工智能治理體系》，呼籲 AI 發展不能由任何單一國家主導，並批評美方「過度延伸」國安理由。29 個創始國共同成立「世界人工智能合作組織」，100+ 國派代表出席。
+Anthropic 在七月底推出 Claude Opus 5，CursorBench 3.2 得分僅落後 Fable 5 約 0.5%，但定價降至每百萬 token $5/$25，為 Fable 5 的一半。此前 Claude Sonnet 5 已成為 Free 與 Pro 用戶預設模型，並享有到 8 月底的優惠定價。
 
-**Insight:** 中國正以多邊框架建立 AI 話語權，對抗西方出口管制；對 MediaTek 而言，「非美陣營」國家 AI 基礎設施需求將加速釋放，尤以東南亞與中亞市場最值得注意。
+**Insight:** 大模型「效能/成本比」快速提升直接壓縮推論 SoC 的差異化空間——邊緣裝置的競爭軸正從「跑得動」轉向「跑得省」，聯發科 Genio Pro 系列的功耗優勢值得在此時加速量化。
 
-🔗 [NPR報導](https://www.npr.org/2026/07/17/nx-s1-5897285/chinas-xi-calls-for-step-up-of-global-effort-in-ai-as-us-curbs-squeeze-chinas-tech-access) | [新華社全文](https://english.news.cn/20260717/893fe11097db460ea31b98f131e34ef0/c.html)
-
----
-
-### ② ⭐⭐⭐⭐ OpenAI 發布 GPT-Live：全雙工架構，同步聆聽、說話、推理
-> **2026-07 | OpenAI**
-
-OpenAI 推出新一代語音 AI GPT-Live，採用全雙工（full-duplex）架構，可同時聆聽、說話並進行推理，支援即時翻譯、網路搜尋與智慧任務委派。這是語音 AI 從「對話助手」轉型為「自主代理」的關鍵一步。
-
-**Insight:** 全雙工語音 AI 正是 Edge AI 裝置最具差異化的應用場景，對車載（in-car）與工業 HMI 的影響尤為直接，MediaTek Dimensity AX 平台值得評估整合機會。
-
-🔗 [Build Fast With AI](https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories)
+🔗 [ThursdAI Releases Tracker](https://thursdai.news/releases/2026-07)
 
 ---
 
-### ③ ⭐⭐⭐ 川普政府解除 Claude Fable 5 出口管制，恢復國際客戶存取
-> **2026-07 | 美國**
+### ② ⭐⭐⭐⭐⭐ ⭐TSMC 自研 EMIB-like 封裝技術，Intel 股價單日飆 12%
+> **2026-07 | TSMC / Kinsus**
 
-川普政府解除對 Anthropic Claude Fable 5 的出口管制，恢復對國際客戶的存取，此前因安全顧慮短暫下架。歐盟同步命令 Google 向競爭性 AI 助手開放 Android，並共享搜尋資料，監管動態持續影響 AI 部署版圖。
+TSMC 與台灣 Kinsus 合作開發內部代號「EMIB Like」的先進晶片封裝技術，功能對標 Intel EMIB（Embedded Multi-die Interconnect Bridge）。消息傳出後 Intel 股價單日大漲 12%（市場解讀為授權合作可能）、TSMC 漲 7%；NVIDIA 亦被報導正評估採用 Intel EMIB 封裝未來處理器。
 
-**Insight:** 出口管制政策的快速翻轉，顯示 AI 監管仍高度政治化；企業在邊緣 AI 部署上選擇多模型策略（而非依賴單一雲端服務）的必要性進一步上升。
+**Insight:** CoWoS 封裝已是 AI 晶片最大量產瓶頸，TSMC EMIB-like 技術若量產將開闢第二條高頻寬封裝路徑，直接擴大 AI 晶片供給天花板；對聯發科而言，先進封裝能力是未來 Chiplet 設計的核心籌碼。
 
-🔗 [Zone Techify](https://www.zonetechify.com/blog/ai-news-july-2026-latest-ai-developments)
+🔗 [Benzinga](https://www.benzinga.com/markets/tech/26/07/60829355/tsmc-is-reportedly-developing-advanced-chip-packaging-tech-to-challenge-intels-dominance) | [Yahoo Finance](https://finance.yahoo.com/technology/ai/articles/tsmcs-next-ai-chip-move-195343067.html)
+
+---
+
+### ③ ⭐⭐⭐⭐ AMD × Meta：史上最大 AI 晶片採購案，規模上看 6 GW
+> **2026-07 | AMD / Meta**
+
+AMD 與 Meta 宣布擴大戰略合作，Meta 承諾採購高達 6 GW 的 AMD Instinct GPU 部署於其 AI 基礎設施，被業界形容為「半導體史上規模最大的 AI 晶片採購案」。此案確立 AMD MI300 系列為 NVIDIA 超規模替代選項。
+
+**Insight:** 6 GW 單一超規模採購打破 NVIDIA 的事實壟斷，競爭格局鬆動將對整個加速器堆疊（含邊緣推論晶片）帶來定價壓力；AMD 以此鞏固的營收基礎也將加速下世代架構研發，值得追蹤其邊緣 AI 路線圖動態。
+
+🔗 [Intellectia AI – AI Semiconductor Stocks July 2026](https://intellectia.ai/blog/ai-semiconductor-stocks-july-2026)
 
 ---
 
 ## 2️⃣ 🏭 科技產業
 
-### ④ ⭐⭐⭐⭐ AI 晶片股大跌，Micron 領跌 13%，抹去 1380 億美元市值
-> **2026-07 | 全球半導體市場**
+### ④ ⭐⭐⭐⭐⭐ ⭐TSMC Q2 2026 創歷史新高：營收 402 億美元，再宣布 1,000 億美元亞利桑那投資
+> **2026-07-16 | TSMC**
 
-半導體類股在七月初遭遇估值衝擊，Micron Technology 領跌 13%，整體市值蒸發約 1380 億美元。全球半導體銷售額在 2026 年 5 月達到 1206 億美元（月增 9.2%、年增 104.1%），高基期引發市場對估值過熱的疑慮，資金進行防禦性調整。
+台積電公布 2026 年第二季財報：合併營收達 402 億美元（年增 36%）、稅後純益年增 77.4%、毛利率 67.7%，全面創歷史新高。同步宣布追加 1,000 億美元投資美國亞利桑那廠，Q3 2026 營收指引 446~458 億美元，3nm + 5nm 合計佔晶圓收入 63%。
 
-**Insight:** 記憶體需求基本面仍強（AI 基礎設施採購持續），但股市修正顯示投資人開始要求盈利兌現時程。對 MediaTek 而言，異質整合（HBM/CXL 與 SoC 協同）的成本管理能力成為關鍵競爭力。
+**Insight:** TSMC 財報確認 AI 晶片需求進入長期高成長軌道，且先進製程（3nm/5nm）已是主力營收來源——對聯發科的正面意涵是先進製程產能分配優先級提升，但成本端的 N2P 轉換壓力也同步加大。
 
-🔗 [Intellectia AI 分析](https://intellectia.ai/blog/ai-chip-stocks-valuation-concerns-july-2026) | [Semiconductor Weekly](https://www.originbrief.app/en/reports/semiconductor-chip-industry/2026-07-20/weekly)
-
----
-
-### ⑤ ⭐⭐⭐⭐ 聯發科 Computex 2026：Genio Pro 5100 瞄準 UAV，Dimensity AX 攻車端
-> **2026-05~07 | MediaTek**
-
-聯發科於 Computex 2026 以「AI Without Limits」為主題展示 Edge-to-Cloud 全端策略，旗艦工業 AI 晶片 Genio Pro 5100 專攻高頻寬視覺與無人機極端邊緣運算；Dimensity AX C-X1 以 80 TOPS、3nm 製程進入智慧車端；Pentonic 800 成為全球首款支援 Dolby Vision 2 的 AI 電視 SoC。
-
-**Insight:** 聯發科正系統性從消費型晶片廠轉型為端到雲 AI 平台提供商，工業/車/智慧家庭三端佈局完整，但關鍵在能否將平台優勢轉化為軟體生態系黏著度。
-
-🔗 [MediaTek 官方](https://www.mediatek.com/computex2026) | [Futurum 分析](https://futurumgroup.com/insights/mediateks-maturing-edge-to-cloud-ai-strategy-expands-beyond-smartphones/)
+🔗 [TechPowerUp](https://www.techpowerup.com/350807/tsmc-reports-record-q2-2026-earning-results) | [CNBC](https://www.cnbc.com/2026/07/16/tsmc-second-quarter-profit-.html)
 
 ---
 
-### ⑥ ⭐⭐⭐ SK Hynix 260 億美元那斯達克募資，記憶體業者 Q2 獲利創歷史新高
-> **2026-07 | 韓國**
+### ⑤ ⭐⭐⭐⭐ ⭐Qualcomm 醞釀雙位數漲價；聯發科 CEO 重申 TSMC 是長期最重要夥伴
+> **2026-07-27 | Taipei Times / TrendForce**
 
-SK Hynix 完成 265 億美元那斯達克募資計畫，用於擴大 DRAM 晶圓產能與先進封裝（HBM），全球記憶體業者預計在 2026 Q2 創下收入與獲利雙紀錄。Samsung 則因 Intel/AMD 下一代伺服器處理器延遲而推遲 CXL 3.1 記憶體模組量產。
+高通因 TSMC N2P 製程成本與 DRAM 價格高漲，擬對旗艦行動 SoC 實施雙位數百分比漲價。聯發科面臨相同成本壓力，但 CEO 公開重申 TSMC 為「最重要且長期」的代工合作夥伴，否認三星搶單傳言，雙方均以 TSMC N2P 節點為 H2 2026 下世代晶片目標。
 
-**Insight:** HBM 供需緊俏仍是 AI 基礎設施擴張的主要瓶頸，MediaTek 資料中心 AI 晶片若需配備 HBM，需提前鎖定供應鏈；Samsung 的 CXL 3.1 延遲可能影響下一代伺服器平台上市節奏。
+**Insight:** 漲價週期中，聯發科若能在 edge AI（Genio/Dimensity AX）建立充分差異化，即可轉移部分成本壓力至客戶；此時加速在 UAV、工業 HMI、車載等垂直場景落地，將是比純拼規格更有效的護城河策略。
 
-🔗 [Semiconductor Weekly](https://www.originbrief.app/en/reports/semiconductor-chip-industry/2026-07-20/weekly) | [DIGITIMES](https://www.digitimes.com/topic/semiconductors/memory_chips/)
+🔗 [Taipei Times](https://www.taipeitimes.com/News/biz/archives/2026/07/27/2003861423) | [TrendForce](https://www.trendforce.com/news/2026/05/29/news-mediatek-ceo-reaffirms-tsmc-as-key-long-term-partner-amid-samsungs-reported-push-for-foundry-orders/)
+
+---
+
+### ⑥ ⭐⭐⭐ AWS 雲端 AI 營收爆發，企業代理 AI 進入量產部署階段
+> **2026-07-30 | TechCrunch / AWS**
+
+亞馬遜 Q2 財報中 AWS 雲端營收成為最大亮點，帶動股價盤後漲近 10%；分析師指出 AI 雲端基礎設施已進入「量產代理 AI」（mass agentic AI）部署階段。然而 Google 委託調查顯示，仍有逾 80% 企業需要重大技術棧升級，方能在生產環境運行 AI 代理。
+
+**Insight:** 「雲端爆發、邊緣尚未普及」的剪刀差正在加大——這對邊緣 AI 晶片廠商既是機會（企業補上技術棧缺口時邊緣部署需求將釋放），也是警示（80% 企業仍在學習，邊緣 AI 導入時程可能比預期慢半年到一年）。
+
+🔗 [TechCrunch](https://techcrunch.com/2026/07/30/investors-love-ai-as-long-as-youre-a-cloud-host/)
 
 ---
 
 ## 3️⃣ 🌍 國際新聞
 
-### ⑦ ⭐⭐⭐⭐ 美伊衝突第 11 天，戰費逾 370 億美元，伊朗反擊海灣美軍基地
-> **2026-07-22 | 中東**
+### ⑦ ⭐⭐⭐⭐⭐ ⭐FCC 將對中禁令升級為零部件層級，美中供應鏈脫鉤入晶片深水區
+> **2026-07-22 | FCC | 來源：大紀元繁體中文**
 
-美國對伊朗的軍事行動進入第 11 天，國防部長 Pete Hegseth 在國會作證表示戰爭總支出已超過 370 億美元（較上次公開估計增加近 80 億）。伊朗週二反擊位於巴林、科威特與約旦的美軍基地，中東局勢緊張持續升高。
+美國聯邦通信委員會（FCC）於 7 月 22 日以國安為由，禁止銷售任何含有中國企業製造之具邏輯運算功能硬體零件的設備，將過去針對整機的「產品封禁」升級為供應鏈上游的「零件級封堵」。8 月美方尚預計公布對中國永久正常貿易關係（PNTR）地位的審查結論，為下半年中美經貿博弈添加新變數。
 
-**Insight:** 中東衝突若進一步升級，將直接衝擊航運保險成本與能源價格；對半導體供應鏈的影響需特別關注台積電等晶圓廠的天然氣/化學品進口依存度，以及海灣地區 AI 資料中心投資方向的轉變。
+**Insight:** 禁令從整機深入至零部件，代表所有使用中國 logic IC 的設備都面臨合規審查——這對台灣、東南亞方案供應商是巨大換單機會，聯發科作為非中國 SoC 廠商在此波重組中具明確受益位置。
 
-🔗 [Just Security](https://www.justsecurity.org/148692/early-edition-july-22-2026/) | [Morning Star](https://morningstaronline.co.uk/article/world-brief-july-22-2026)
+🔗 [大紀元繁體 (Epoch Times)](https://www.epochtimes.com/b5/26/7/28/n14818826.htm/amp) | [Yahoo奇摩股市](https://tw.stock.yahoo.com/news/%E7%BE%8E%E4%B8%AD%E6%8E%80ai%E6%99%B6%E7%89%87%E4%B8%96%E7%B4%80%E4%B9%8B%E6%88%B0-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%88%90%E5%85%A8%E7%90%83%E7%A7%91%E6%8A%80%E5%86%B7%E6%88%B0%E9%97%9C%E9%8D%B5-114712743.html)
 
 ---
 
-### ⑧ ⭐⭐ 烏克蘭總統解除武裝部隊總司令，戰局指揮出現重大人事更迭
-> **2026-07-22 | 烏克蘭**
+### ⑧ ⭐⭐⭐ 台灣出口抗地緣衝擊，半導體競爭軸從「製程」轉向「科技信任」
+> **2026-07-27 | Digitimes / CommonWealth Magazine**
 
-烏克蘭總統澤連斯基解除武裝部隊總司令奧列克桑德爾·薩爾斯基的職務，任命米哈伊洛·德拉帕蒂接任，此次人事異動發生於連日民眾抗議要求其下台之後。此為俄烏戰爭期間烏克蘭最高指揮層的重大改組。
+台灣經濟研究院 7 月底指出台灣出口與投資動能足以部分吸收地緣政治衝擊。《天下雜誌》英文版分析指全球半導體競爭已從廠址與製程節點，轉向「誰的 AI、雲端與國防基礎設施可信賴」的「科技信任」競賽；6 月「矽和平峰會」（Pax Silica Summit）將台灣定位為此新秩序的核心節點，但同時凸顯台灣面對每日 260 萬次中國網路入侵的脆弱性。
 
-**Insight:** 烏克蘭指揮層重組可能影響西方盟友的軍事援助決策節奏，若和平談判機率上升，歐洲重建需求將推動工業自動化與 AI 基礎設施的新一輪投資週期。
+**Insight:** 「科技信任」成為半導體競爭新軸線，意味著技術規格之外，品牌來源國與資安可信度將成為採購決策的關鍵因素——這對聯發科開拓歐美國防、政府及關鍵基礎設施市場具有戰略意義。
 
-🔗 [WORLD - Wednesday Morning News](https://wng.org/podcasts/wednesday-morning-news-july-22-2026-1784664142) | [Havana Times](https://havanatimes.org/news/international-news-briefs-for-wednesday-july-22-2026/)
+🔗 [Digitimes](https://www.digitimes.com/news/a20260727PD201/taiwan-investment-exports-gdp-2026.html) | [CommonWealth Magazine](https://english.cw.com.tw/article/article.action?id=4888)
 
 ---
 
 ## ⚠️ 弱訊號
 
-1. **Google 非洲 Applied AI Lab 落地阿克拉（迦納）** — 專注非洲在地 AI 解決方案，為當地研究者與創業者提供早期模型存取。主流媒體幾乎忽略這一訊號，但南半球 AI 生態建立速度正超出預期，尤其是低資源語言模型與行動裝置優先的 AI 應用場景，將是下一個差異化競技場。🔗 [AI News](https://www.artificialintelligence-news.com/)
+1. **TSMC EMIB-like 技術的授權模糊地帶**：目前報導未明確 TSMC 與 Intel 之間是否存在 IP 授權協議，或純屬 TSMC 自研競品——若為後者，Intel 股價飆漲反而可能在消息澄清後修正，形成短期波動機會。值得追蹤正式公告。🔗 [Benzinga](https://www.benzinga.com/markets/tech/26/07/60829355/tsmc-is-reportedly-developing-advanced-chip-packaging-tech-to-challenge-intels-dominance)
 
-2. **Reddit 部署 LLM 垃圾訊息偵測系統，每日攔截 2300 萬次曝光** — LLM 已進入大規模內容治理實戰。這代表推理成本已低至可在 UGC 平台全量部署，邊緣推理晶片的「內容安全」應用場景市場即將爆發，MediaTek 的端側 LLM 方案值得在此鋪排。🔗 [Build Fast With AI](https://www.buildfastwithai.com/blogs/ai-news-today-july-20-2026-16-biggest-stories)
+2. **80% 企業尚未準備好跑 AI Agent**：主流報導聚焦 AI Agent 成功案例，但 Google 調查顯示絕大多數企業仍卡在技術棧升級階段——這個「基礎設施就緒度」缺口，對系統整合商（SI）和邊緣 AI 硬體廠商而言是比雲端 API 更大的商機，卻鮮少被討論。🔗 [Solutions Review](https://solutionsreview.com/ai-news-for-the-week-of-july-24-updates-from-booz-allen-gartner-microsoft-more/)
 
 ---
 
-ℹ️ *註: 本次無歷史資料可參考 (GitHub API 未回應 / 首次跑)*
+ℹ️ *Cross-issue 分析：⭐ 加分主題本週持續出現 — TSMC 供應鏈 (3+ 天)、美中科技脫鉤 (3+ 天)，已標記 ⭐ bonus。*
 
 ---
 
