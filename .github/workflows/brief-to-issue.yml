@@ -1,0 +1,69 @@
+# Creates a GitHub Issue from each brief file pushed to briefs/<label>/<date>.md.
+#
+# Why this exists: the Anthropic routine sandbox can `git push` but cannot reach
+# api.github.com (egress firewall, flipped ~2026-06-24). So the routine commits
+# the brief as a file, and this Action — running on GitHub's own infra — turns
+# it into the Issue that notifies Hank by email.
+#
+# Files with `backfilled: true` in front matter are skipped (they mirror issues
+# that already exist and only serve as cross-issue memory for the routines).
+name: Brief → Issue
+
+on:
+  push:
+    branches: [main]
+    paths: ['briefs/**.md']
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create issues for pushed brief files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          BEFORE="${{ github.event.before }}"
+          if [ "$BEFORE" = "0000000000000000000000000000000000000000" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
+            RANGE="HEAD~1..HEAD"
+          else
+            RANGE="$BEFORE..${{ github.sha }}"
+          fi
+          FILES=$(git diff --name-only --diff-filter=AM "$RANGE" -- 'briefs/**.md' || true)
+          [ -n "$FILES" ] || { echo "no brief files in push"; exit 0; }
+
+          for f in $FILES; do
+            [ -f "$f" ] || continue
+
+            title=$(awk 'f==1 && /^title:/ {sub(/^title:[ ]*/,""); print; exit} /^---$/ {f++}' "$f")
+            label=$(awk 'f==1 && /^label:/ {sub(/^label:[ ]*/,""); print; exit} /^---$/ {f++}' "$f")
+            backfilled=$(awk 'f==1 && /^backfilled:/ {sub(/^backfilled:[ ]*/,""); print; exit} /^---$/ {f++}' "$f")
+
+            if [ -z "$title" ]; then echo "skip $f (no title front matter)"; continue; fi
+            if [ "$backfilled" = "true" ]; then echo "skip $f (backfilled)"; continue; fi
+
+            # Dedupe: re-pushing the same brief must not open a second issue.
+            if gh issue list --repo "$GITHUB_REPOSITORY" --state all --limit 100 \
+                 --search "in:title \"$title\"" --json title --jq '.[].title' \
+                 | grep -Fxq "$title"; then
+              echo "skip $f (issue already exists)"
+              continue
+            fi
+
+            # Body = everything after the closing --- of the front matter.
+            awk 'body==1 {print} /^---$/ {n++; if (n==2) body=1}' "$f" > /tmp/issue-body.md
+
+            gh issue create --repo "$GITHUB_REPOSITORY" \
+              --title "$title" \
+              --body-file /tmp/issue-body.md \
+              ${label:+--label "$label"}
+            echo "created issue for $f"
+          done

@@ -8,52 +8,64 @@ GitHub 會在 issue 建立時自動寄通知信到你 watcher 信箱，所以體
 
 ---
 
-## 架構
+## 架構（2026-08-01 起：git push + GitHub Action）
 
 ```
-[Claude Routine — 每天 00:00 UTC = 08:00 Asia/Taipei]
+[Claude Routine — 每天 23:00 UTC = 07:00 Asia/Taipei]
         │
         ▼
 [Anthropic 雲端 spawn 一個 Claude session]
         │
-        ├── git clone 此 repo (用 PAT)
-        ├── 用 web search 搜尋過去 24 小時新聞
-        ├── 依 prompt 規範寫好 brief (subject + body markdown)
-        ├── (可選) python morning_brief.py --fetch-recent --label daily   # 拉前幾期作為跨期記憶
-        └── python morning_brief.py --subject "..." --body-file body.md --label daily
+        ├── git clone 此 repo
+        ├── python morning_brief.py --fetch-recent --local --label daily   # 讀 briefs/ 作為跨期記憶 (不碰網路)
+        ├── 用 web search 搜尋過去 24 小時新聞、依 prompt 規範寫好 brief
+        ├── python morning_brief.py --emit --subject "..." --body-file body.md --label daily
+        │       └── 寫出 briefs/daily/<date>.md (含 front matter)
+        └── git commit + push
                 │
-                └── POST api.github.com/repos/<repo>/issues
-                        │
-                        └── GitHub 自動 email 通知 → hank800620@gmail.com
+                ▼
+[GitHub Action: .github/workflows/brief-to-issue.yml]
+        └── 解析 front matter → gh issue create
+                └── GitHub 自動 email 通知 → hank800620@gmail.com
 ```
 
-**重點：新聞搜尋與整理由 routine 內的 Claude 直接做，使用 Max 訂閱額度，不另外算 API 費用。** `morning_brief.py` 只負責收下成品再開 issue，不呼叫 Anthropic API。
+**重點：新聞搜尋與整理由 routine 內的 Claude 直接做，使用 Max 訂閱額度，不另外算 API 費用。**
 
-**為什麼不用 email**：Anthropic routine sandbox 的出口防火牆封鎖所有 SMTP port 與所有第三方 email API。`api.github.com` 在白名單，所以走 GitHub Issue。
+**為什麼繞一圈 git push**：Anthropic routine sandbox 的出口防火牆政策會變。2026-04 時 `api.github.com` 通、git push 被擋（所以最初直接 POST 開 issue）；~2026-06-24 起反轉，`api.github.com` 被擋、git push 通（6/24–7/31 的 brief 因此全數蒸發）。現在 routine 只依賴 git push，開 issue 交給跑在 GitHub 端的 Action，sandbox 防火牆再怎麼變都影響不到。email API 與 SMTP 則從頭到尾都是封的，別再試。
+
+`briefs/` 資料夾同時是跨期記憶的來源——歷史 issues 已全數回填成 `briefs/<label>/<date>.md`（front matter 標 `backfilled: true`，Action 會跳過不重開 issue）。
 
 ---
 
 ## `morning_brief.py` 用法
 
 ```bash
-# 開新 issue (一般情況)
-python morning_brief.py --subject "[morning-brief][daily] 2026-05-09 ..." \
+# 寫出 briefs/<label>/<date>.md 供 Action 開 issue (routine 一般情況)
+python morning_brief.py --emit --subject "[morning-brief][daily] 2026-08-01 ..." \
                        --body-file body.md \
                        --label daily
+
+# 讀 briefs/ 資料夾作為跨期記憶 (routine 用,不碰網路)
+python morning_brief.py --fetch-recent --local --label daily --limit 5
+
+# 直接 POST api.github.com 開 issue (legacy,本機可用、sandbox 內會被防火牆擋)
+python morning_brief.py --subject "..." --body-file body.md --label daily
 
 # 預覽不送出
 python morning_brief.py --subject "..." --body-file body.md --label daily --dry-run
 
-# 拉最近 N 期 issues 作為跨期記憶 (供 routine 內 Claude 讀)
+# 從 GitHub API 拉最近 N 期 (legacy,本機可用)
 python morning_brief.py --fetch-recent --label daily --limit 7
 ```
 
 **Flags**：
+- `--emit`：寫到 `briefs/<label>/<date>.md`（日期取自 `--subject` 內的 YYYY-MM-DD），不碰網路
 - `--subject`：issue 標題（必填，除非 `--fetch-recent`）
 - `--body-file`：markdown 檔案路徑（不給則從 stdin 讀）
 - `--label`：可重複，標 issue 用。建議用 `daily` / `weekly` / `monthly`
 - `--dry-run`：只印出，不 POST
-- `--fetch-recent`：印出最近 N 期同 label 的 issues 內容（給 routine 跨期記憶用）
+- `--fetch-recent`：印出最近 N 期同 label 的內容（給 routine 跨期記憶用）
+- `--local`：搭配 `--fetch-recent`，改讀本地 `briefs/` 而非 GitHub API
 - `--limit`：搭配 `--fetch-recent`，預設 7
 
 **環境變數**：
